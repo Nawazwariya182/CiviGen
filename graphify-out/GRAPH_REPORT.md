@@ -4,12 +4,12 @@
 - cluster-only mode — file stats not available
 
 ## Summary
-- 345 nodes · 568 edges · 21 communities (11 shown, 10 thin omitted)
+- 350 nodes · 579 edges · 23 communities (12 shown, 11 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 3 edges (avg confidence: 0.88)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e5a70e8b`
+- Built from commit: `2e3d43b2`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -17,12 +17,13 @@
 - App.tsx
 - server.py
 - pipeline_qwen.py
-- execute_task
 - package.json
+- schemas.py
 - QwenPipeline
 - compilerOptions
 - compilerOptions
 - ScrollableCards.tsx
+- get
 - GenerationProgressTracker
 - ApiPlaygroundTab.tsx
 - CiviGen — Generative Architectural Design Studio
@@ -32,6 +33,7 @@
 - google
 - google_genai
 - mimetypes
+- Image
 - requests
 - urllib_parse
 
@@ -48,45 +50,45 @@
 10. `PipelineManager` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `ProjectsPortalPageProps` --references--> `AssetRun`  [EXTRACTED]
-  ui/src/components/ProjectsPortalPage.tsx → ui/src/components/AssetFeedItem.tsx
 - `ProjectsDrawerProps` --references--> `ProjectItem`  [EXTRACTED]
   ui/src/components/ProjectsDrawer.tsx → ui/src/components/ProjectsPortalPage.tsx
-- `generate_from_json()` --calls--> `GenerateResponse`  [EXTRACTED]
+- `ProjectsPortalPageProps` --references--> `AssetRun`  [EXTRACTED]
+  ui/src/components/ProjectsPortalPage.tsx → ui/src/components/AssetFeedItem.tsx
+- `execute_task()` --calls--> `TaskGenerateResponse`  [EXTRACTED]
   MODEL SERVER/server.py → MODEL SERVER/schemas.py
-- `openai_chat_completions()` --calls--> `OpenAIChatCompletionChoice`  [EXTRACTED]
-  MODEL SERVER/server.py → MODEL SERVER/schemas.py
-- `openai_chat_completions()` --calls--> `OpenAIChatCompletionResponse`  [EXTRACTED]
-  MODEL SERVER/server.py → MODEL SERVER/schemas.py
+- `PipelineManager` --uses--> `QwenPipeline`  [INFERRED]
+  MODEL SERVER/pipeline_manager.py → MODEL SERVER/pipeline_qwen.py
+- `execute_task()` --calls--> `build_task_prompt()`  [EXTRACTED]
+  MODEL SERVER/server.py → MODEL SERVER/task_configs.py
 
 ## Import Cycles
 - None detected.
 
-## Communities (21 total, 10 thin omitted)
+## Communities (23 total, 11 thin omitted)
 
 ### Community 0 - "App.tsx"
-Cohesion: 0.07
-Nodes (43): lucide-react, react, react-dom, App(), ParsedRoute, parseUrlRoute(), TaskDef, AppsHubPage() (+35 more)
+Cohesion: 0.06
+Nodes (45): lucide-react, react, App(), ParsedRoute, parseUrlRoute(), TaskDef, AppsHubPage(), AppsHubPageProps (+37 more)
 
 ### Community 1 - "server.py"
-Cohesion: 0.06
-Nodes (53): base64, BaseModel, delete, fastapi, fastapi_middleware_cors, fastapi_responses, fastapi_staticfiles, get (+45 more)
+Cohesion: 0.07
+Nodes (61): base64, delete, fastapi, fastapi_middleware_cors, fastapi_responses, fastapi_staticfiles, GenerateJsonRequest, io (+53 more)
 
 ### Community 2 - "pipeline_qwen.py"
-Cohesion: 0.06
-Nodes (36): argparse, find_python(), get_local_ip(), main(), open_browser_delayed(), Dynamically locates the best Python interpreter with CUDA/PyTorch installed., CiviGen CLI Launcher Starts the CiviGen FastAPI model server and web studio,…, Detects local network IP for mobile & tablet Wi-Fi connectivity. (+28 more)
-
-### Community 3 - "execute_task"
-Cohesion: 0.09
-Nodes (40): GenerateJsonRequest, api_upscale_4k(), decode_b64_image(), encode_image_b64(), execute_task(), generate_from_json(), openai_chat_completions(), openai_image_edits() (+32 more)
-
-### Community 4 - "package.json"
 Cohesion: 0.07
-Nodes (27): agentation, @types/node, @types/react, @types/react-dom, typescript, vite, @vitejs/plugin-react, dependencies (+19 more)
+Nodes (32): argparse, find_python(), get_local_ip(), main(), open_browser_delayed(), Dynamically locates the best Python interpreter with CUDA/PyTorch installed., CiviGen CLI Launcher Starts the CiviGen FastAPI model server and web studio,…, Detects local network IP for mobile & tablet Wi-Fi connectivity. (+24 more)
+
+### Community 3 - "package.json"
+Cohesion: 0.07
+Nodes (28): agentation, react-dom, @types/node, @types/react, @types/react-dom, typescript, vite, @vitejs/plugin-react (+20 more)
+
+### Community 4 - "schemas.py"
+Cohesion: 0.13
+Nodes (24): BaseModel, ExampleItem, GenerateJsonRequest, OpenAIChatCompletionChoice, OpenAIChatCompletionRequest, OpenAIChatCompletionResponse, OpenAIChatMessage, OpenAIChatMessageContentItem (+16 more)
 
 ### Community 5 - "QwenPipeline"
 Cohesion: 0.11
-Nodes (11): PipelineManager, Any, Image, Executes image generation or multi-image editing with the chosen model. Thread-…, Returns real-time GPU telemetry and pipeline readiness., 4K Ultra-Sharp Latent Upscaling & Tile Refiner: 1. High-order Lanczos…, Any, Image (+3 more)
+Nodes (11): Image, PipelineManager, Any, Image, Executes image generation or multi-image editing with the chosen model. Thread-…, Returns real-time GPU telemetry and pipeline readiness., 4K Ultra-Sharp Latent Upscaling & Tile Refiner: 1. High-order Lanczos…, Any (+3 more)
 
 ### Community 6 - "compilerOptions"
 Cohesion: 0.11
@@ -100,33 +102,37 @@ Nodes (15): compilerOptions, allowImportingTsExtensions, isolatedModules, lib, m
 Cohesion: 0.14
 Nodes (13): ALL_ASPECT_RATIOS, ALL_LIGHTING_OPTIONS, ALL_STYLE_PRESETS, AspectRatioCards(), AspectRatioOption, LightingOption, LightingPresetCards(), RESOLUTION_OPTIONS (+5 more)
 
-### Community 10 - "ApiPlaygroundTab.tsx"
+### Community 9 - "get"
+Cohesion: 0.17
+Nodes (12): get, get_generation_progress(), get_telemetry(), list_examples(), list_tasks(), openai_list_models(), Returns GPU telemetry, VRAM status, and ready models., Returns real diffusion step percentage directly from ComfyUI sampler callback. (+4 more)
+
+### Community 11 - "ApiPlaygroundTab.tsx"
 Cohesion: 0.28
 Nodes (6): ApiPlaygroundTab(), TaskMeta, ShinyText(), ShinyTextProps, SpotlightCard(), SpotlightCardProps
 
-### Community 11 - "CiviGen — Generative Architectural Design Studio"
+### Community 12 - "CiviGen — Generative Architectural Design Studio"
 Cohesion: 0.25
 Nodes (7): 1. Backend Setup, 2. Frontend Setup, CiviGen — Generative Architectural Design Studio, 🚀 Getting Started, 🌟 Key Features, ⚖️ License, 📂 Repository Structure
 
 ## Knowledge Gaps
-- **83 isolated node(s):** `ParsedRoute`, `TaskDef`, `AppsHubPageProps`, `AssetFeedItemProps`, `BeforeAfterSliderProps` (+78 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 176 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **84 isolated node(s):** `AppsHubPageProps`, `BeforeAfterSliderProps`, `CustomSelectProps`, `CustomSliderProps`, `CustomSwitchProps` (+79 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 178 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **11 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `react` connect `App.tsx` to `ScrollableCards.tsx`, `ApiPlaygroundTab.tsx`, `package.json`, `BlurText.tsx`?**
+- **Why does `react` connect `App.tsx` to `ApiPlaygroundTab.tsx`, `ScrollableCards.tsx`, `package.json`, `BlurText.tsx`?**
   _High betweenness centrality (0.042) - this node is a cross-community bridge._
 - **Why does `QwenPipeline` connect `QwenPipeline` to `pipeline_qwen.py`?**
-  _High betweenness centrality (0.032) - this node is a cross-community bridge._
+  _High betweenness centrality (0.031) - this node is a cross-community bridge._
 - **Why does `PipelineManager` connect `QwenPipeline` to `server.py`, `pipeline_qwen.py`?**
-  _High betweenness centrality (0.032) - this node is a cross-community bridge._
-- **What connects `ParsedRoute`, `TaskDef`, `AppsHubPageProps` to the rest of the system?**
-  _83 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _High betweenness centrality (0.031) - this node is a cross-community bridge._
+- **What connects `AppsHubPageProps`, `BeforeAfterSliderProps`, `CustomSelectProps` to the rest of the system?**
+  _84 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `App.tsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.06554019457245264 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06433566433566433 - nodes in this community are weakly interconnected._
 - **Should `server.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.06262626262626263 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06768905341089371 - nodes in this community are weakly interconnected._
 - **Should `pipeline_qwen.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.06342494714587738 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07051282051282051 - nodes in this community are weakly interconnected._

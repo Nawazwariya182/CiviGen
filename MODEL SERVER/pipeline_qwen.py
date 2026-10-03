@@ -190,10 +190,18 @@ class QwenPipeline:
             except Exception:
                 ref_latents = []
 
-            # If partial denoise (< 1.0) is requested and input latent exists, start from the real image latent!
-            if denoise < 1.0 and len(ref_latents) > 0 and ref_latents[0] is not None:
-                latent = ref_latents[0]
-                logger.info(f"Using reference latent from input image for img2img edit at denoise={denoise}")
+            # If partial denoise (< 1.0) is requested, guarantee we start from the real image latent!
+            if denoise < 1.0:
+                if len(ref_latents) > 0 and ref_latents[0] is not None:
+                    latent = ref_latents[0]
+                else:
+                    # Explicit VAE encode of the input reference image for guaranteed structural preservation
+                    first_img = images[0].convert("RGB")
+                    np_im = np.array(first_img).astype(np.float32) / 255.0
+                    t_im = torch.from_numpy(np_im).unsqueeze(0)
+                    t_im = comfy.utils.common_upscale(t_im.movedim(-1, 1), width, height, "lanczos", "disabled").movedim(1, -1)
+                    latent = vae.encode(t_im)
+                logger.info(f"Using reference latent from input image for high-fidelity edit at denoise={denoise}")
             else:
                 latent = out_latent
 

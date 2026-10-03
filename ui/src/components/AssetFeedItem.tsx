@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { BeforeAfterSlider } from './BeforeAfterSlider';
 import { DotMatrixLoaderCard } from './DotMatrixLoaderCard';
+import { getPresetsForCategory, EditPreset } from '../presets/editPresets';
 
 export interface AssetRun {
   id: string;
@@ -48,6 +49,7 @@ interface AssetFeedItemProps {
   onOpenModal: (imgUrl: string, title: string, prompt: string) => void;
   onTriggerUpscale4k: (b64: string) => void;
   onUpdateAssetRun?: (updatedRun: AssetRun) => void;
+  onSendToStudio?: (imageUrl: string, promptText?: string, category?: string) => void;
 }
 
 export const AssetFeedItem: React.FC<AssetFeedItemProps> = ({
@@ -59,7 +61,8 @@ export const AssetFeedItem: React.FC<AssetFeedItemProps> = ({
   onToggleBookmark,
   onOpenModal,
   onTriggerUpscale4k,
-  onUpdateAssetRun
+  onUpdateAssetRun,
+  onSendToStudio
 }) => {
   const [localRun, setLocalRun] = useState<AssetRun>(run);
   const [viewMode, setViewMode] = useState<'grid' | 'compare'>('grid');
@@ -69,7 +72,9 @@ export const AssetFeedItem: React.FC<AssetFeedItemProps> = ({
   // In-place edit state
   const [isEditPopoverOpen, setIsEditPopoverOpen] = useState<boolean>(false);
   const [editInstruction, setEditInstruction] = useState<string>('');
-  const [editDenoise, setEditDenoise] = useState<number>(1.0);
+  const [editDenoise, setEditDenoise] = useState<number>(0.50);
+  const [selectedPresetId, setSelectedPresetId] = useState<string | null>(null);
+  const [presetFilter, setPresetFilter] = useState<'all' | 'lighting' | 'materials' | 'features' | 'refine'>('all');
   const [isEditing, setIsEditing] = useState<boolean>(false);
 
   const popoverRef = useRef<HTMLDivElement>(null);
@@ -495,8 +500,8 @@ export const AssetFeedItem: React.FC<AssetFeedItemProps> = ({
                   position: 'absolute',
                   top: 'calc(100% + 9px)',
                   right: 0,
-                  width: 380,
-                  maxWidth: '92vw',
+                  width: 440,
+                  maxWidth: '95vw',
                   background: '#FFFFFF',
                   borderRadius: 12,
                   border: '1px solid #E5E7EB',
@@ -537,7 +542,114 @@ export const AssetFeedItem: React.FC<AssetFeedItemProps> = ({
                 </div>
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-                  <label style={{ fontSize: 11, fontWeight: 600, color: '#374151' }}>Edit Instruction</label>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                    <label style={{ fontSize: 11, fontWeight: 700, color: '#374151' }}>Curated Re-Edit Presets</label>
+                    <span style={{ fontSize: 10, color: '#6B7280' }}>Click to apply prompt &amp; tuned denoise</span>
+                  </div>
+
+                  {/* Preset Filter Tabs */}
+                  <div style={{ display: 'flex', gap: 4, overflowX: 'auto', paddingBottom: 2 }}>
+                    {[
+                      { id: 'all', label: 'All' },
+                      { id: 'lighting', label: '🌅 Lighting' },
+                      { id: 'materials', label: '🪵 Materials' },
+                      { id: 'features', label: '🌿 Features' },
+                      { id: 'refine', label: '💎 Refine' }
+                    ].map((tab) => (
+                      <button
+                        key={tab.id}
+                        type="button"
+                        onClick={() => setPresetFilter(tab.id as any)}
+                        style={{
+                          padding: '3px 8px',
+                          fontSize: 10.5,
+                          fontWeight: presetFilter === tab.id ? 700 : 500,
+                          borderRadius: 9999,
+                          border: 'none',
+                          background: presetFilter === tab.id ? '#0F172A' : '#F1F5F9',
+                          color: presetFilter === tab.id ? '#FFFFFF' : '#475569',
+                          cursor: 'pointer',
+                          whiteSpace: 'nowrap',
+                          transition: 'all 120ms ease'
+                        }}
+                      >
+                        {tab.label}
+                      </button>
+                    ))}
+                  </div>
+
+                  {/* 2-Column Preset Cards */}
+                  <div
+                    style={{
+                      display: 'grid',
+                      gridTemplateColumns: '1fr 1fr',
+                      gap: 6,
+                      maxHeight: 155,
+                      overflowY: 'auto',
+                      paddingRight: 2
+                    }}
+                  >
+                    {getPresetsForCategory(localRun.category || localRun.taskId)
+                      .filter((p) => presetFilter === 'all' || p.group === presetFilter)
+                      .map((preset) => {
+                        const isPresetActive = selectedPresetId === preset.id;
+                        return (
+                          <button
+                            key={preset.id}
+                            type="button"
+                            onClick={() => {
+                              setSelectedPresetId(preset.id);
+                              setEditInstruction(preset.prompt);
+                              setEditDenoise(preset.denoise);
+                              textareaRef.current?.focus();
+                            }}
+                            style={{
+                              display: 'flex',
+                              flexDirection: 'column',
+                              alignItems: 'flex-start',
+                              gap: 2,
+                              padding: '6px 8px',
+                              background: isPresetActive ? '#EFF6FF' : '#F8FAFC',
+                              border: isPresetActive ? '1.5px solid #2563EB' : '1px solid #E2E8F0',
+                              borderRadius: 8,
+                              cursor: 'pointer',
+                              textAlign: 'left',
+                              transition: 'all 120ms ease'
+                            }}
+                          >
+                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+                              <span style={{ fontSize: 11, fontWeight: 700, color: isPresetActive ? '#1E40AF' : '#1E293B' }}>
+                                {preset.icon} {preset.label}
+                              </span>
+                              <span
+                                style={{
+                                  fontSize: 9,
+                                  fontWeight: 700,
+                                  padding: '1px 4px',
+                                  borderRadius: 4,
+                                  background: isPresetActive ? '#2563EB' : '#E2E8F0',
+                                  color: isPresetActive ? '#FFFFFF' : '#475569'
+                                }}
+                              >
+                                {preset.denoise}
+                              </span>
+                            </div>
+                            <span style={{ fontSize: 9.5, color: '#64748B', lineHeight: 1.25 }}>
+                              {preset.description}
+                            </span>
+                          </button>
+                        );
+                      })}
+                  </div>
+                </div>
+
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <label style={{ fontSize: 11, fontWeight: 700, color: '#374151' }}>Custom Edit Instruction</label>
+                    {selectedPresetId && (
+                      <span style={{ fontSize: 10, color: '#2563EB', fontWeight: 600 }}>Preset Applied</span>
+                    )}
+                  </div>
                   <textarea
                     ref={textareaRef}
                     value={editInstruction}
@@ -545,9 +657,9 @@ export const AssetFeedItem: React.FC<AssetFeedItemProps> = ({
                     placeholder="e.g., Add modern wooden louvers, change floor to Italian white marble..."
                     style={{
                       width: '100%',
-                      minHeight: 70,
+                      minHeight: 65,
                       padding: '8px 10px',
-                      fontSize: 12,
+                      fontSize: 11.5,
                       borderRadius: 8,
                       border: '1px solid #D1D5DB',
                       outline: 'none',
@@ -559,30 +671,36 @@ export const AssetFeedItem: React.FC<AssetFeedItemProps> = ({
 
                 <div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: 11, fontWeight: 600, color: '#4B5563', marginBottom: 6 }}>
-                    <span>Inpainting Precision</span>
-                    <span style={{ color: '#111827', fontFamily: 'monospace' }}>{editDenoise.toFixed(2)}</span>
+                    <span>Inpainting Precision (Denoise)</span>
+                    <span style={{ color: '#0F172A', fontWeight: 700, fontFamily: 'monospace' }}>
+                      {editDenoise.toFixed(2)} {editDenoise <= 0.40 ? '• Subtle Refine' : editDenoise <= 0.54 ? '• Balanced Retouch' : editDenoise <= 0.65 ? '• Element Mod' : '• Deep Redesign'}
+                    </span>
                   </div>
 
                   {/* Preset Pills */}
-                  <div style={{ display: 'flex', gap: 6, marginBottom: 8 }}>
+                  <div style={{ display: 'flex', gap: 5, marginBottom: 8 }}>
                     {[
-                      { label: 'Full Inpaint (1.0)', val: 1.0 },
-                      { label: 'Balanced (0.80)', val: 0.8 },
-                      { label: 'Subtle (0.60)', val: 0.6 }
+                      { label: 'Subtle (0.35)', val: 0.35 },
+                      { label: 'Retouch (0.50)', val: 0.50 },
+                      { label: 'Element Mod (0.58)', val: 0.58 },
+                      { label: 'Overhaul (0.72)', val: 0.72 }
                     ].map((p) => (
                       <button
                         key={p.val}
                         type="button"
-                        onClick={() => setEditDenoise(p.val)}
+                        onClick={() => {
+                          setEditDenoise(p.val);
+                          setSelectedPresetId(null);
+                        }}
                         style={{
                           flex: 1,
-                          padding: '4px 6px',
-                          fontSize: 10.5,
-                          fontWeight: editDenoise === p.val ? 700 : 500,
+                          padding: '4px 4px',
+                          fontSize: 10,
+                          fontWeight: Math.abs(editDenoise - p.val) < 0.02 ? 700 : 500,
                           borderRadius: 6,
-                          border: editDenoise === p.val ? '1px solid #111827' : '1px solid #E5E7EB',
-                          background: editDenoise === p.val ? '#111827' : '#F9FAFB',
-                          color: editDenoise === p.val ? '#FFFFFF' : '#4B5563',
+                          border: Math.abs(editDenoise - p.val) < 0.02 ? '1px solid #0F172A' : '1px solid #E2E8F0',
+                          background: Math.abs(editDenoise - p.val) < 0.02 ? '#0F172A' : '#F8FAFC',
+                          color: Math.abs(editDenoise - p.val) < 0.02 ? '#FFFFFF' : '#475569',
                           cursor: 'pointer',
                           transition: 'all 120ms ease'
                         }}
@@ -594,16 +712,20 @@ export const AssetFeedItem: React.FC<AssetFeedItemProps> = ({
 
                   <input
                     type="range"
-                    min={0.3}
-                    max={1.0}
-                    step={0.05}
+                    min={0.25}
+                    max={0.85}
+                    step={0.02}
                     value={editDenoise}
-                    onChange={(e) => setEditDenoise(parseFloat(e.target.value))}
-                    style={{ width: '100%', accentColor: '#111827', cursor: 'pointer' }}
+                    onChange={(e) => {
+                      setEditDenoise(parseFloat(e.target.value));
+                      setSelectedPresetId(null);
+                    }}
+                    style={{ width: '100%', accentColor: '#0F172A', cursor: 'pointer' }}
                   />
-                  <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 10, color: '#9CA3AF', marginTop: 2 }}>
-                    <span>Subtle Retouch</span>
-                    <span>Complete Inpainting (Recommended)</span>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 9.5, color: '#64748B', marginTop: 2 }}>
+                    <span>0.25 (Pristine Structure)</span>
+                    <span>0.50 (Recommended)</span>
+                    <span>0.85 (High Variance)</span>
                   </div>
                 </div>
 
@@ -633,35 +755,64 @@ export const AssetFeedItem: React.FC<AssetFeedItemProps> = ({
                   </div>
                 </div>
 
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 8, marginTop: 4, paddingTop: 10, borderTop: '1px solid #F3F4F6' }}>
-                  <button
-                    type="button"
-                    onClick={() => setIsEditPopoverOpen(false)}
-                    style={{ background: 'transparent', border: 'none', color: '#6B7280', fontSize: 12, fontWeight: 600, cursor: 'pointer', padding: '6px 12px' }}
-                  >
-                    Cancel
-                  </button>
-                  <button
-                    type="button"
-                    onClick={handleApplyEdit}
-                    disabled={!editInstruction.trim() || isEditing}
-                    style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: 6,
-                      background: editInstruction.trim() && !isEditing ? '#0F172A' : '#9CA3AF',
-                      color: '#FFFFFF',
-                      border: 'none',
-                      borderRadius: 7,
-                      padding: '7px 14px',
-                      fontSize: 12,
-                      fontWeight: 600,
-                      cursor: editInstruction.trim() && !isEditing ? 'pointer' : 'not-allowed'
-                    }}
-                  >
-                    <Sparkles size={13} />
-                    <span>Apply Edit</span>
-                  </button>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8, marginTop: 4, paddingTop: 10, borderTop: '1px solid #F3F4F6' }}>
+                  {onSendToStudio ? (
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setIsEditPopoverOpen(false);
+                        onSendToStudio(localRun.images[0]?.url || '', editInstruction || localRun.prompt, localRun.category);
+                      }}
+                      title="Load into Studio Sidebar with Presets & Parameters"
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: 5,
+                        background: '#F8FAFC',
+                        border: '1px solid #CBD5E1',
+                        borderRadius: 7,
+                        padding: '6px 11px',
+                        fontSize: 11,
+                        fontWeight: 600,
+                        color: '#334155',
+                        cursor: 'pointer',
+                        transition: 'all 120ms ease'
+                      }}
+                    >
+                      <Sparkles size={11} style={{ color: '#6366F1' }} />
+                      <span>Open in Studio</span>
+                    </button>
+                  ) : <div />}
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                    <button
+                      type="button"
+                      onClick={() => setIsEditPopoverOpen(false)}
+                      style={{ background: 'transparent', border: 'none', color: '#6B7280', fontSize: 12, fontWeight: 600, cursor: 'pointer', padding: '6px 12px' }}
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      type="button"
+                      onClick={handleApplyEdit}
+                      disabled={!editInstruction.trim() || isEditing}
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: 6,
+                        background: editInstruction.trim() && !isEditing ? '#0F172A' : '#9CA3AF',
+                        color: '#FFFFFF',
+                        border: 'none',
+                        borderRadius: 7,
+                        padding: '7px 14px',
+                        fontSize: 12,
+                        fontWeight: 600,
+                        cursor: editInstruction.trim() && !isEditing ? 'pointer' : 'not-allowed'
+                      }}
+                    >
+                      <Sparkles size={13} />
+                      <span>Apply Edit</span>
+                    </button>
+                  </div>
                 </div>
               </div>
             )}

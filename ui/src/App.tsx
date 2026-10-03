@@ -56,6 +56,7 @@ import {
   TASK_EXAMPLE_IMAGES,
   TASK_INPUT_IMAGES
 } from './taskConstants';
+import { getPresetsForCategory, EditPreset } from './presets/editPresets';
 
 interface TaskDef {
   id: string;
@@ -219,6 +220,9 @@ export function App() {
   // Prompts
   const [prompt, setPrompt] = useState<string>('');
   const [isEnhancing, setIsEnhancing] = useState<boolean>(false);
+  const [activePresetId, setActivePresetId] = useState<string | null>(null);
+  const [presetTypeFilter, setPresetTypeFilter] = useState<'all' | 'lighting' | 'materials' | 'features' | 'refine'>('all');
+  const [isPresetDrawerOpen, setIsPresetDrawerOpen] = useState<boolean>(true);
 
   // Reference Images
   const [referenceImages, setReferenceImages] = useState<Array<{ id: string; name: string; base64: string; width?: number; height?: number }>>([]);
@@ -980,6 +984,48 @@ export function App() {
     setActiveTab('assets');
   };
 
+  // Load asset as reference in Studio for re-editing with calibrated presets
+  const handleSendToStudio = (imageUrl: string, promptText?: string, cat?: string) => {
+    const img = new Image();
+    img.onload = () => {
+      const detected = detectImageRatio(img);
+      setDetectedRatio(detected);
+      setReferenceImages([{
+        id: `ref_${Date.now()}`,
+        name: 'Asset Reference',
+        base64: imageUrl,
+        width: img.width,
+        height: img.height
+      }]);
+    };
+    img.src = imageUrl;
+
+    const c = cat || (selectedTaskId.startsWith('arch') ? 'architecture' : selectedTaskId.startsWith('interior') ? 'interior' : 'furniture');
+    if (c === 'architecture') {
+      setSelectedTaskId('arch_image_edit');
+      setDenoise(0.52);
+    } else if (c === 'interior') {
+      setSelectedTaskId('interior_image_edit');
+      setDenoise(0.52);
+    } else {
+      setSelectedTaskId('furniture_edit');
+      setDenoise(0.48);
+    }
+
+    if (promptText) {
+      setPrompt(promptText);
+    }
+    setCurrentView('studio');
+    setActiveTab('assets');
+    setIsSidebarCollapsed(false);
+  };
+
+  const handleSelectPreset = (p: EditPreset) => {
+    setActivePresetId(p.id);
+    setPrompt(p.prompt);
+    setDenoise(p.denoise);
+  };
+
   // Cycle Grid Layout on Grid Button click
   const handleCycleGrid = () => {
     setZoomLevel((prev) => (prev >= 5 ? 1 : prev + 1));
@@ -1093,6 +1139,19 @@ export function App() {
       ];
     }
   }, [currentTaskCategory]);
+
+  const categoryPresets = React.useMemo(() => {
+    return getPresetsForCategory(currentTaskCategory as 'architecture' | 'interior' | 'furniture');
+  }, [currentTaskCategory]);
+
+  const filteredPresets = React.useMemo(() => {
+    if (presetTypeFilter === 'all') return categoryPresets;
+    return categoryPresets.filter((p) => p.group === presetTypeFilter);
+  }, [categoryPresets, presetTypeFilter]);
+
+  const activePreset = React.useMemo(() => {
+    return categoryPresets.find((p) => p.id === activePresetId);
+  }, [categoryPresets, activePresetId]);
 
   // Ratio Options
   const ratioOptions: SelectOption[] = [
@@ -2145,8 +2204,197 @@ export function App() {
                   </div>
                 </div>
               ) : (
-                <div className="form-group">
-                  <label className="form-label" style={{ fontSize: 12, fontWeight: 600, color: '#111827' }}>Prompt</label>
+                <>
+                  {/* Re-Edit & Style Presets Selector */}
+                  <div className="form-group" style={{ marginBottom: 12 }}>
+                    <div
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
+                        marginBottom: 6
+                      }}
+                    >
+                      <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                        <label className="form-label" style={{ fontSize: 12, fontWeight: 600, color: '#111827', margin: 0, display: 'flex', alignItems: 'center', gap: 5 }}>
+                          <Sparkles size={13} style={{ color: '#4F46E5' }} /> Re-Edit Presets
+                        </label>
+                        <span
+                          style={{
+                            fontSize: 10,
+                            fontWeight: 600,
+                            background: '#EEF2FF',
+                            color: '#4F46E5',
+                            padding: '1px 6px',
+                            borderRadius: 4,
+                            border: '1px solid #E0E7FF'
+                          }}
+                        >
+                          Calibrated Denoise
+                        </span>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => setIsPresetDrawerOpen(!isPresetDrawerOpen)}
+                        style={{
+                          background: 'transparent',
+                          border: 'none',
+                          color: '#6B7280',
+                          fontSize: 11,
+                          fontWeight: 600,
+                          cursor: 'pointer',
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: 3,
+                          padding: 0
+                        }}
+                      >
+                        <span>{isPresetDrawerOpen ? 'Collapse' : 'Browse Presets'}</span>
+                        <ChevronDown
+                          size={12}
+                          style={{
+                            transform: isPresetDrawerOpen ? 'rotate(180deg)' : 'none',
+                            transition: 'transform 150ms ease'
+                          }}
+                        />
+                      </button>
+                    </div>
+
+                    {isPresetDrawerOpen && (
+                      <div
+                        style={{
+                          background: '#F8FAFC',
+                          border: '1px solid #E2E8F0',
+                          borderRadius: 10,
+                          padding: 8,
+                          display: 'flex',
+                          flexDirection: 'column',
+                          gap: 8
+                        }}
+                      >
+                        {/* Filter Chips */}
+                        <div style={{ display: 'flex', gap: 4, overflowX: 'auto', paddingBottom: 2 }}>
+                          {(['all', 'lighting', 'materials', 'features', 'refine'] as const).map((cat) => (
+                            <button
+                              key={cat}
+                              type="button"
+                              onClick={() => setPresetTypeFilter(cat)}
+                              style={{
+                                padding: '2px 8px',
+                                fontSize: 10.5,
+                                fontWeight: presetTypeFilter === cat ? 700 : 500,
+                                background: presetTypeFilter === cat ? '#0F172A' : '#FFFFFF',
+                                color: presetTypeFilter === cat ? '#FFFFFF' : '#475569',
+                                border: presetTypeFilter === cat ? '1px solid #0F172A' : '1px solid #E2E8F0',
+                                borderRadius: 6,
+                                cursor: 'pointer',
+                                whiteSpace: 'nowrap'
+                              }}
+                            >
+                              {cat === 'all' ? 'All' : cat === 'lighting' ? '💡 Lighting' : cat === 'materials' ? '🪵 Materials' : cat === 'features' ? '🏛️ Elements' : '✨ Polish'}
+                            </button>
+                          ))}
+                        </div>
+
+                        {/* Presets Grid */}
+                        <div
+                          style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fill, minmax(130px, 1fr))',
+                            gap: 6,
+                            maxHeight: 180,
+                            overflowY: 'auto',
+                            paddingRight: 2
+                          }}
+                        >
+                          {filteredPresets.map((p) => {
+                            const isActive = activePresetId === p.id;
+                            return (
+                              <div
+                                key={p.id}
+                                onClick={() => {
+                                  handleSelectPreset(p);
+                                  if (referenceImages.length > 0) {
+                                    if (p.category === 'architecture' && selectedTaskId === 'arch_text_to_arch') {
+                                      setSelectedTaskId('arch_image_edit');
+                                    } else if (p.category === 'furniture' && selectedTaskId === 'furniture_text_to_render') {
+                                      setSelectedTaskId('furniture_edit');
+                                    }
+                                  }
+                                }}
+                                style={{
+                                  background: isActive ? '#EFF6FF' : '#FFFFFF',
+                                  border: isActive ? '1.5px solid #2563EB' : '1px solid #E2E8F0',
+                                  borderRadius: 8,
+                                  padding: '6px 8px',
+                                  cursor: 'pointer',
+                                  display: 'flex',
+                                  flexDirection: 'column',
+                                  gap: 3,
+                                  transition: 'all 120ms ease'
+                                }}
+                              >
+                                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 4 }}>
+                                  <span style={{ fontSize: 13 }}>{p.icon}</span>
+                                  <span
+                                    style={{
+                                      fontSize: 9.5,
+                                      fontFamily: 'var(--font-mono, monospace)',
+                                      fontWeight: 700,
+                                      background: isActive ? '#DBEAFE' : '#F1F5F9',
+                                      color: isActive ? '#1D4ED8' : '#475569',
+                                      padding: '1px 4px',
+                                      borderRadius: 4
+                                    }}
+                                    title={`Denoise calibrated to ${p.denoise}`}
+                                  >
+                                    {p.denoise}
+                                  </span>
+                                </div>
+                                <span style={{ fontSize: 11, fontWeight: 600, color: '#1E293B', lineHeight: 1.25 }}>
+                                  {p.label}
+                                </span>
+                                <span style={{ fontSize: 9.5, color: '#64748B', lineHeight: 1.2, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                                  {p.description}
+                                </span>
+                              </div>
+                            );
+                          })}
+                        </div>
+
+                        {activePreset && (
+                          <div
+                            style={{
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'space-between',
+                              background: '#EFF6FF',
+                              border: '1px solid #BFDBFE',
+                              borderRadius: 6,
+                              padding: '4px 8px',
+                              fontSize: 10.5,
+                              color: '#1E40AF'
+                            }}
+                          >
+                            <span>Active Preset: <strong>{activePreset.label}</strong> (Denoise: {activePreset.denoise})</span>
+                            <button
+                              type="button"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setActivePresetId(null);
+                              }}
+                              style={{ background: 'transparent', border: 'none', color: '#6B7280', cursor: 'pointer', padding: 0 }}
+                            >
+                              <X size={12} />
+                            </button>
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="form-group">
+                    <label className="form-label" style={{ fontSize: 12, fontWeight: 600, color: '#111827' }}>Prompt</label>
                   <div className="prompt-wrapper" style={{ position: 'relative', width: '100%' }}>
                     <textarea
                       className="prompt-textarea"
@@ -2194,7 +2442,8 @@ export function App() {
                     </button>
                   </div>
                 </div>
-              )}
+              </>
+            )}
 
               {/* Aspect Ratio 4-Column Cards */}
               <AspectRatioCards
@@ -2274,6 +2523,11 @@ export function App() {
                       step={0.05}
                       onChange={(val) => setDenoise(val)}
                     />
+                    <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 9.5, color: '#64748B', marginTop: -2, marginBottom: 8, padding: '0 2px' }}>
+                      <span title="Denoise 0.10 - 0.40: Preserves exact structural lines, sharpens micro-textures">0.35 Polish</span>
+                      <span title="Denoise 0.45 - 0.55: Calibrated for materials, textures, and lighting">0.50 Re-Edit</span>
+                      <span title="Denoise 0.70 - 1.00: High structural variation / redesign">0.85 Overhaul</span>
+                    </div>
 
                     <div className="form-group" style={{ marginTop: 4 }}>
                       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 4 }}>
@@ -2484,6 +2738,7 @@ export function App() {
                     onOpenModal={(url, title, promptText) => setModalImage({ url, title, prompt: promptText })}
                     onTriggerUpscale4k={handleTriggerUpscale4k}
                     onUpdateAssetRun={handleUpdateAssetRun}
+                    onSendToStudio={handleSendToStudio}
                   />
                 ))
               )}
