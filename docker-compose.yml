@@ -1,0 +1,24 @@
+services:
+  civigen:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: civigen:latest
+    container_name: civigen-studio
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - CIVIGEN_LOW_VRAM=0 # Set to 1 for 6GB-8GB GPUs
+    volumes:
+      # Mount models folder from host into container (no need to duplicate 17GB weights inside image)
+      - ./MODELS:/app/MODELS
+      # Persist generated images on host machine
+      - "./MODEL SERVER/outputs:/app/MODEL SERVER/outputs"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]

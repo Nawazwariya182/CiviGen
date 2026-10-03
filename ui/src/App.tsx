@@ -42,7 +42,7 @@ import { TaskSelectionPage } from './components/TaskSelectionPage';
 import { LibraryPage } from './components/LibraryPage';
 import { ProjectsDrawer } from './components/ProjectsDrawer';
 import { DotMatrixLoaderCard } from './components/DotMatrixLoaderCard';
-import { QwenLogo, FluxLogo } from './components/ModelLogos';
+import { QwenLogo } from './components/ModelLogos';
 import {
   AspectRatioCards,
   ResolutionCards,
@@ -998,14 +998,8 @@ export function App() {
     {
       value: 'qwen',
       label: 'Qwen Image 2.1 (8B DiT)',
-      badge: 'Alibaba / 8B',
+      badge: 'Alibaba / 8B DiT',
       icon: <QwenLogo size={18} />
-    },
-    {
-      value: 'flux',
-      label: 'Flux.2 Klein (4B Flow-Matching)',
-      badge: 'BFL / 4B',
-      icon: <FluxLogo size={18} />
     }
   ];
 
@@ -2382,7 +2376,7 @@ export function App() {
               {/* Halftone Dot Matrix Wave Loader Card while generating */}
               {isGenerating && (
                 <DotMatrixLoaderCard
-                  modelName={model === 'qwen' ? 'Qwen Image 2.1 (8B DiT)' : 'Flux.2 Klein (4B Flow)'}
+                  modelName="Qwen Image 2.1 (8B DiT)"
                   taskCode={TASK_SHORT_CODES[selectedTaskId] || 'GEN'}
                   prompt={prompt}
                   onCancel={handleStopGeneration}

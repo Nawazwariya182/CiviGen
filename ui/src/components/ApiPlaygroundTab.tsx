@@ -73,7 +73,7 @@ export const ApiPlaygroundTab: React.FC = () => {
 
     if (apiStyle === 'openai_chat') {
       const payload = {
-        model: task.default_model === 'flux' ? 'flux-2-klein' : 'qwen-image-2.1',
+        model: 'qwen-image-2.1',
         task: task.id,
         messages: [
           {
@@ -107,7 +107,7 @@ export const ApiPlaygroundTab: React.FC = () => {
       setRequestJson(JSON.stringify(payload, null, 2));
     } else if (apiStyle === 'openai_image') {
       const payload = {
-        model: task.default_model === 'flux' ? 'flux-2-klein' : 'qwen-image-2.1',
+        model: 'qwen-image-2.1',
         prompt: task.example_prompt,
         n: 1,
         size: `${task.default_width}x${task.default_height}`,
@@ -221,7 +221,7 @@ client = OpenAI(
 
 # Calling task: ${currentTask?.title || 'Architecture'}
 response = client.chat.completions.create(
-    model="${currentTask?.default_model === 'flux' ? 'flux-2-klein' : 'qwen-image-2.1'}",
+    model="qwen-image-2.1",
     messages=[
         {"role": "user", "content": "${currentTask?.example_prompt || 'make a luxury villa'}"}
     ],
@@ -281,7 +281,7 @@ console.log("Render result:", data);`;
               Architecture, Interior & Furniture API Console
             </h2>
             <p style={{ fontSize: 13, color: '#6B7280', marginTop: 4 }}>
-              Execute requests against local Qwen Image 2.1 & Flux.2 Klein engines using OpenAI SDK, cURL, or native JSON endpoints.
+              Execute requests against local Qwen Image 2.1 (8B DiT) engine using OpenAI SDK, cURL, or native JSON endpoints.
             </p>
           </div>
 

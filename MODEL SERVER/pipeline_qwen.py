@@ -14,8 +14,34 @@ import torch
 import numpy as np
 from PIL import Image
 
-# Ensure ComfyUI core modules can be resolved
-COMFY_PATH = r"C:\Users\Shahnawaz Wariya\Documents\ComfyUI\ComfyUI_core"
+# Dynamic resolution of ComfyUI core modules without hardcoding user folders
+def find_comfyui_path() -> str:
+    env_path = os.environ.get("COMFYUI_PATH")
+    if env_path and os.path.exists(env_path):
+        return env_path
+    
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    candidates = [
+        os.path.join(base_dir, "ComfyUI"),
+        os.path.join(base_dir, "ComfyUI_core"),
+        os.path.join(base_dir, "engine", "ComfyUI"),
+        os.path.expanduser("~/Documents/ComfyUI/ComfyUI_core"),
+        os.path.expanduser("~/Documents/ComfyUI"),
+        os.path.expanduser("~/ComfyUI"),
+        r"C:\Users\Shahnawaz Wariya\Documents\ComfyUI\ComfyUI_core",
+        r"C:\Users\Shahnawaz Wariya\Documents\ComfyUI",
+    ]
+    for c in candidates:
+        if c and os.path.exists(c) and os.path.exists(os.path.join(c, "comfy")):
+            return c
+        elif c and os.path.exists(c) and os.path.exists(os.path.join(c, "ComfyUI_core", "comfy")):
+            return os.path.join(c, "ComfyUI_core")
+    for c in candidates:
+        if c and os.path.exists(c):
+            return c
+    return os.path.join(base_dir, "ComfyUI")
+
+COMFY_PATH = find_comfyui_path()
 if COMFY_PATH not in sys.path:
     sys.path.insert(0, COMFY_PATH)
 
@@ -34,6 +60,8 @@ QWEN_DIR = os.path.join(BASE_DIR, "MODELS", "Qwen")
 QWEN_UNET_PATH = os.path.join(QWEN_DIR, "qwen_image_2.1_int8_convrot.safetensors")
 QWEN_CLIP_PATH = os.path.join(QWEN_DIR, "qwen3vl_8b_int8_convrot.safetensors")
 QWEN_VAE_PATH = os.path.join(QWEN_DIR, "qwen_image_2.1_vae_bf16.safetensors")
+
+LOW_VRAM_MODE = os.environ.get("CIVIGEN_LOW_VRAM", "0").lower() in ("1", "true", "yes")
 
 
 class QwenPipeline:
@@ -162,6 +190,17 @@ class QwenPipeline:
 
         # Free Text Encoder from GPU before sampling to conserve VRAM
         comfy.model_management.soft_empty_cache()
+        if LOW_VRAM_MODE or os.environ.get("CIVIGEN_LOW_VRAM", "0").lower() in ("1", "true", "yes"):
+            logger.info("[LOW-VRAM] Aggressive CPU offload: purging text-vision encoder from VRAM...")
+            self.clip = None
+            try:
+                comfy.model_management.unload_all_models()
+                comfy.model_management.soft_empty_cache()
+                if torch.cuda.is_available():
+                    torch.cuda.empty_cache()
+                    torch.cuda.ipc_collect()
+            except Exception as e:
+                logger.warning(f"Low-VRAM offload notice: {e}")
 
         # Step 2: Sampling with Qwen DiT
         model = self._load_unet()

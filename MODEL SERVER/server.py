@@ -888,8 +888,45 @@ def free_port(port: int = 8000):
         logger.warning(f"Port conflict auto-check notice: {e}")
 
 
+def get_local_ip() -> str:
+    """Detects local network IP for mobile & tablet access over Wi-Fi."""
+    import socket
+    try:
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        s.connect(("8.8.8.8", 80))
+        ip = s.getsockname()[0]
+        s.close()
+        return ip
+    except Exception:
+        return "127.0.0.1"
+
+
 if __name__ == "__main__":
-    free_port(8000)
-    logger.info("Starting AI Architecture & Multi-Model Server on http://0.0.0.0:8000...")
-    uvicorn.run(app, host="0.0.0.0", port=8000, log_level="info")
+    import argparse
+    parser = argparse.ArgumentParser(description="CiviGen Architectural Generative Studio (Qwen Image 2.1 8B DiT)")
+    parser.add_argument("--host", default="0.0.0.0", help="Host IP to bind (default: 0.0.0.0 for LAN access)")
+    parser.add_argument("--port", type=int, default=8000, help="Port to bind (default: 8000)")
+    parser.add_argument("--low-vram", action="store_true", help="Enable aggressive 6GB-8GB VRAM offloading")
+    args = parser.parse_args()
+
+    if args.low_vram:
+        os.environ["CIVIGEN_LOW_VRAM"] = "1"
+        logger.info("[LOW-VRAM] Aggressive CPU memory offloading enabled for 6GB-8GB GPUs.")
+
+    free_port(args.port)
+    local_ip = get_local_ip()
+    is_low_vram = os.environ.get("CIVIGEN_LOW_VRAM", "0").lower() in ("1", "true", "yes")
+
+    print("\n" + "=" * 70)
+    print("  CIVIGEN — Generative Architectural Design Studio (Qwen 8B DiT)")
+    print("=" * 70)
+    print(f"  • Desktop Browser:   http://localhost:{args.port}")
+    if args.host == "0.0.0.0":
+        print(f"  • Mobile & Tablet:   http://{local_ip}:{args.port}")
+        print("    (Open on any phone or tablet connected to your Wi-Fi!)")
+    print(f"  • Memory Mode:       {'Aggressive 6GB-8GB Offloading' if is_low_vram else 'Standard FP8/INT8 Execution'}")
+    print(f"  • API Playground:    http://localhost:{args.port}/api")
+    print("=" * 70 + "\n")
+
+    uvicorn.run(app, host=args.host, port=args.port, log_level="info")
 

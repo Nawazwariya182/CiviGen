@@ -19,7 +19,6 @@ if SERVER_DIR not in sys.path:
     sys.path.insert(0, SERVER_DIR)
 
 from pipeline_qwen import QwenPipeline
-from pipeline_flux import FluxPipeline
 from prompt_enhancer import enhance_prompt, DEFAULT_NEGATIVE_PROMPT
 
 logger = logging.getLogger("PipelineManager")
@@ -41,10 +40,9 @@ class PipelineManager:
             return
         
         self.qwen = QwenPipeline()
-        self.flux = FluxPipeline()
         self.active_lock = threading.Lock()
         self._initialized = True
-        logger.info("PipelineManager initialized with Qwen and Flux pipelines.")
+        logger.info("PipelineManager initialized with Qwen Image 2.1 (8B DiT) pipeline.")
 
     def tile_refine_4k(self, img: Image.Image, target_w: Optional[int] = None, target_h: Optional[int] = None) -> Image.Image:
         """
@@ -121,43 +119,20 @@ class PipelineManager:
             else:
                 prompt_used = prompt.strip()
 
-            target_model = model.lower()
-            if "flux" in target_model:
-                if self.qwen.model is not None or self.qwen.clip is not None:
-                    logger.info("Switching to Flux: unloading Qwen to stay within system RAM limit...")
-                    self.qwen.unload_all()
-                out_img, seed_used, meta = self.flux.generate(
-                    prompt=prompt_used,
-                    negative_prompt=effective_neg,
-                    images=images,
-                    width=width,
-                    height=height,
-                    steps=steps,
-                    cfg=cfg,
-                    denoise=denoise,
-                    seed=seed,
-                    sampler_name=sampler_name,
-                    scheduler=scheduler,
-                    tiled_vae=tiled_vae
-                )
-            else:
-                if self.flux.model is not None or self.flux.clip is not None:
-                    logger.info("Switching to Qwen: unloading Flux to stay within system RAM limit...")
-                    self.flux.unload_all()
-                out_img, seed_used, meta = self.qwen.generate(
-                    prompt=prompt_used,
-                    negative_prompt=effective_neg,
-                    images=images,
-                    width=width,
-                    height=height,
-                    steps=steps,
-                    cfg=cfg,
-                    denoise=denoise,
-                    seed=seed,
-                    sampler_name=sampler_name,
-                    scheduler=scheduler,
-                    tiled_vae=tiled_vae
-                )
+            out_img, seed_used, meta = self.qwen.generate(
+                prompt=prompt_used,
+                negative_prompt=effective_neg,
+                images=images,
+                width=width,
+                height=height,
+                steps=steps,
+                cfg=cfg,
+                denoise=denoise,
+                seed=seed,
+                sampler_name=sampler_name,
+                scheduler=scheduler,
+                tiled_vae=tiled_vae
+            )
 
             # Optional 4K refinement pass
             if upscale_4k:
@@ -188,6 +163,8 @@ class PipelineManager:
             reserved_vram = round(torch.cuda.memory_reserved(0) / (1024**3), 2)
             free_vram = round(total_vram - reserved_vram, 2)
 
+        low_vram = os.environ.get("CIVIGEN_LOW_VRAM", "0").lower() in ("1", "true", "yes")
+
         return {
             "status": "ready",
             "cuda_available": cuda_ok,
@@ -196,6 +173,7 @@ class PipelineManager:
             "vram_allocated_gb": allocated_vram,
             "vram_reserved_gb": reserved_vram,
             "vram_free_gb": free_vram,
-            "models_ready": ["Qwen Image 2.1 (8B)", "Flux.2 Klein (4B)"],
+            "low_vram_mode": low_vram,
+            "models_ready": ["Qwen Image 2.1 (8B DiT)"],
             "tasks_count": 12
         }

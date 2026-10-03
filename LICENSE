@@ -1,0 +1,27 @@
+CIVIGEN SOURCE-AVAILABLE & NON-COMMERCIAL LICENSE
+Version 1.0 (Based on PolyForm Noncommercial 1.0.0)
+
+Copyright (c) 2026 Shahnawaz Wariya and CiviGen Contributors. All Rights Reserved.
+
+TERMS AND CONDITIONS
+
+1. PERMITTED USE (FREE FOR INDIVIDUALS & RESEARCH)
+Subject to the terms and restrictions below, each contributor grants you a perpetual, worldwide, non-exclusive, no-charge, royalty-free copyright license to reproduce, prepare derivative works of, publicly display, publicly perform, and run this software for Noncommercial Purposes.
+
+"Noncommercial Purpose" means any use of the software that is not intended to produce a commercial advantage or financial gain, including:
+- Personal, educational, academic, and non-profit research use.
+- Independent architectural, interior design, and visualization experimentation by individuals.
+- Free local deployment and multi-device private testing on personal hardware.
+
+2. COMMERCIAL RESTRICTIONS (CORPORATE CLOSED-SOURCE BAN)
+Any commercial use by corporations, companies, businesses, or commercial entities—specifically including, but not limited to:
+- Incorporating CiviGen or any portion of its code into closed-source, proprietary commercial products or services;
+- Deploying CiviGen as a paid commercial Software-as-a-Service (SaaS) or hosted API backend;
+- Distributing CiviGen as part of a paid commercial software package or bundle;
+is STRICTLY PROHIBITED without a separate, explicit commercial license agreement executed directly with the copyright holders.
+
+3. NO UNAUTHORIZED CLOSED-SOURCE DERIVATIVES
+You may not rebrand, repackage, or distribute modified, closed-source forks or derivatives of this software. Any public distribution of this software or its source code must retain this License in full, along with all original copyright notices and contributor attributions.
+
+4. DISCLAIMER OF WARRANTY & LIMITATION OF LIABILITY
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

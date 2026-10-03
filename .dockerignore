@@ -1,0 +1,13 @@
+.git
+.venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+Thumbs.db
+node_modules
+ui/node_modules
+MODELS/
+MODEL SERVER/outputs/
+*.bat
