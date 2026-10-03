@@ -145,7 +145,20 @@ class QwenPipeline:
             latent_w = width // 16
             latent = torch.zeros([1, latent_channels, latent_h, latent_w], device=comfy.model_management.intermediate_device())
         else:
-            latent = out_latent
+            # Check if reference latents were generated during conditioning
+            ref_latents = []
+            try:
+                if len(positive) > 0 and len(positive[0]) > 1:
+                    ref_latents = positive[0][1].get("reference_latents", [])
+            except Exception:
+                ref_latents = []
+
+            # If partial denoise (< 1.0) is requested and input latent exists, start from the real image latent!
+            if denoise < 1.0 and len(ref_latents) > 0 and ref_latents[0] is not None:
+                latent = ref_latents[0]
+                logger.info(f"Using reference latent from input image for img2img edit at denoise={denoise}")
+            else:
+                latent = out_latent
 
         # Free Text Encoder from GPU before sampling to conserve VRAM
         comfy.model_management.soft_empty_cache()

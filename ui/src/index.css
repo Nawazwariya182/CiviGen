@@ -90,6 +90,7 @@ button, input, select, textarea {
 
 /* Top Navigation Bar */
 .top-nav {
+  position: relative;
   height: 56px;
   min-height: 56px;
   max-height: 56px;
@@ -134,6 +135,9 @@ button, input, select, textarea {
 }
 
 .nav-tabs {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
   background: #F1F5F9;
@@ -141,6 +145,7 @@ button, input, select, textarea {
   border-radius: 9px;
   gap: 3px;
   border: 1px solid #E2E8F0;
+  z-index: 25;
 }
 
 .nav-tab-btn {

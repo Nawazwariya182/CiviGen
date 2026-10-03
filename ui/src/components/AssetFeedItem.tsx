@@ -69,7 +69,7 @@ export const AssetFeedItem: React.FC<AssetFeedItemProps> = ({
   // In-place edit state
   const [isEditPopoverOpen, setIsEditPopoverOpen] = useState<boolean>(false);
   const [editInstruction, setEditInstruction] = useState<string>('');
-  const [editDenoise, setEditDenoise] = useState<number>(0.80);
+  const [editDenoise, setEditDenoise] = useState<number>(1.0);
   const [isEditing, setIsEditing] = useState<boolean>(false);
 
   const popoverRef = useRef<HTMLDivElement>(null);
@@ -216,6 +216,9 @@ export const AssetFeedItem: React.FC<AssetFeedItemProps> = ({
         editTaskTitle = 'Furniture Design Image Edit';
       }
 
+      const imgWidth = currentImg.width || 1024;
+      const imgHeight = currentImg.height || 1024;
+
       const reqBody = {
         task_id: editTaskId,
         prompt: editInstruction.trim(),
@@ -223,7 +226,9 @@ export const AssetFeedItem: React.FC<AssetFeedItemProps> = ({
         image_urls: currentImg.url ? [currentImg.url] : [],
         project_id: localRun.projectId || 'PRJ-1001',
         denoise: editDenoise,
-        steps: 24,
+        width: imgWidth,
+        height: imgHeight,
+        steps: 25,
         model: 'qwen'
       };
 
@@ -553,19 +558,53 @@ export const AssetFeedItem: React.FC<AssetFeedItemProps> = ({
                 </div>
 
                 <div>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 11, fontWeight: 600, color: '#4B5563', marginBottom: 4 }}>
-                    <span>Denoise Strength</span>
-                    <span style={{ color: '#111827' }}>{editDenoise.toFixed(2)}</span>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: 11, fontWeight: 600, color: '#4B5563', marginBottom: 6 }}>
+                    <span>Inpainting Precision</span>
+                    <span style={{ color: '#111827', fontFamily: 'monospace' }}>{editDenoise.toFixed(2)}</span>
                   </div>
+
+                  {/* Preset Pills */}
+                  <div style={{ display: 'flex', gap: 6, marginBottom: 8 }}>
+                    {[
+                      { label: 'Full Inpaint (1.0)', val: 1.0 },
+                      { label: 'Balanced (0.80)', val: 0.8 },
+                      { label: 'Subtle (0.60)', val: 0.6 }
+                    ].map((p) => (
+                      <button
+                        key={p.val}
+                        type="button"
+                        onClick={() => setEditDenoise(p.val)}
+                        style={{
+                          flex: 1,
+                          padding: '4px 6px',
+                          fontSize: 10.5,
+                          fontWeight: editDenoise === p.val ? 700 : 500,
+                          borderRadius: 6,
+                          border: editDenoise === p.val ? '1px solid #111827' : '1px solid #E5E7EB',
+                          background: editDenoise === p.val ? '#111827' : '#F9FAFB',
+                          color: editDenoise === p.val ? '#FFFFFF' : '#4B5563',
+                          cursor: 'pointer',
+                          transition: 'all 120ms ease'
+                        }}
+                      >
+                        {p.label}
+                      </button>
+                    ))}
+                  </div>
+
                   <input
                     type="range"
-                    min={0.2}
+                    min={0.3}
                     max={1.0}
                     step={0.05}
                     value={editDenoise}
                     onChange={(e) => setEditDenoise(parseFloat(e.target.value))}
                     style={{ width: '100%', accentColor: '#111827', cursor: 'pointer' }}
                   />
+                  <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 10, color: '#9CA3AF', marginTop: 2 }}>
+                    <span>Subtle Retouch</span>
+                    <span>Complete Inpainting (Recommended)</span>
+                  </div>
                 </div>
 
                 <div>

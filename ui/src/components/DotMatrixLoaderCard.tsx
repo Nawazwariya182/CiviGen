@@ -25,24 +25,28 @@ export const DotMatrixLoaderCard: React.FC<DotMatrixLoaderCardProps> = ({ onCanc
           const data = await res.json();
           if (isMounted) {
             if (data.is_generating && typeof data.percentage === 'number' && data.percentage > 0) {
-              // During active generation, clamp to 99% max so it never lingers at 100% before image arrives
-              const target = Math.min(99, data.percentage);
-              setProgress((prev) => Math.max(prev, target));
-            } else if (!data.is_generating && data.percentage === 100) {
-              setProgress(100);
+              // During active generation, track real sampler step % and clamp to 99% max before final render arrives
+              const target = Math.min(99, Math.max(3, data.percentage));
+              setProgress((prev) => (target > prev ? target : prev));
+            } else {
+              // During initial API dispatch/conditioning, smoothly crawl 1% at a time up to 12% max
+              pollCount++;
+              if (pollCount < 15) {
+                setProgress((prev) => Math.min(12, prev + 1));
+              }
             }
           }
         }
       } catch {
         pollCount++;
         if (isMounted && pollCount < 15) {
-          setProgress((prev) => Math.min(25, prev + 1));
+          setProgress((prev) => Math.min(12, prev + 1));
         }
       }
     };
 
     fetchProgress();
-    const interval = setInterval(fetchProgress, 150);
+    const interval = setInterval(fetchProgress, 180);
     return () => {
       isMounted = false;
       clearInterval(interval);

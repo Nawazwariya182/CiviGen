@@ -86,21 +86,21 @@ TASKS: Dict[str, Dict[str, Any]] = {
         "default_model": "qwen",
         "default_width": 1088,
         "default_height": 1440,
-        "default_steps": 24,
+        "default_steps": 25,
         "default_cfg": 1.0,
-        "default_denoise": 0.80,
+        "default_denoise": 1.0,
         "default_sampler": "euler",
         "default_scheduler": "simple",
         "tiled_vae": False,
         "requires_image": True,
         "system_prompt_template": (
-            "Picture 1 is an existing architectural render. "
+            "Picture 1 is an existing architectural photograph. "
             "Modify Picture 1 according to the instruction: {user_prompt}. "
-            "Preserve the overall building geometry, structural masses, horizon line, and camera angle of Picture 1, "
-            "seamlessly integrating the new architectural materials, textures, and lighting changes with high photorealism."
+            "Retain the exact camera perspective, structural alignment, building envelope, and horizon line of Picture 1, "
+            "seamlessly rendering the new modifications with realistic architectural materials, accurate shadows, reflections, and natural lighting."
         ),
         "negative_prompt": (
-            "blurry, artifacts, seam lines, distorted proportions, low quality, mismatched lighting, cartoon, plastic look"
+            "blurry, artifacts, seam lines, distorted proportions, low quality, mismatched lighting, cartoon, plastic look, warped perspective"
         )
     },
 
@@ -206,21 +206,21 @@ TASKS: Dict[str, Dict[str, Any]] = {
         "default_model": "qwen",
         "default_width": 1568,
         "default_height": 992,
-        "default_steps": 22,
+        "default_steps": 25,
         "default_cfg": 1.0,
-        "default_denoise": 0.75,
+        "default_denoise": 1.0,
         "default_sampler": "euler",
         "default_scheduler": "simple",
         "tiled_vae": False,
         "requires_image": True,
         "system_prompt_template": (
             "Picture 1 is an interior design photograph. "
-            "Perform specific interior editing on Picture 1: {user_prompt}. "
-            "Keep unaffected areas strictly identical in texture, geometry, and camera angle. "
-            "Ensure the newly introduced elements cast realistic shadows and reflect ambient light seamlessly."
+            "Modify Picture 1 according to the instruction: {user_prompt}. "
+            "Preserve the room layout, structural walls, window positions, ceiling lines, and perspective of Picture 1. "
+            "Seamlessly incorporate the specified design changes with photorealistic interior materials, balanced natural daylight, and accurate ambient reflections."
         ),
         "negative_prompt": (
-            "jarring contrast, floating objects, mismatched lighting, low quality, warped perspective, blur, artifacts"
+            "jarring contrast, floating objects, mismatched lighting, low quality, warped perspective, blur, artifacts, cartoon"
         )
     },
 
@@ -297,9 +297,9 @@ TASKS: Dict[str, Dict[str, Any]] = {
         "default_model": "qwen",
         "default_width": 1024,
         "default_height": 1024,
-        "default_steps": 22,
+        "default_steps": 25,
         "default_cfg": 1.0,
-        "default_denoise": 0.75,
+        "default_denoise": 1.0,
         "default_sampler": "euler",
         "default_scheduler": "simple",
         "tiled_vae": False,

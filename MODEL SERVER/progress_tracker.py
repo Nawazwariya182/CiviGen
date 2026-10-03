@@ -15,7 +15,7 @@ class GenerationProgressTracker:
     def start(self, task_id: str = "", total_steps: int = 25, project_id: str = ""):
         with self.lock:
             self.is_generating = True
-            self.percentage = 2
+            self.percentage = 3
             self.current_step = 0
             self.total_steps = max(1, total_steps)
             self.task_id = task_id
@@ -64,13 +64,15 @@ class GenerationProgressTracker:
 
     def get_status(self) -> Dict[str, Any]:
         with self.lock:
+            # Idle/finished server reports 0% so fresh generation never latches onto a stale 100%
+            pct = self.percentage if self.is_generating else 0
             return {
                 "is_generating": self.is_generating,
-                "percentage": self.percentage,
-                "current_step": self.current_step,
+                "percentage": pct,
+                "current_step": self.current_step if self.is_generating else 0,
                 "total_steps": self.total_steps,
-                "task_id": self.task_id,
-                "project_id": getattr(self, "project_id", "")
+                "task_id": self.task_id if self.is_generating else "",
+                "project_id": getattr(self, "project_id", "") if self.is_generating else ""
             }
 
 progress_tracker = GenerationProgressTracker()

@@ -283,6 +283,13 @@ def execute_task(req: TaskGenerateRequest):
         t0 = time.time()
         cfg = get_task_config(req.task_id)
 
+        # Immediately register task with progress tracker so client polling sees active status and 3% instead of idle/stale 100%
+        try:
+            from progress_tracker import progress_tracker
+            progress_tracker.start(task_id=req.task_id, total_steps=req.steps or cfg.get("default_steps", 25), project_id=req.project_id or "PRJ-1001")
+        except Exception:
+            pass
+
         # Decode or load reference images
         input_images: List[Image.Image] = []
         raw_b64_list = list(req.images_base64 or [])
@@ -372,16 +379,26 @@ def execute_task(req: TaskGenerateRequest):
             )
 
         model_name = req.model or cfg.get("default_model", "qwen")
-        width = req.width or cfg.get("default_width", 1024)
-        height = req.height or cfg.get("default_height", 1024)
+        if req.width and req.height:
+            width = req.width
+            height = req.height
+        elif len(input_images) > 0 and req.task_id in ("arch_image_edit", "interior_image_edit", "furniture_edit", "arch_enhance_render"):
+            # Preserve input image natural aspect ratio and resolution
+            src_w, src_h = input_images[0].size
+            max_dim = 1536
+            if max(src_w, src_h) > max_dim:
+                scale = max_dim / max(src_w, src_h)
+                src_w = int(src_w * scale)
+                src_h = int(src_h * scale)
+            width = max(256, (src_w // 32) * 32)
+            height = max(256, (src_h // 32) * 32)
+        else:
+            width = req.width or cfg.get("default_width", 1024)
+            height = req.height or cfg.get("default_height", 1024)
+
         steps = req.steps or cfg.get("default_steps", 25)
         cfg_scale = req.cfg or cfg.get("default_cfg", 1.0)
         denoise = req.denoise if req.denoise is not None else cfg.get("default_denoise", 1.0)
-        try:
-            from progress_tracker import progress_tracker
-            progress_tracker.start(task_id=req.task_id, total_steps=steps, project_id=req.project_id or "PRJ-1001")
-        except Exception:
-            pass
 
         out_img, seed_used, meta = manager.generate(
             model=model_name,

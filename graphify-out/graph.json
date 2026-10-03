@@ -609,7 +609,7 @@
       "file_type": "code",
       "norm_label": "api_enhance_prompt()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L759"
+      "source_location": "L776"
     },
     {
       "id": "ui_src_components_customslider_customslider",
@@ -729,7 +729,7 @@
       "file_type": "code",
       "norm_label": "step_callback()",
       "source_file": "MODEL SERVER/pipeline_qwen.py",
-      "source_location": "L168"
+      "source_location": "L181"
     },
     {
       "id": "model_server_pipeline_qwen_qwenpipeline_init",
@@ -1077,7 +1077,7 @@
       "file_type": "code",
       "norm_label": "openai_list_models()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L536"
+      "source_location": "L553"
     },
     {
       "id": "model_server_server_record_output",
@@ -1113,7 +1113,7 @@
       "file_type": "code",
       "norm_label": "serve_spa_frontend()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L846"
+      "source_location": "L863"
     },
     {
       "id": "ui_src_app_app",
@@ -1305,7 +1305,7 @@
       "file_type": "code",
       "norm_label": "api_upscale_4k()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L766"
+      "source_location": "L783"
     },
     {
       "id": "model_server_server_decode_b64_image",
@@ -1353,7 +1353,7 @@
       "file_type": "code",
       "norm_label": "free_port()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L855"
+      "source_location": "L872"
     },
     {
       "id": "model_server_server_generate_from_json",
@@ -1365,7 +1365,7 @@
       "file_type": "code",
       "norm_label": "generate_from_json()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L789"
+      "source_location": "L806"
     },
     {
       "id": "model_server_server_openai_chat_completions",
@@ -1377,7 +1377,7 @@
       "file_type": "code",
       "norm_label": "openai_chat_completions()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L567"
+      "source_location": "L584"
     },
     {
       "id": "model_server_server_openai_image_edits",
@@ -1389,7 +1389,7 @@
       "file_type": "code",
       "norm_label": "openai_image_edits()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L714"
+      "source_location": "L731"
     },
     {
       "id": "model_server_server_openai_image_generation",
@@ -1401,7 +1401,7 @@
       "file_type": "code",
       "norm_label": "openai_image_generation()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L676"
+      "source_location": "L693"
     },
     {
       "id": "model_server_server_save_output_image",
@@ -1437,7 +1437,7 @@
       "file_type": "code",
       "norm_label": "task_arch_aie()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L486"
+      "source_location": "L503"
     },
     {
       "id": "model_server_server_task_arch_etdotr",
@@ -1449,7 +1449,7 @@
       "file_type": "code",
       "norm_label": "task_arch_etdotr()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L491"
+      "source_location": "L508"
     },
     {
       "id": "model_server_server_task_arch_s2a",
@@ -1461,7 +1461,7 @@
       "file_type": "code",
       "norm_label": "task_arch_s2a()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L481"
+      "source_location": "L498"
     },
     {
       "id": "model_server_server_task_arch_t2a",
@@ -1473,7 +1473,7 @@
       "file_type": "code",
       "norm_label": "task_arch_t2a()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L476"
+      "source_location": "L493"
     },
     {
       "id": "model_server_server_task_furniture_fe",
@@ -1485,7 +1485,7 @@
       "file_type": "code",
       "norm_label": "task_furniture_fe()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L521"
+      "source_location": "L538"
     },
     {
       "id": "model_server_server_task_furniture_s2f",
@@ -1497,7 +1497,7 @@
       "file_type": "code",
       "norm_label": "task_furniture_s2f()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L516"
+      "source_location": "L533"
     },
     {
       "id": "model_server_server_task_furniture_t2f",
@@ -1509,7 +1509,7 @@
       "file_type": "code",
       "norm_label": "task_furniture_t2f()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L526"
+      "source_location": "L543"
     },
     {
       "id": "model_server_server_task_interior_frmr",
@@ -1521,7 +1521,7 @@
       "file_type": "code",
       "norm_label": "task_interior_frmr()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L511"
+      "source_location": "L528"
     },
     {
       "id": "model_server_server_task_interior_gyrnl",
@@ -1533,7 +1533,7 @@
       "file_type": "code",
       "norm_label": "task_interior_gyrnl()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L501"
+      "source_location": "L518"
     },
     {
       "id": "model_server_server_task_interior_idie",
@@ -1545,7 +1545,7 @@
       "file_type": "code",
       "norm_label": "task_interior_idie()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L506"
+      "source_location": "L523"
     },
     {
       "id": "model_server_server_task_interior_s2id",
@@ -1557,7 +1557,7 @@
       "file_type": "code",
       "norm_label": "task_interior_s2id()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L496"
+      "source_location": "L513"
     },
     {
       "id": "model_server_task_configs_build_task_prompt",
@@ -1965,7 +1965,7 @@
       "source_location": "L72"
     },
     {
-      "id": "model_server_server_rationale_760",
+      "id": "model_server_server_rationale_777",
       "label": "Expands user prompt into a high-end architectural brief.",
       "_origin": "ast",
       "community": 14,
@@ -1973,7 +1973,7 @@
       "file_type": "rationale",
       "norm_label": "expands user prompt into a high-end architectural brief.",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L760"
+      "source_location": "L777"
     },
     {
       "id": "ui_src_components_customslider",
@@ -2889,7 +2889,7 @@
       "source_location": "L237"
     },
     {
-      "id": "model_server_server_rationale_537",
+      "id": "model_server_server_rationale_554",
       "label": "OpenAI standard models list endpoint.",
       "_origin": "ast",
       "community": 72,
@@ -2897,7 +2897,7 @@
       "file_type": "rationale",
       "norm_label": "openai standard models list endpoint.",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L537"
+      "source_location": "L554"
     },
     {
       "id": "ui_tsconfig_node",
@@ -3307,7 +3307,7 @@
       "source_location": "L278"
     },
     {
-      "id": "model_server_server_rationale_568",
+      "id": "model_server_server_rationale_585",
       "label": "OpenAI Chat Completion API Compatibility Endpoint. Accepts text prompts and\u2026",
       "_origin": "ast",
       "community": 95,
@@ -3315,10 +3315,10 @@
       "file_type": "rationale",
       "norm_label": "openai chat completion api compatibility endpoint. accepts text prompts and...",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L568"
+      "source_location": "L585"
     },
     {
-      "id": "model_server_server_rationale_677",
+      "id": "model_server_server_rationale_694",
       "label": "OpenAI standard Image Generation API.",
       "_origin": "ast",
       "community": 95,
@@ -3326,10 +3326,10 @@
       "file_type": "rationale",
       "norm_label": "openai standard image generation api.",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L677"
+      "source_location": "L694"
     },
     {
-      "id": "model_server_server_rationale_715",
+      "id": "model_server_server_rationale_732",
       "label": "OpenAI standard Image Edit API.",
       "_origin": "ast",
       "community": 95,
@@ -3337,10 +3337,10 @@
       "file_type": "rationale",
       "norm_label": "openai standard image edit api.",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L715"
+      "source_location": "L732"
     },
     {
-      "id": "model_server_server_rationale_767",
+      "id": "model_server_server_rationale_784",
       "label": "Runs high-order 4K latent tile refinement on input image.",
       "_origin": "ast",
       "community": 95,
@@ -3348,10 +3348,10 @@
       "file_type": "rationale",
       "norm_label": "runs high-order 4k latent tile refinement on input image.",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L767"
+      "source_location": "L784"
     },
     {
-      "id": "model_server_server_rationale_790",
+      "id": "model_server_server_rationale_807",
       "label": "Raw low-level JSON generation endpoint.",
       "_origin": "ast",
       "community": 95,
@@ -3359,10 +3359,10 @@
       "file_type": "rationale",
       "norm_label": "raw low-level json generation endpoint.",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L790"
+      "source_location": "L807"
     },
     {
-      "id": "model_server_server_rationale_856",
+      "id": "model_server_server_rationale_873",
       "label": "Automatically frees the port on Windows if lingering processes are holding it.",
       "_origin": "ast",
       "community": 95,
@@ -3370,7 +3370,7 @@
       "file_type": "rationale",
       "norm_label": "automatically frees the port on windows if lingering processes are holding it.",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L856"
+      "source_location": "L873"
     },
     {
       "id": "model_server_task_configs_rationale_1",
@@ -4101,7 +4101,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/pipeline_qwen.py",
-      "source_location": "L154",
+      "source_location": "L167",
       "weight": 1.0
     },
     {
@@ -4113,7 +4113,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L761",
+      "source_location": "L778",
       "weight": 1.0
     },
     {
@@ -4125,7 +4125,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L770",
+      "source_location": "L787",
       "weight": 1.0
     },
     {
@@ -4137,7 +4137,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L772",
+      "source_location": "L789",
       "weight": 1.0
     },
     {
@@ -4149,7 +4149,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L781",
+      "source_location": "L798",
       "weight": 1.0
     },
     {
@@ -4197,7 +4197,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L301",
+      "source_location": "L308",
       "weight": 1.0
     },
     {
@@ -4209,7 +4209,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L361",
+      "source_location": "L368",
       "weight": 1.0
     },
     {
@@ -4221,7 +4221,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L367",
+      "source_location": "L374",
       "weight": 1.0
     },
     {
@@ -4233,7 +4233,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L408",
+      "source_location": "L425",
       "weight": 1.0
     },
     {
@@ -4245,7 +4245,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L425",
+      "source_location": "L442",
       "weight": 1.0
     },
     {
@@ -4257,7 +4257,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L795",
+      "source_location": "L812",
       "weight": 1.0
     },
     {
@@ -4269,7 +4269,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L815",
+      "source_location": "L832",
       "weight": 1.0
     },
     {
@@ -4281,7 +4281,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L826",
+      "source_location": "L843",
       "weight": 1.0
     },
     {
@@ -4305,7 +4305,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L589",
+      "source_location": "L606",
       "weight": 1.0
     },
     {
@@ -4317,7 +4317,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L619",
+      "source_location": "L636",
       "weight": 1.0
     },
     {
@@ -4329,7 +4329,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L621",
+      "source_location": "L638",
       "weight": 1.0
     },
     {
@@ -4341,7 +4341,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L641",
+      "source_location": "L658",
       "weight": 1.0
     },
     {
@@ -4353,7 +4353,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L642",
+      "source_location": "L659",
       "weight": 1.0
     },
     {
@@ -4365,7 +4365,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L718",
+      "source_location": "L735",
       "weight": 1.0
     },
     {
@@ -4377,7 +4377,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L736",
+      "source_location": "L753",
       "weight": 1.0
     },
     {
@@ -4389,7 +4389,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L737",
+      "source_location": "L754",
       "weight": 1.0
     },
     {
@@ -4401,7 +4401,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L695",
+      "source_location": "L712",
       "weight": 1.0
     },
     {
@@ -4413,7 +4413,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L696",
+      "source_location": "L713",
       "weight": 1.0
     },
     {
@@ -4461,7 +4461,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L488",
+      "source_location": "L505",
       "weight": 1.0
     },
     {
@@ -4473,7 +4473,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L493",
+      "source_location": "L510",
       "weight": 1.0
     },
     {
@@ -4485,7 +4485,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L483",
+      "source_location": "L500",
       "weight": 1.0
     },
     {
@@ -4497,7 +4497,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L478",
+      "source_location": "L495",
       "weight": 1.0
     },
     {
@@ -4509,7 +4509,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L523",
+      "source_location": "L540",
       "weight": 1.0
     },
     {
@@ -4521,7 +4521,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L518",
+      "source_location": "L535",
       "weight": 1.0
     },
     {
@@ -4533,7 +4533,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L528",
+      "source_location": "L545",
       "weight": 1.0
     },
     {
@@ -4545,7 +4545,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L513",
+      "source_location": "L530",
       "weight": 1.0
     },
     {
@@ -4557,7 +4557,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L503",
+      "source_location": "L520",
       "weight": 1.0
     },
     {
@@ -4569,7 +4569,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L508",
+      "source_location": "L525",
       "weight": 1.0
     },
     {
@@ -4581,7 +4581,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L498",
+      "source_location": "L515",
       "weight": 1.0
     },
     {
@@ -4617,7 +4617,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L758",
+      "source_location": "L775",
       "weight": 1.0
     },
     {
@@ -4629,7 +4629,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L765",
+      "source_location": "L782",
       "weight": 1.0
     },
     {
@@ -4665,7 +4665,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L788",
+      "source_location": "L805",
       "weight": 1.0
     },
     {
@@ -4737,7 +4737,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L566",
+      "source_location": "L583",
       "weight": 1.0
     },
     {
@@ -4749,7 +4749,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L713",
+      "source_location": "L730",
       "weight": 1.0
     },
     {
@@ -4761,7 +4761,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L675",
+      "source_location": "L692",
       "weight": 1.0
     },
     {
@@ -4773,7 +4773,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L535",
+      "source_location": "L552",
       "weight": 1.0
     },
     {
@@ -4785,7 +4785,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L845",
+      "source_location": "L862",
       "weight": 1.0
     },
     {
@@ -4809,7 +4809,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L485",
+      "source_location": "L502",
       "weight": 1.0
     },
     {
@@ -4821,7 +4821,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L490",
+      "source_location": "L507",
       "weight": 1.0
     },
     {
@@ -4833,7 +4833,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L480",
+      "source_location": "L497",
       "weight": 1.0
     },
     {
@@ -4845,7 +4845,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L475",
+      "source_location": "L492",
       "weight": 1.0
     },
     {
@@ -4857,7 +4857,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L520",
+      "source_location": "L537",
       "weight": 1.0
     },
     {
@@ -4869,7 +4869,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L515",
+      "source_location": "L532",
       "weight": 1.0
     },
     {
@@ -4881,7 +4881,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L525",
+      "source_location": "L542",
       "weight": 1.0
     },
     {
@@ -4893,7 +4893,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L510",
+      "source_location": "L527",
       "weight": 1.0
     },
     {
@@ -4905,7 +4905,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L500",
+      "source_location": "L517",
       "weight": 1.0
     },
     {
@@ -4917,7 +4917,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L505",
+      "source_location": "L522",
       "weight": 1.0
     },
     {
@@ -4929,7 +4929,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L495",
+      "source_location": "L512",
       "weight": 1.0
     },
     {
@@ -7612,7 +7612,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/pipeline_qwen.py",
-      "source_location": "L168",
+      "source_location": "L181",
       "weight": 1.0
     },
     {
@@ -7931,7 +7931,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L476",
+      "source_location": "L493",
       "weight": 1.0
     },
     {
@@ -7942,7 +7942,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L481",
+      "source_location": "L498",
       "weight": 1.0
     },
     {
@@ -7953,7 +7953,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L486",
+      "source_location": "L503",
       "weight": 1.0
     },
     {
@@ -7964,7 +7964,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L491",
+      "source_location": "L508",
       "weight": 1.0
     },
     {
@@ -7975,7 +7975,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L496",
+      "source_location": "L513",
       "weight": 1.0
     },
     {
@@ -7986,7 +7986,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L501",
+      "source_location": "L518",
       "weight": 1.0
     },
     {
@@ -7997,7 +7997,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L506",
+      "source_location": "L523",
       "weight": 1.0
     },
     {
@@ -8008,7 +8008,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L511",
+      "source_location": "L528",
       "weight": 1.0
     },
     {
@@ -8019,7 +8019,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L516",
+      "source_location": "L533",
       "weight": 1.0
     },
     {
@@ -8030,7 +8030,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L521",
+      "source_location": "L538",
       "weight": 1.0
     },
     {
@@ -8041,7 +8041,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L526",
+      "source_location": "L543",
       "weight": 1.0
     },
     {
@@ -8052,7 +8052,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L536",
+      "source_location": "L553",
       "weight": 1.0
     },
     {
@@ -8063,7 +8063,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L567",
+      "source_location": "L584",
       "weight": 1.0
     },
     {
@@ -8074,7 +8074,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L676",
+      "source_location": "L693",
       "weight": 1.0
     },
     {
@@ -8085,7 +8085,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L714",
+      "source_location": "L731",
       "weight": 1.0
     },
     {
@@ -8096,7 +8096,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L759",
+      "source_location": "L776",
       "weight": 1.0
     },
     {
@@ -8107,7 +8107,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L766",
+      "source_location": "L783",
       "weight": 1.0
     },
     {
@@ -8118,7 +8118,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L789",
+      "source_location": "L806",
       "weight": 1.0
     },
     {
@@ -8129,7 +8129,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L846",
+      "source_location": "L863",
       "weight": 1.0
     },
     {
@@ -8140,7 +8140,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L855",
+      "source_location": "L872",
       "weight": 1.0
     },
     {
@@ -10256,91 +10256,91 @@
       "weight": 1.0
     },
     {
-      "source": "model_server_server_rationale_537",
+      "source": "model_server_server_rationale_554",
       "target": "model_server_server_openai_list_models",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L537",
+      "source_location": "L554",
       "weight": 1.0
     },
     {
-      "source": "model_server_server_rationale_568",
+      "source": "model_server_server_rationale_585",
       "target": "model_server_server_openai_chat_completions",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L568",
+      "source_location": "L585",
       "weight": 1.0
     },
     {
-      "source": "model_server_server_rationale_677",
+      "source": "model_server_server_rationale_694",
       "target": "model_server_server_openai_image_generation",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L677",
+      "source_location": "L694",
       "weight": 1.0
     },
     {
-      "source": "model_server_server_rationale_715",
+      "source": "model_server_server_rationale_732",
       "target": "model_server_server_openai_image_edits",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L715",
+      "source_location": "L732",
       "weight": 1.0
     },
     {
-      "source": "model_server_server_rationale_760",
+      "source": "model_server_server_rationale_777",
       "target": "model_server_server_api_enhance_prompt",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L760",
+      "source_location": "L777",
       "weight": 1.0
     },
     {
-      "source": "model_server_server_rationale_767",
+      "source": "model_server_server_rationale_784",
       "target": "model_server_server_api_upscale_4k",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L767",
+      "source_location": "L784",
       "weight": 1.0
     },
     {
-      "source": "model_server_server_rationale_790",
+      "source": "model_server_server_rationale_807",
       "target": "model_server_server_generate_from_json",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L790",
+      "source_location": "L807",
       "weight": 1.0
     },
     {
-      "source": "model_server_server_rationale_856",
+      "source": "model_server_server_rationale_873",
       "target": "model_server_server_free_port",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L856",
+      "source_location": "L873",
       "weight": 1.0
     },
     {
@@ -10385,7 +10385,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L766",
+      "source_location": "L783",
       "weight": 0.8
     },
     {
@@ -10409,7 +10409,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L789",
+      "source_location": "L806",
       "weight": 0.8
     },
     {
@@ -10421,7 +10421,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L567",
+      "source_location": "L584",
       "weight": 0.8
     },
     {
@@ -10433,7 +10433,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L714",
+      "source_location": "L731",
       "weight": 0.8
     },
     {
@@ -10445,7 +10445,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L676",
+      "source_location": "L693",
       "weight": 0.8
     },
     {
@@ -10457,7 +10457,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L486",
+      "source_location": "L503",
       "weight": 0.8
     },
     {
@@ -10469,7 +10469,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L491",
+      "source_location": "L508",
       "weight": 0.8
     },
     {
@@ -10481,7 +10481,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L481",
+      "source_location": "L498",
       "weight": 0.8
     },
     {
@@ -10493,7 +10493,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L476",
+      "source_location": "L493",
       "weight": 0.8
     },
     {
@@ -10505,7 +10505,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L521",
+      "source_location": "L538",
       "weight": 0.8
     },
     {
@@ -10517,7 +10517,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L516",
+      "source_location": "L533",
       "weight": 0.8
     },
     {
@@ -10529,7 +10529,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L526",
+      "source_location": "L543",
       "weight": 0.8
     },
     {
@@ -10541,7 +10541,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L511",
+      "source_location": "L528",
       "weight": 0.8
     },
     {
@@ -10553,7 +10553,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L501",
+      "source_location": "L518",
       "weight": 0.8
     },
     {
@@ -10565,7 +10565,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L506",
+      "source_location": "L523",
       "weight": 0.8
     },
     {
@@ -10577,7 +10577,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L496",
+      "source_location": "L513",
       "weight": 0.8
     },
     {
@@ -10610,7 +10610,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.95,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L430",
+      "source_location": "L447",
       "weight": 0.8
     },
     {
@@ -10621,7 +10621,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.95,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L818",
+      "source_location": "L835",
       "weight": 0.8
     },
     {
@@ -10632,7 +10632,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.95,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L651",
+      "source_location": "L668",
       "weight": 0.8
     },
     {
@@ -10643,10 +10643,10 @@
       "confidence": "INFERRED",
       "confidence_score": 0.95,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L663",
+      "source_location": "L680",
       "weight": 0.8
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "baec8dc54e02568f608e47928d588aebb10bedf0"
+  "built_at_commit": "63a17c4a1473a2d919c8669d24a107c27148dcc7"
 }
