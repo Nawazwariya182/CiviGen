@@ -693,7 +693,7 @@ def openai_chat_completions(req: OpenAIChatCompletionRequest):
 def openai_image_generation(req: OpenAIImageGenerationRequest):
     """OpenAI standard Image Generation API."""
     try:
-        model_name = "flux" if "flux" in (req.model or "").lower() else "qwen"
+        model_name = "qwen"
         w, h = 1024, 1024
         if req.size:
             parts = req.size.lower().split("x")
@@ -731,7 +731,7 @@ def openai_image_generation(req: OpenAIImageGenerationRequest):
 def openai_image_edits(req: OpenAIImageEditRequest):
     """OpenAI standard Image Edit API."""
     try:
-        model_name = "flux" if "flux" in (req.model or "").lower() else "qwen"
+        model_name = "qwen"
         ref_img = decode_b64_image(req.image)
 
         w, h = 1024, 1024

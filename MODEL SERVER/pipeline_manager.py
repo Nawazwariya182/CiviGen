@@ -103,7 +103,8 @@ class PipelineManager:
                  sampler_name: str = "euler",
                  scheduler: str = "simple",
                  tiled_vae: bool = False,
-                 upscale_4k: bool = False) -> Tuple[Image.Image, int, Dict[str, Any]]:
+                 upscale_4k: bool = False,
+                 is_subtask: bool = False) -> Tuple[Image.Image, int, Dict[str, Any]]:
         """
         Executes image generation or multi-image editing with the chosen model.
         Thread-safe: guarantees single-pipeline execution on the GPU.
@@ -131,7 +132,8 @@ class PipelineManager:
                 seed=seed,
                 sampler_name=sampler_name,
                 scheduler=scheduler,
-                tiled_vae=tiled_vae
+                tiled_vae=tiled_vae,
+                is_subtask=is_subtask
             )
 
             # Optional 4K refinement pass
@@ -175,5 +177,5 @@ class PipelineManager:
             "vram_free_gb": free_vram,
             "low_vram_mode": low_vram,
             "models_ready": ["Qwen Image 2.1 (8B DiT)"],
-            "tasks_count": 12
+            "tasks_count": 11
         }

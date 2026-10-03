@@ -51,6 +51,14 @@ import comfy.sample
 import comfy.model_management
 from comfy_extras.nodes_qwen import TextEncodeQwenImage21
 
+try:
+    from progress_tracker import progress_tracker
+except ImportError:
+    try:
+        from .progress_tracker import progress_tracker
+    except Exception:
+        progress_tracker = None
+
 logger = logging.getLogger("QwenPipeline")
 
 # Default model weight locations in AI ARCH\MODELS\Qwen
@@ -127,7 +135,8 @@ class QwenPipeline:
                  seed: int = -1,
                  sampler_name: str = "euler",
                  scheduler: str = "simple",
-                 tiled_vae: bool = False) -> Tuple[Image.Image, int, Dict[str, Any]]:
+                 tiled_vae: bool = False,
+                 is_subtask: bool = False) -> Tuple[Image.Image, int, Dict[str, Any]]:
         """
         Executes generation / editing with full sequential memory offloading.
         """
@@ -212,15 +221,12 @@ class QwenPipeline:
 
         noise = comfy.sample.prepare_noise(latent, seed)
 
-        try:
-            from progress_tracker import progress_tracker
-            if not progress_tracker.is_generating:
-                progress_tracker.start(task_id="qwen", total_steps=steps)
-
-            def step_callback(step, x0, x, total_steps):
+        def step_callback(step, x0, x, total_steps):
+            if progress_tracker is not None:
                 progress_tracker.update_step(step, total_steps)
-        except Exception:
-            step_callback = None
+
+        if progress_tracker is not None and not progress_tracker.is_generating and not is_subtask:
+            progress_tracker.start(task_id="qwen", total_steps=steps)
 
         samples = comfy.sample.sample(
             model=model,
@@ -257,7 +263,7 @@ class QwenPipeline:
             logger.warning(f"Tiled VAE decode fallback: {e}")
             decoded = vae.decode(samples)
 
-        if not is_subtask:
+        if not is_subtask and progress_tracker is not None:
             try:
                 progress_tracker.set_finalizing()
             except Exception:
@@ -268,7 +274,7 @@ class QwenPipeline:
         img_array = (decoded[0, :, :, :3] * 255.0).clip(0, 255).astype(np.uint8)
         output_image = Image.fromarray(img_array, mode="RGB")
 
-        if not is_subtask:
+        if not is_subtask and progress_tracker is not None:
             try:
                 progress_tracker.finish()
             except Exception:
