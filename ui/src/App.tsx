@@ -26,7 +26,8 @@ import {
   Compass,
   ArrowLeft,
   LayoutGrid,
-  Upload
+  Upload,
+  Image as ImageIcon
 } from 'lucide-react';
 import { Agentation } from 'agentation';
 import { ApiPlaygroundTab } from './components/ApiPlaygroundTab';
@@ -38,6 +39,7 @@ import { Magnet } from './components/Magnet';
 import { AppsHubPage } from './components/AppsHubPage';
 import { ProjectsPortalPage, ProjectItem } from './components/ProjectsPortalPage';
 import { TaskSelectionPage } from './components/TaskSelectionPage';
+import { LibraryPage } from './components/LibraryPage';
 import { ProjectsDrawer } from './components/ProjectsDrawer';
 import { DotMatrixLoaderCard } from './components/DotMatrixLoaderCard';
 import { QwenLogo, FluxLogo } from './components/ModelLogos';
@@ -80,11 +82,20 @@ interface ParsedRoute {
   projectId?: string;
   prefix: string; // 'pjk' | 'prj'
   taskId?: string;
+  tab?: 'assets' | 'api' | 'library';
 }
 
 export const parseUrlRoute = (pathname: string): ParsedRoute => {
   const parts = pathname.split('/').filter(Boolean);
-  // Example: ['pjk-1002', 'tasks', 'S2F'] or ['prj-1002', 'tasks'] or ['projects'] or []
+  // Example: ['library'], ['api'], ['pjk-1002', 'tasks', 'S2F'] or ['prj-1002', 'tasks'] or ['projects'] or []
+  if (parts.length >= 1 && parts[0].toLowerCase() === 'library') {
+    return { view: 'projects', prefix: 'prj', tab: 'library' };
+  }
+
+  if (parts.length >= 1 && parts[0].toLowerCase() === 'api') {
+    return { view: 'projects', prefix: 'prj', tab: 'api' };
+  }
+
   if (parts.length >= 2 && parts[1].toLowerCase() === 'tasks') {
     const rawProj = parts[0];
     const prefix = rawProj.toLowerCase().startsWith('pjk') ? 'pjk' : 'prj';
@@ -98,24 +109,27 @@ export const parseUrlRoute = (pathname: string): ParsedRoute => {
         view: 'studio',
         projectId: projId,
         prefix,
-        taskId: mappedTaskId || 'arch_text_to_arch'
+        taskId: mappedTaskId || 'arch_text_to_arch',
+        tab: 'assets'
       };
     }
 
     return {
       view: 'tasks',
       projectId: projId,
-      prefix
+      prefix,
+      tab: 'assets'
     };
   }
 
   if (parts.length >= 1 && parts[0].toLowerCase() === 'projects') {
-    return { view: 'projects', prefix: 'prj' };
+    return { view: 'projects', prefix: 'prj', tab: 'assets' };
   }
 
   return {
     view: 'projects',
-    prefix: 'prj'
+    prefix: 'prj',
+    tab: 'assets'
   };
 };
 
@@ -127,7 +141,7 @@ export function App() {
 
   // Navigation & View Modes: 'projects' | 'tasks' | 'studio'
   const [currentView, setCurrentView] = useState<'projects' | 'tasks' | 'studio'>(initialRoute.view);
-  const [activeTab, setActiveTab] = useState<'assets' | 'api'>('assets');
+  const [activeTab, setActiveTab] = useState<'assets' | 'api' | 'library'>(initialRoute.tab || 'assets');
   const [activeSuite, setActiveSuite] = useState<'all' | 'architecture' | 'interior_furniture'>('all');
 
   // Resizable Sidebar
@@ -240,7 +254,11 @@ export function App() {
     const projSlug = `${urlPrefix}-${num}`;
     const taskCode = TASK_SHORT_CODES[selectedTaskId] || 'T2A';
 
-    if (currentView === 'projects') {
+    if (activeTab === 'library') {
+      targetPath = '/library';
+    } else if (activeTab === 'api') {
+      targetPath = '/api';
+    } else if (currentView === 'projects') {
       targetPath = '/';
     } else if (currentView === 'tasks') {
       targetPath = `/${projSlug}/tasks`;
@@ -249,9 +267,9 @@ export function App() {
     }
 
     if (window.location.pathname !== targetPath) {
-      window.history.pushState({ currentView, currentProjectId, selectedTaskId, urlPrefix }, '', targetPath);
+      window.history.pushState({ currentView, currentProjectId, selectedTaskId, urlPrefix, activeTab }, '', targetPath);
     }
-  }, [currentView, currentProjectId, selectedTaskId, urlPrefix]);
+  }, [currentView, currentProjectId, selectedTaskId, urlPrefix, activeTab]);
 
   // Handle browser Back / Forward history navigation (popstate)
   useEffect(() => {
@@ -260,8 +278,12 @@ export function App() {
       if (route.prefix) setUrlPrefix(route.prefix);
       if (route.projectId) setCurrentProjectId(route.projectId);
       if (route.taskId) setSelectedTaskId(route.taskId);
+      if (route.tab) {
+        setActiveTab(route.tab);
+      } else {
+        setActiveTab('assets');
+      }
       setCurrentView(route.view);
-      setActiveTab('assets');
     };
 
     window.addEventListener('popstate', handlePopState);
@@ -915,6 +937,42 @@ export function App() {
     if (confirm(`Clear all rendered assets from project ${currentProjectId}?`)) {
       setAssetRuns((prev) => prev.filter((r) => r.projectId && r.projectId !== currentProjectId));
     }
+  };
+
+  // Open asset in Studio directly from Library
+  const handleOpenInStudioFromLibrary = (
+    taskId: string,
+    projectId: string,
+    imgPrompt: string,
+    inputImgUrl?: string
+  ) => {
+    if (projectId) {
+      setCurrentProjectId(projectId);
+    }
+    if (taskId) {
+      setSelectedTaskId(taskId);
+      const task = tasks[taskId];
+      if (task) {
+        setSteps(task.default_steps || 25);
+        setCfg(task.default_cfg || 1.0);
+        setDenoise(task.default_denoise || 1.0);
+        setModel(task.default_model || 'qwen');
+      }
+    }
+    if (imgPrompt) {
+      setPrompt(imgPrompt);
+    }
+    if (inputImgUrl) {
+      setReferenceImages([
+        {
+          id: `ref_${Date.now()}`,
+          name: 'library_reference.png',
+          base64: inputImgUrl
+        }
+      ]);
+    }
+    setCurrentView('studio');
+    setActiveTab('assets');
   };
 
   // Cycle Grid Layout on Grid Button click
@@ -1623,7 +1681,7 @@ export function App() {
           )}
         </div>
 
-        {/* Center Tabs: Segmented Nav Control matching reference mockup */}
+        {/* Center Tabs: Segmented Nav Control matching progressive disclosure */}
         <div className="nav-tabs">
           <button
             className={`nav-tab-btn ${currentView === 'projects' && activeTab === 'assets' ? 'active' : ''}`}
@@ -1635,24 +1693,39 @@ export function App() {
             <FolderOpen size={13} /> Projects
           </button>
 
-          <button
-            className={`nav-tab-btn ${currentView === 'tasks' && activeTab === 'assets' ? 'active' : ''}`}
-            onClick={() => {
-              setCurrentView('tasks');
-              setActiveTab('assets');
-            }}
-          >
-            <Compass size={13} /> Tasks
-          </button>
+          {/* User Feedback 2: For project view, we should NOT see Tasks */}
+          {currentView !== 'projects' && (
+            <button
+              className={`nav-tab-btn ${currentView === 'tasks' && activeTab === 'assets' ? 'active' : ''}`}
+              onClick={() => {
+                setCurrentView('tasks');
+                setActiveTab('assets');
+              }}
+            >
+              <Compass size={13} /> Tasks
+            </button>
+          )}
 
+          {/* User Feedback 2 & 3: For project and tasks view, we should NOT see Studio */}
+          {currentView === 'studio' && (
+            <button
+              className={`nav-tab-btn ${currentView === 'studio' && activeTab === 'assets' ? 'active' : ''}`}
+              onClick={() => {
+                setCurrentView('studio');
+                setActiveTab('assets');
+              }}
+            >
+              <Layers size={13} /> Studio
+            </button>
+          )}
+
+          {/* User Feedback 4: Add Library tab where all generated images can be seen */}
           <button
-            className={`nav-tab-btn ${currentView === 'studio' && activeTab === 'assets' ? 'active' : ''}`}
-            onClick={() => {
-              setCurrentView('studio');
-              setActiveTab('assets');
-            }}
+            className={`nav-tab-btn ${activeTab === 'library' ? 'active' : ''}`}
+            onClick={() => setActiveTab('library')}
+            title="Browse all generated renders and concepts across projects"
           >
-            <Layers size={13} /> Studio
+            <ImageIcon size={13} /> Library
           </button>
 
           <button
@@ -1818,11 +1891,21 @@ export function App() {
         </div>
       </header>
 
-      {/* Main Layout: Either API, Projects Portal, Task Selection, or Generation Studio */}
+      {/* Main Layout: Either API, Library, Projects Portal, Task Selection, or Generation Studio */}
       {activeTab === 'api' ? (
         <main className="workspace-content">
           <ApiPlaygroundTab />
         </main>
+      ) : activeTab === 'library' ? (
+        <LibraryPage
+          assetRuns={assetRuns}
+          projects={projects}
+          onOpenModal={(imgUrl, title, prompt) => setModalImage({ url: imgUrl, title, prompt })}
+          onTriggerUpscale4k={handleTriggerUpscale4k}
+          onDelete={handleDeleteAsset}
+          onToggleBookmark={handleToggleBookmark}
+          onOpenInStudio={handleOpenInStudioFromLibrary}
+        />
       ) : currentView === 'projects' ? (
         <ProjectsPortalPage
           projects={projects}
