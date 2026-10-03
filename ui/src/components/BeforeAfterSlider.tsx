@@ -293,12 +293,15 @@ export const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
         <div
           ref={containerRef}
           className="comparison-container"
-          style={{ height: 500, background: '#1E293B' }}
+          style={{ height: 500, background: '#1E293B', touchAction: 'pan-y' }}
           onMouseDown={() => setIsDragging(true)}
           onMouseUp={() => setIsDragging(false)}
           onMouseLeave={() => setIsDragging(false)}
           onMouseMove={handleMouseMove}
-          onTouchStart={() => setIsDragging(true)}
+          onTouchStart={(e) => {
+            setIsDragging(true);
+            if (e.touches.length > 0) handleMove(e.touches[0].clientX);
+          }}
           onTouchEnd={() => setIsDragging(false)}
           onTouchMove={handleTouchMove}
         >

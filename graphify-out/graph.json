@@ -573,7 +573,7 @@
       "file_type": "code",
       "norm_label": "taskselectionpageprops",
       "source_file": "ui/src/components/TaskSelectionPage.tsx",
-      "source_location": "L491"
+      "source_location": "L502"
     },
     {
       "id": "ui_src_components_blurtext_blurtext",
@@ -1677,7 +1677,7 @@
       "file_type": "code",
       "norm_label": "isometricherographic()",
       "source_file": "ui/src/components/TaskSelectionPage.tsx",
-      "source_location": "L342"
+      "source_location": "L353"
     },
     {
       "id": "ui_src_components_taskselectionpage_taskcardslider",
@@ -1701,7 +1701,7 @@
       "file_type": "code",
       "norm_label": "taskselectionpage()",
       "source_file": "ui/src/components/TaskSelectionPage.tsx",
-      "source_location": "L499"
+      "source_location": "L510"
     },
     {
       "id": "readme",
@@ -9108,7 +9108,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "ui/src/components/TaskSelectionPage.tsx",
-      "source_location": "L342",
+      "source_location": "L353",
       "weight": 1.0
     },
     {
@@ -9119,7 +9119,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "ui/src/components/TaskSelectionPage.tsx",
-      "source_location": "L491",
+      "source_location": "L502",
       "weight": 1.0
     },
     {
@@ -9130,7 +9130,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "ui/src/components/TaskSelectionPage.tsx",
-      "source_location": "L499",
+      "source_location": "L510",
       "weight": 1.0
     },
     {
@@ -10648,5 +10648,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "63a17c4a1473a2d919c8669d24a107c27148dcc7"
+  "built_at_commit": "d67bdaa0c2841868b31dd57961864c6c18edaa94"
 }

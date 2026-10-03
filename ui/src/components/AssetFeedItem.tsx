@@ -788,6 +788,7 @@ export const AssetFeedItem: React.FC<AssetFeedItemProps> = ({
       ) : (
         /* Image Grid: 2 Equal Columns for Dual-image tasks; Single Column matching width for text-to-arch */
         <div
+          className="asset-images-grid"
           style={{
             display: 'grid',
             gridTemplateColumns: hasInputImage ? 'repeat(2, minmax(0, 1fr))' : 'repeat(2, minmax(0, 1fr))',

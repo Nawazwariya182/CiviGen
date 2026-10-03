@@ -199,6 +199,14 @@ const TaskCardSlider: React.FC<{
     setSliderPos(percent);
   };
 
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    if (!containerRef.current || e.touches.length === 0) return;
+    const rect = containerRef.current.getBoundingClientRect();
+    const x = Math.max(0, Math.min(e.touches[0].clientX - rect.left, rect.width));
+    const percent = Math.max(2, Math.min(98, (x / rect.width) * 100));
+    setSliderPos(percent);
+  };
+
   const handleMouseLeave = () => {
     setSliderPos(50);
   };
@@ -208,13 +216,16 @@ const TaskCardSlider: React.FC<{
       ref={containerRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
+      onTouchMove={handleTouchMove}
+      onTouchStart={handleTouchMove}
       style={{
         position: 'relative',
         width: '100%',
         height: '190px',
         overflow: 'hidden',
         background: '#0F172A',
-        userSelect: 'none'
+        userSelect: 'none',
+        touchAction: 'pan-y'
       }}
     >
       {/* Background: Output Render (Right side / full canvas) */}
@@ -776,6 +787,7 @@ export const TaskSelectionPage: React.FC<TaskSelectionPageProps> = ({
 
   return (
     <div
+      className="task-selection-page-wrapper"
       style={{
         flex: 1,
         overflowY: 'auto',
@@ -789,11 +801,14 @@ export const TaskSelectionPage: React.FC<TaskSelectionPageProps> = ({
       <div style={{ maxWidth: 1220, width: '100%' }}>
         {/* Top Navigation Bar: Back to Projects & Active Project Badge */}
         <div
+          className="task-selection-top-bar"
           style={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            marginBottom: 20
+            marginBottom: 20,
+            gap: 12,
+            flexWrap: 'wrap'
           }}
         >
           {/* Back Button */}
@@ -828,6 +843,7 @@ export const TaskSelectionPage: React.FC<TaskSelectionPageProps> = ({
 
           {/* Active Project Tag */}
           <div
+            className="task-selection-project-badge"
             style={{
               display: 'flex',
               alignItems: 'center',
@@ -850,6 +866,7 @@ export const TaskSelectionPage: React.FC<TaskSelectionPageProps> = ({
 
         {/* Hero Banner: Title, Subtitle, and 3D Isometric Graphic */}
         <div
+          className="task-selection-hero-bar"
           style={{
             display: 'flex',
             alignItems: 'center',

@@ -728,6 +728,11 @@ export function App() {
     if (isGenerating) return;
     setIsGenerating(true);
 
+    // On mobile screens, auto-collapse controls so user immediately sees the generative progress in the feed
+    if (window.innerWidth < 768) {
+      setIsSidebarCollapsed(true);
+    }
+
     try {
       localStorage.setItem('civigen_active_generation', JSON.stringify({
         projectId: currentProjectId,
@@ -2490,6 +2495,26 @@ export function App() {
               )}
             </div>
           </main>
+
+          {/* Floating Mobile Studio Toggle Button */}
+          <button
+            type="button"
+            className="mobile-studio-toggle-btn"
+            onClick={() => setIsSidebarCollapsed(!isSidebarCollapsed)}
+            title={isSidebarCollapsed ? "Open Controls" : "View Render Feed"}
+          >
+            {isSidebarCollapsed ? (
+              <>
+                <Sliders size={14} />
+                <span>Controls &amp; Parameters</span>
+              </>
+            ) : (
+              <>
+                <Layers size={14} />
+                <span>View Feed ({currentProjectRuns.length})</span>
+              </>
+            )}
+          </button>
         </div>
       )}
 

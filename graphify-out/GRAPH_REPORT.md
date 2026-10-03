@@ -1,7 +1,7 @@
 # Graph Report - AI ARCH  (2026-10-03)
 
 ## Corpus Check
-- 37 files · ~37,954 words
+- 37 files · ~38,109 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 6 file(s) not represented in the graph (top: .bat 3, (none) 2, .css 1)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `63a17c4a`
+- Built from commit: `d67bdaa0`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 

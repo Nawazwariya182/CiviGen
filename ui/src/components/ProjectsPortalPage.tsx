@@ -215,6 +215,7 @@ export const ProjectsPortalPage: React.FC<ProjectsPortalPageProps> = ({
 
   return (
     <div
+      className="projects-portal-container"
       style={{
         flex: 1,
         overflowY: 'auto',
@@ -231,6 +232,7 @@ export const ProjectsPortalPage: React.FC<ProjectsPortalPageProps> = ({
         {/* 1. HERO HEADER WITH 3D ISOMETRIC CUBE ART & CREATE BUTTON     */}
         {/* ============================================================== */}
         <div
+          className="projects-portal-hero-row"
           style={{
             display: 'flex',
             alignItems: 'center',
@@ -292,6 +294,7 @@ export const ProjectsPortalPage: React.FC<ProjectsPortalPageProps> = ({
 
           {/* Right Hero: Translucent 3D Isometric Art + Create New Project Button */}
           <div
+            className="projects-hero-art-wrapper"
             style={{
               position: 'relative',
               display: 'flex',
@@ -422,6 +425,7 @@ export const ProjectsPortalPage: React.FC<ProjectsPortalPageProps> = ({
         {/* 2. FILTER TABS PILL GROUP & SEARCH / CONTROLS BAR              */}
         {/* ============================================================== */}
         <div
+          className="projects-filter-bar"
           style={{
             display: 'flex',
             alignItems: 'center',
@@ -433,6 +437,7 @@ export const ProjectsPortalPage: React.FC<ProjectsPortalPageProps> = ({
         >
           {/* Left: Filter Tabs Capsule */}
           <div
+            className="projects-filter-capsule scroll-strip-no-scrollbar"
             style={{
               background: '#F1F5F9',
               border: '1px solid #E2E8F0',
@@ -440,7 +445,9 @@ export const ProjectsPortalPage: React.FC<ProjectsPortalPageProps> = ({
               padding: 4,
               display: 'inline-flex',
               gap: 3,
-              alignItems: 'center'
+              alignItems: 'center',
+              overflowX: 'auto',
+              maxWidth: '100%'
             }}
           >
             {[
@@ -750,6 +757,7 @@ export const ProjectsPortalPage: React.FC<ProjectsPortalPageProps> = ({
         {/* ============================================================== */}
         {viewMode === 'grid' ? (
           <div
+            className="projects-cards-grid"
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))',
@@ -1363,6 +1371,7 @@ export const ProjectsPortalPage: React.FC<ProjectsPortalPageProps> = ({
           }}
         >
           <div
+            className="create-project-modal-card"
             onClick={(e) => e.stopPropagation()}
             style={{
               background: '#FFFFFF',

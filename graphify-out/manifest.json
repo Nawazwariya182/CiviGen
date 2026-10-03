@@ -48,9 +48,9 @@
     "semantic_hash": "132d41d6194c588fdac480cdd51cabfd"
   },
   "ui/src/App.tsx": {
-    "mtime": 1791002987.253128,
-    "seen": 1791003103.1484141,
-    "ast_hash": "a49009e5d367b7a639cc8e53fa99f3f1",
+    "mtime": 1791018593.081745,
+    "seen": 1791018686.0396886,
+    "ast_hash": "da501708f6844d3ba97cb1c5f9c58890",
     "semantic_hash": ""
   },
   "ui/src/components/ApiPlaygroundTab.tsx": {
@@ -60,15 +60,15 @@
     "semantic_hash": ""
   },
   "ui/src/components/AssetFeedItem.tsx": {
-    "mtime": 1791017700.4108388,
-    "seen": 1791017747.4120088,
-    "ast_hash": "1db6c3cc1a7883133a5ac0a9032a3176",
+    "mtime": 1791018286.4660437,
+    "seen": 1791018686.0396886,
+    "ast_hash": "66e5a910cb452abea2977a1cab6e3084",
     "semantic_hash": ""
   },
   "ui/src/components/BeforeAfterSlider.tsx": {
-    "mtime": 1790991268.9621496,
-    "seen": 1790991470.7737293,
-    "ast_hash": "fb17b7f91af7c3adcbda5aaab16fea21",
+    "mtime": 1791018561.660038,
+    "seen": 1791018686.0396886,
+    "ast_hash": "64883c956062ff196510b64379134ea2",
     "semantic_hash": ""
   },
   "ui/src/components/BlurText.tsx": {
@@ -162,9 +162,9 @@
     "semantic_hash": ""
   },
   "ui/src/components/ProjectsDrawer.tsx": {
-    "mtime": 1790969564.1961737,
-    "seen": 1790969580.8300989,
-    "ast_hash": "5bce94e6648fe17ef04695d5463fbbf0",
+    "mtime": 1791018550.658988,
+    "seen": 1791018686.0396886,
+    "ast_hash": "e412f869efc4ff9b11cdc8d3a91c23ea",
     "semantic_hash": ""
   },
   "ui/src/taskConstants.ts": {
@@ -186,15 +186,15 @@
     "semantic_hash": ""
   },
   "ui/src/components/ProjectsPortalPage.tsx": {
-    "mtime": 1790999450.5065317,
-    "seen": 1790999727.5832112,
-    "ast_hash": "8e08aae74bb2447dabbaa669152da22f",
+    "mtime": 1791018571.5146408,
+    "seen": 1791018686.0396886,
+    "ast_hash": "2b44634b6fcce4a2370760c07e181c03",
     "semantic_hash": ""
   },
   "ui/src/components/TaskSelectionPage.tsx": {
-    "mtime": 1791016965.0924199,
-    "seen": 1791017147.3636045,
-    "ast_hash": "3ee4ae0bf7d461275016c22e8b24a3f2",
+    "mtime": 1791018216.081282,
+    "seen": 1791018686.0396886,
+    "ast_hash": "9bc0f359050f34b52dccf17f90a873f2",
     "semantic_hash": ""
   },
   "ui/src/components/DotMatrixLoaderCard.tsx": {
@@ -216,9 +216,9 @@
     "semantic_hash": ""
   },
   "ui/src/components/LibraryPage.tsx": {
-    "mtime": 1791002758.5468824,
-    "seen": 1791003103.1484141,
-    "ast_hash": "0773101e3eba0f565035db4bfcac0508",
+    "mtime": 1791018272.944059,
+    "seen": 1791018686.0396886,
+    "ast_hash": "09574482a08a915e0de1f05c7c9e1eda",
     "semantic_hash": ""
   },
   "README.md": {

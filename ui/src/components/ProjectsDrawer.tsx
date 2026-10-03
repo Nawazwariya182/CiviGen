@@ -41,7 +41,8 @@ export const ProjectsDrawer: React.FC<ProjectsDrawerProps> = ({
     >
       <div
         style={{
-          width: 380,
+          width: 'min(380px, 88vw)',
+          maxWidth: '100vw',
           background: '#FFFFFF',
           height: '100%',
           boxShadow: '10px 0 25px -5px rgba(0, 0, 0, 0.1)',

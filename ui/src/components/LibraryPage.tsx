@@ -106,7 +106,10 @@ export const LibraryPage: React.FC<LibraryPageProps> = ({
   }, [assetRuns, searchQuery, categoryFilter, selectedProjectId, showBookmarkedOnly, sortBy]);
 
   return (
-    <div style={{ padding: '28px 36px', width: '100%', maxWidth: 1600, margin: '0 auto', overflowY: 'auto', height: 'calc(100vh - 56px)' }}>
+    <div
+      className="library-page-container"
+      style={{ padding: '28px 36px', width: '100%', maxWidth: 1600, margin: '0 auto', overflowY: 'auto', height: 'calc(100vh - 56px)' }}
+    >
       {/* Header Bar */}
       <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', flexWrap: 'wrap', gap: 16, marginBottom: 24 }}>
         <div>
@@ -138,6 +141,7 @@ export const LibraryPage: React.FC<LibraryPageProps> = ({
 
       {/* Control Bar: Search + Category Tabs + Project Filter + Sorting */}
       <div
+        className="library-filter-bar"
         style={{
           display: 'flex',
           alignItems: 'center',
@@ -174,7 +178,10 @@ export const LibraryPage: React.FC<LibraryPageProps> = ({
         </div>
 
         {/* Middle: Category Filter Pills */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: 4, background: '#F1F5F9', padding: 3, borderRadius: 8 }}>
+        <div
+          className="library-filter-capsule scroll-strip-no-scrollbar"
+          style={{ display: 'flex', alignItems: 'center', gap: 4, background: '#F1F5F9', padding: 3, borderRadius: 8, overflowX: 'auto', maxWidth: '100%' }}
+        >
           {[
             { key: 'all', label: 'All' },
             { key: 'architecture', label: 'Architecture' },
@@ -279,6 +286,7 @@ export const LibraryPage: React.FC<LibraryPageProps> = ({
         </div>
       ) : (
         <div
+          className="library-assets-grid"
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
