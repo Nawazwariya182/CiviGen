@@ -22,6 +22,7 @@ class TaskGenerateRequest(BaseModel):
     lighting: Optional[str] = Field("Twilight Golden Hour", description="Atmosphere and lighting preset")
     images_base64: Optional[List[str]] = Field(default=[], description="List of base64 input images (sketch, room photo, etc.)")
     image_urls: Optional[List[str]] = Field(default=[], description="List of file paths or output URLs (/outputs/...)")
+    images: Optional[List[str]] = Field(default=[], description="List of input images (base64 or URLs)")
     width: Optional[int] = Field(None, description="Output width (overrides task default if specified)")
     height: Optional[int] = Field(None, description="Output height (overrides task default if specified)")
     steps: Optional[int] = Field(None, description="Inference steps")

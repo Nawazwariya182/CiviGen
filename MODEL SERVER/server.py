@@ -290,7 +290,17 @@ def execute_task(req: TaskGenerateRequest):
 
         # Decode or load reference images
         input_images: List[Image.Image] = []
-        for b64 in (req.images_base64 or []):
+        raw_b64_list = list(req.images_base64 or [])
+        for img_item in (getattr(req, "images", None) or []):
+            if img_item and isinstance(img_item, str):
+                if img_item.startswith("data:image") or len(img_item) > 200:
+                    raw_b64_list.append(img_item)
+                elif "/outputs/" in img_item or "/examples/" in img_item or os.path.exists(img_item):
+                    if not req.image_urls:
+                        req.image_urls = []
+                    req.image_urls.append(img_item)
+
+        for b64 in raw_b64_list:
             if b64 and b64.strip():
                 try:
                     input_images.append(decode_b64_image(b64))
@@ -396,9 +406,9 @@ def execute_task(req: TaskGenerateRequest):
             upscale_4k=req.upscale_4k or False
         )
 
-        # Save or resolve input image for the comparison slider (only when user actually passed input images)
+        # Save or resolve input image for the comparison slider (only when an input image is available)
         input_file_url = None
-        if len(req.images or []) > 0 and len(input_images) > 0:
+        if len(input_images) > 0:
             try:
                 _, input_file_url = save_output_image(input_images[0], prefix=f"{req.task_id}_input", record=False)
             except Exception as e:
