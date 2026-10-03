@@ -1,0 +1,30 @@
+# Ignore model weights and large binary assets
+MODELS/
+*.safetensors
+*.gguf
+*.bin
+*.pt
+*.pth
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.avif
+
+# Ignore outputs and sample images
+MODEL SERVER/outputs/
+outputs/
+EXAMPLE/
+
+# Ignore node modules and build outputs
+ui/node_modules/
+ui/dist/
+node_modules/
+dist/
+
+# Ignore virtual environments and caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+.git/

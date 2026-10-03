@@ -1,0 +1,452 @@
+{
+  ".agent/skills/gemini-skills/.agents/plugins/marketplace.json": {
+    "mtime": 1790338946.4428449,
+    "seen": 1790965415.951811,
+    "ast_hash": "02c2b9c8096120824e9391a6de1a7b0d",
+    "semantic_hash": "02c2b9c8096120824e9391a6de1a7b0d"
+  },
+  ".agent/skills/gemini-skills/.claude-plugin/marketplace.json": {
+    "mtime": 1790338946.4438467,
+    "seen": 1790965415.951811,
+    "ast_hash": "57be4853a49ac8041f66c11521de3729",
+    "semantic_hash": "57be4853a49ac8041f66c11521de3729"
+  },
+  ".agent/skills/gemini-skills/.claude-plugin/plugin.json": {
+    "mtime": 1790338946.4438467,
+    "seen": 1790965415.951811,
+    "ast_hash": "8c7a9939e5a6adaf8dbfd9ce06014248",
+    "semantic_hash": "8c7a9939e5a6adaf8dbfd9ce06014248"
+  },
+  ".agent/skills/gemini-skills/.codex-plugin/plugin.json": {
+    "mtime": 1790338946.444847,
+    "seen": 1790965415.951811,
+    "ast_hash": "d94ca3c212e1b7557e0f515740363d10",
+    "semantic_hash": "d94ca3c212e1b7557e0f515740363d10"
+  },
+  ".agent/skills/gemini-skills/.cursor-plugin/plugin.json": {
+    "mtime": 1790338946.4453368,
+    "seen": 1790965415.951811,
+    "ast_hash": "d94ca3c212e1b7557e0f515740363d10",
+    "semantic_hash": "d94ca3c212e1b7557e0f515740363d10"
+  },
+  ".agent/skills/gemini-skills/plugin.json": {
+    "mtime": 1790338946.4468412,
+    "seen": 1790965415.951811,
+    "ast_hash": "8c7a9939e5a6adaf8dbfd9ce06014248",
+    "semantic_hash": "8c7a9939e5a6adaf8dbfd9ce06014248"
+  },
+  ".agent/skills/gemini-skills/skills/gemini-omni-flash-api/scripts/upload_file.py": {
+    "mtime": 1790338946.450879,
+    "seen": 1790965415.951811,
+    "ast_hash": "1a3b0a4298a0a606ebe8fa9dd1c14182",
+    "semantic_hash": "1a3b0a4298a0a606ebe8fa9dd1c14182"
+  },
+  ".agent/skills/gemini-skills/skills/gemini-omni-flash-api/scripts/video/generate_video.py": {
+    "mtime": 1790338946.451451,
+    "seen": 1790965415.951811,
+    "ast_hash": "d256e9ad9948e9c1403e012d34b716a9",
+    "semantic_hash": "d256e9ad9948e9c1403e012d34b716a9"
+  },
+  ".agent/skills/gemini-skills/skills/gemini-omni-flash-api/scripts/video/inspect_video.py": {
+    "mtime": 1790338946.4519515,
+    "seen": 1790965415.951811,
+    "ast_hash": "768346a4c8b24d1a034e2fcd37581021",
+    "semantic_hash": "768346a4c8b24d1a034e2fcd37581021"
+  },
+  ".agent/skills/gemini-skills/skills/gemini-omni-flash-api/scripts/video/prep_video.py": {
+    "mtime": 1790338946.4524515,
+    "seen": 1790965415.951811,
+    "ast_hash": "45bf04d1a3feea49d23b36c62d716fe6",
+    "semantic_hash": "45bf04d1a3feea49d23b36c62d716fe6"
+  },
+  "MODEL SERVER/multiview_architectural_generator.py": {
+    "mtime": 1790990834.154166,
+    "seen": 1790991470.7737293,
+    "ast_hash": "40faa782ff26931751f1e90b20a5e1b7",
+    "semantic_hash": ""
+  },
+  "MODEL SERVER/pipeline_flux.py": {
+    "mtime": 1790990834.0590081,
+    "seen": 1790991470.7737293,
+    "ast_hash": "4704e09f57a20231b5b98071701f8f4e",
+    "semantic_hash": ""
+  },
+  "MODEL SERVER/pipeline_manager.py": {
+    "mtime": 1790989597.3309205,
+    "seen": 1790991470.7737293,
+    "ast_hash": "1bd5125af3ceecae37973e4b0f5f9c9f",
+    "semantic_hash": ""
+  },
+  "MODEL SERVER/pipeline_qwen.py": {
+    "mtime": 1790990834.0600064,
+    "seen": 1790991470.7737293,
+    "ast_hash": "05ea792044cead8183c39c7618e2cb62",
+    "semantic_hash": ""
+  },
+  "MODEL SERVER/prompt_enhancer.py": {
+    "mtime": 1790998128.7523694,
+    "seen": 1790998851.5552287,
+    "ast_hash": "473e685e38b6ffd81f797dbae1f42432",
+    "semantic_hash": ""
+  },
+  "MODEL SERVER/schemas.py": {
+    "mtime": 1790997229.435713,
+    "seen": 1790997453.5522702,
+    "ast_hash": "ffc9952d29223cde2acde17e12cb196b",
+    "semantic_hash": ""
+  },
+  "MODEL SERVER/server.py": {
+    "mtime": 1790999988.1441598,
+    "seen": 1791000311.768892,
+    "ast_hash": "b226cc5052876028e92b721f57333277",
+    "semantic_hash": ""
+  },
+  "MODEL SERVER/task_configs.py": {
+    "mtime": 1790998458.1792674,
+    "seen": 1790998851.5552287,
+    "ast_hash": "a4d5429fffac62ce93487a45f6e6b075",
+    "semantic_hash": ""
+  },
+  "ui/package.json": {
+    "mtime": 1790966720.180343,
+    "seen": 1790966859.6733334,
+    "ast_hash": "132d41d6194c588fdac480cdd51cabfd",
+    "semantic_hash": "132d41d6194c588fdac480cdd51cabfd"
+  },
+  "ui/src/App.tsx": {
+    "mtime": 1791000642.537904,
+    "seen": 1791000741.7235868,
+    "ast_hash": "7ee2c55d9f59fe2161435c92319ce6c4",
+    "semantic_hash": ""
+  },
+  "ui/src/components/ApiPlaygroundTab.tsx": {
+    "mtime": 1790965576.2019868,
+    "seen": 1790965640.9636357,
+    "ast_hash": "2248f2df5f9307e7d3ba63dd405d5741",
+    "semantic_hash": "2248f2df5f9307e7d3ba63dd405d5741"
+  },
+  "ui/src/components/AssetFeedItem.tsx": {
+    "mtime": 1791000570.4836607,
+    "seen": 1791000741.7235868,
+    "ast_hash": "127488f4d40794daa549cf50228a1151",
+    "semantic_hash": ""
+  },
+  "ui/src/components/BeforeAfterSlider.tsx": {
+    "mtime": 1790991268.9621496,
+    "seen": 1790991470.7737293,
+    "ast_hash": "fb17b7f91af7c3adcbda5aaab16fea21",
+    "semantic_hash": ""
+  },
+  "ui/src/components/BlurText.tsx": {
+    "mtime": 1790965523.0023427,
+    "seen": 1790965640.9636357,
+    "ast_hash": "cab9e59f50441b96aa5372914759b36e",
+    "semantic_hash": "cab9e59f50441b96aa5372914759b36e"
+  },
+  "ui/src/components/Magnet.tsx": {
+    "mtime": 1790965537.57473,
+    "seen": 1790965640.9636357,
+    "ast_hash": "f9abb64fd144eb71f6c38f865084095d",
+    "semantic_hash": "f9abb64fd144eb71f6c38f865084095d"
+  },
+  "ui/src/components/ShinyText.tsx": {
+    "mtime": 1790965529.2400265,
+    "seen": 1790965640.9636357,
+    "ast_hash": "dbd186304cae8d494fe2bb7ad1eb6ef6",
+    "semantic_hash": "dbd186304cae8d494fe2bb7ad1eb6ef6"
+  },
+  "ui/src/components/SpotlightCard.tsx": {
+    "mtime": 1790965516.2938564,
+    "seen": 1790965640.9636357,
+    "ast_hash": "4ee2403169ee6b6d5c55aec501f70bf1",
+    "semantic_hash": "4ee2403169ee6b6d5c55aec501f70bf1"
+  },
+  "ui/src/main.tsx": {
+    "mtime": 1790965608.0653853,
+    "seen": 1790965640.9636357,
+    "ast_hash": "4e7bfa8e1320ab46797e98795814f293",
+    "semantic_hash": "4e7bfa8e1320ab46797e98795814f293"
+  },
+  "ui/src/vite-env.d.ts": {
+    "mtime": 1790965621.2886088,
+    "seen": 1790965640.9636357,
+    "ast_hash": "0352474ba2918efe13895edbc3780d94",
+    "semantic_hash": "0352474ba2918efe13895edbc3780d94"
+  },
+  "ui/tsconfig.app.json": {
+    "mtime": 1790965476.5325973,
+    "seen": 1790965640.9636357,
+    "ast_hash": "3102c623274773648863536059b8e972",
+    "semantic_hash": "3102c623274773648863536059b8e972"
+  },
+  "ui/tsconfig.json": {
+    "mtime": 1790965470.2534153,
+    "seen": 1790965640.9636357,
+    "ast_hash": "a3d39fa780ebff65444de257f291ce6c",
+    "semantic_hash": "a3d39fa780ebff65444de257f291ce6c"
+  },
+  "ui/tsconfig.node.json": {
+    "mtime": 1790965482.003604,
+    "seen": 1790965640.9636357,
+    "ast_hash": "910b1be5e07456ebea0b76bbe8448c6d",
+    "semantic_hash": "910b1be5e07456ebea0b76bbe8448c6d"
+  },
+  "ui/vite.config.ts": {
+    "mtime": 1790965464.143977,
+    "seen": 1790965640.9636357,
+    "ast_hash": "08e280a7b7b9f4dcabe59593cba060f8",
+    "semantic_hash": "08e280a7b7b9f4dcabe59593cba060f8"
+  },
+  "ui/src/components/CustomSelect.tsx": {
+    "mtime": 1790969054.7982106,
+    "seen": 1790969196.4976435,
+    "ast_hash": "be0ff4e7ae1e49436f59b5f0221f2983",
+    "semantic_hash": ""
+  },
+  "ui/src/components/CustomSlider.tsx": {
+    "mtime": 1790967833.176738,
+    "seen": 1790968342.0778162,
+    "ast_hash": "61bb8b1e27d2edfd0ed32a7d63d01699",
+    "semantic_hash": ""
+  },
+  "ui/src/components/CustomSwitch.tsx": {
+    "mtime": 1790967841.0208006,
+    "seen": 1790968342.0778162,
+    "ast_hash": "f470c7aa87a6b2497526715dac419efe",
+    "semantic_hash": ""
+  },
+  ".agent/skills/gemini-skills/README.md": {
+    "mtime": 1790338946.4463434,
+    "seen": 1790968342.0778162,
+    "ast_hash": "36f06699ed5b629c12d2dbeb6e4eed70",
+    "semantic_hash": ""
+  },
+  ".agent/skills/gemini-skills/skills/gemini-api-dev/SKILL.md": {
+    "mtime": 1790338946.44734,
+    "seen": 1790968342.0778162,
+    "ast_hash": "205e3c053102faa4b987f15ecaa6224b",
+    "semantic_hash": ""
+  },
+  ".agent/skills/gemini-skills/skills/gemini-api-dev/references/migration.md": {
+    "mtime": 1790338946.448341,
+    "seen": 1790968342.0778162,
+    "ast_hash": "f64817ee2d651cd5c58a0c6f955221aa",
+    "semantic_hash": ""
+  },
+  ".agent/skills/gemini-skills/skills/gemini-live-api-dev/SKILL.md": {
+    "mtime": 1790338946.4488428,
+    "seen": 1790968342.0778162,
+    "ast_hash": "d12453c334b5fc7e562111160dd3c538",
+    "semantic_hash": ""
+  },
+  ".agent/skills/gemini-skills/skills/gemini-live-api-dev/references/migration.md": {
+    "mtime": 1790338946.4493406,
+    "seen": 1790968342.0778162,
+    "ast_hash": "ab24b81217b872327c604c91f9cc9171",
+    "semantic_hash": ""
+  },
+  ".agent/skills/gemini-skills/skills/gemini-omni-flash-api/SKILL.md": {
+    "mtime": 1790338946.44984,
+    "seen": 1790968342.0778162,
+    "ast_hash": "9da84115f74912f29bf2172b7502141e",
+    "semantic_hash": ""
+  },
+  ".agent/skills/skills-garden/README.md": {
+    "mtime": 1790338952.4977052,
+    "seen": 1790968342.0778162,
+    "ast_hash": "3ce26241b4080fb2ca8e9073b99263b2",
+    "semantic_hash": ""
+  },
+  ".agent/skills/skills-garden/design-doc-skills/README.md": {
+    "mtime": 1790338952.498705,
+    "seen": 1790968342.0778162,
+    "ast_hash": "f38a9ab89fc0eba5799bad39bbc7452c",
+    "semantic_hash": ""
+  },
+  ".agent/skills/skills-garden/design-doc-skills/eng-design-doc/SKILL.md": {
+    "mtime": 1790338952.4994154,
+    "seen": 1790968342.0778162,
+    "ast_hash": "b7a2b2b709a218ba0ead35952f1fd37a",
+    "semantic_hash": ""
+  },
+  ".agent/skills/skills-garden/design-doc-skills/pm-design-doc/SKILL.md": {
+    "mtime": 1790338952.5001564,
+    "seen": 1790968342.0778162,
+    "ast_hash": "190f79a4a57b578d34726e5bff6b32c3",
+    "semantic_hash": ""
+  },
+  ".agent/skills/skills-garden/design-doc-skills/ux-design-doc/SKILL.md": {
+    "mtime": 1790338952.5006602,
+    "seen": 1790968342.0778162,
+    "ast_hash": "220021456c15d6d937d43790a35dffbc",
+    "semantic_hash": ""
+  },
+  ".agent/skills/skills-garden/eng-skills/gemini-api.md": {
+    "mtime": 1790338952.5016608,
+    "seen": 1790968342.0778162,
+    "ast_hash": "4e4590a09008b67e100c62e901ff0550",
+    "semantic_hash": ""
+  },
+  ".agent/skills/skills-garden/eng-skills/test-driven-dev.md": {
+    "mtime": 1790338952.5021603,
+    "seen": 1790968342.0778162,
+    "ast_hash": "b2cc04c7758027d93bff15c5e73f2af2",
+    "semantic_hash": ""
+  },
+  ".agent/skills/skills-garden/ux-design-skills/cloud-pup.md": {
+    "mtime": 1790338952.5026608,
+    "seen": 1790968342.0778162,
+    "ast_hash": "84ec3c41fa43d1461b2f098add63862b",
+    "semantic_hash": ""
+  },
+  ".agent/skills/skills-garden/ux-design-skills/listening-room.md": {
+    "mtime": 1790338952.50316,
+    "seen": 1790968342.0778162,
+    "ast_hash": "c18686b401ad079bc7e12a901893bfcc",
+    "semantic_hash": ""
+  },
+  ".agent/skills/skills-garden/ux-design-skills/y2k-dreamcore.md": {
+    "mtime": 1790338952.5036614,
+    "seen": 1790968342.0778162,
+    "ast_hash": "429599ee6a19cecae638d850a247323e",
+    "semantic_hash": ""
+  },
+  ".agents/skills/design-taste-frontend/SKILL.md": {
+    "mtime": 1790344780.9291916,
+    "seen": 1790968342.0778162,
+    "ast_hash": "648c8bf98f84fbe7f14bf2da035c57fe",
+    "semantic_hash": ""
+  },
+  ".agents/skills/full-output-enforcement/SKILL.md": {
+    "mtime": 1790344780.9261916,
+    "seen": 1790968342.0778162,
+    "ast_hash": "2072dc2c1357dc9cd6384d1f441e05c3",
+    "semantic_hash": ""
+  },
+  ".agents/skills/gpt-taste/SKILL.md": {
+    "mtime": 1790344780.9226916,
+    "seen": 1790968342.0778162,
+    "ast_hash": "e2a7560cbfce7a853dd8f65eca12c103",
+    "semantic_hash": ""
+  },
+  ".agents/skills/high-end-visual-design/SKILL.md": {
+    "mtime": 1790344780.9271922,
+    "seen": 1790968342.0778162,
+    "ast_hash": "64f7c1069a5a3d18797950d8fac7b63a",
+    "semantic_hash": ""
+  },
+  ".agents/skills/image-to-code/SKILL.md": {
+    "mtime": 1790344780.923692,
+    "seen": 1790968342.0778162,
+    "ast_hash": "b18a810930da9c6b558b15c85bc74007",
+    "semantic_hash": ""
+  },
+  ".agents/skills/minimalist-ui/SKILL.md": {
+    "mtime": 1790344780.9256916,
+    "seen": 1790968342.0778162,
+    "ast_hash": "32f8681f79a681d00a4b72ddce4415b1",
+    "semantic_hash": ""
+  },
+  ".claude/skills/design-taste-frontend/SKILL.md": {
+    "mtime": 1790344780.9291916,
+    "seen": 1790968342.0778162,
+    "ast_hash": "648c8bf98f84fbe7f14bf2da035c57fe",
+    "semantic_hash": ""
+  },
+  ".claude/skills/full-output-enforcement/SKILL.md": {
+    "mtime": 1790344780.9261916,
+    "seen": 1790968342.0778162,
+    "ast_hash": "2072dc2c1357dc9cd6384d1f441e05c3",
+    "semantic_hash": ""
+  },
+  ".claude/skills/gpt-taste/SKILL.md": {
+    "mtime": 1790344780.9226916,
+    "seen": 1790968342.0778162,
+    "ast_hash": "e2a7560cbfce7a853dd8f65eca12c103",
+    "semantic_hash": ""
+  },
+  ".claude/skills/high-end-visual-design/SKILL.md": {
+    "mtime": 1790344780.9271922,
+    "seen": 1790968342.0778162,
+    "ast_hash": "64f7c1069a5a3d18797950d8fac7b63a",
+    "semantic_hash": ""
+  },
+  ".claude/skills/image-to-code/SKILL.md": {
+    "mtime": 1790344780.923692,
+    "seen": 1790968342.0778162,
+    "ast_hash": "b18a810930da9c6b558b15c85bc74007",
+    "semantic_hash": ""
+  },
+  ".claude/skills/minimalist-ui/SKILL.md": {
+    "mtime": 1790344780.9256916,
+    "seen": 1790968342.0778162,
+    "ast_hash": "32f8681f79a681d00a4b72ddce4415b1",
+    "semantic_hash": ""
+  },
+  "ui/index.html": {
+    "mtime": 1790965489.7044978,
+    "seen": 1790968342.0778162,
+    "ast_hash": "15e55549525d088a20f4dccf61c2d544",
+    "semantic_hash": ""
+  },
+  "ui/src/components/AppsHubPage.tsx": {
+    "mtime": 1790998678.8840473,
+    "seen": 1790998851.5552287,
+    "ast_hash": "e36ee129aa07c50b3f33e2e178bd7bd8",
+    "semantic_hash": ""
+  },
+  "ui/src/components/ProjectsDrawer.tsx": {
+    "mtime": 1790969564.1961737,
+    "seen": 1790969580.8300989,
+    "ast_hash": "5bce94e6648fe17ef04695d5463fbbf0",
+    "semantic_hash": ""
+  },
+  "ui/src/taskConstants.ts": {
+    "mtime": 1790999913.9322963,
+    "seen": 1791000311.768892,
+    "ast_hash": "1c7130fb4bff6a813271d8944e71caf1",
+    "semantic_hash": ""
+  },
+  "ui/src/components/ModelLogos.tsx": {
+    "mtime": 1790970568.2171662,
+    "seen": 1790970888.1923747,
+    "ast_hash": "a5db8a249fb830616b6f65f22e79b2bf",
+    "semantic_hash": ""
+  },
+  "ui/src/components/ScrollableCards.tsx": {
+    "mtime": 1791001320.334922,
+    "seen": 1791001371.551591,
+    "ast_hash": "6b7b9859bbeb014df192a13c26f147fd",
+    "semantic_hash": ""
+  },
+  "ui/src/components/ProjectsPortalPage.tsx": {
+    "mtime": 1790999450.5065317,
+    "seen": 1790999727.5832112,
+    "ast_hash": "8e08aae74bb2447dabbaa669152da22f",
+    "semantic_hash": ""
+  },
+  "ui/src/components/TaskSelectionPage.tsx": {
+    "mtime": 1790998998.8764007,
+    "seen": 1790999064.253608,
+    "ast_hash": "06d0ecfed41abadb2ace0324361d278b",
+    "semantic_hash": ""
+  },
+  "ui/src/components/DotMatrixLoaderCard.tsx": {
+    "mtime": 1790991223.9795072,
+    "seen": 1790991470.7737293,
+    "ast_hash": "40e41bcea0f0840bf36d7f3f15b65568",
+    "semantic_hash": ""
+  },
+  "MODEL SERVER/progress_tracker.py": {
+    "mtime": 1790991076.4105942,
+    "seen": 1790991470.7737293,
+    "ast_hash": "223e973aae4f416e1607dd8d094ad466",
+    "semantic_hash": ""
+  },
+  "ui/src/components/StyleCardDotMatrix.tsx": {
+    "mtime": 1790991139.6637654,
+    "seen": 1790991470.7737293,
+    "ast_hash": "bed379470d49c19733c176346ac47a46",
+    "semantic_hash": ""
+  }
+}
