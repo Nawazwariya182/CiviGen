@@ -35,9 +35,6 @@ import uvicorn
 from schemas import (
     TaskGenerateRequest,
     TaskGenerateResponse,
-    SketchMultiViewRequest,
-    SketchMultiViewResponse,
-    MultiViewAngleItem,
     GenerateJsonRequest,
     GenerateResponse,
     Upscale4kRequest,
@@ -51,7 +48,6 @@ from schemas import (
 from task_configs import TASKS, TASK_CATEGORIES, get_task_config, build_task_prompt
 from prompt_enhancer import enhance_prompt
 from pipeline_manager import PipelineManager
-from multiview_architectural_generator import ArchitecturalMultiViewGenerator
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(name)s: %(message)s")
 logger = logging.getLogger("ArchModelServer")
@@ -83,7 +79,6 @@ if os.path.exists(EXAMPLES_DIR):
 
 # Lazy pipeline managers
 manager = PipelineManager()
-multiview_generator = ArchitecturalMultiViewGenerator(pipeline_manager=manager)
 
 
 # =============================================================================
@@ -476,73 +471,6 @@ def execute_task(req: TaskGenerateRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
 
-@app.post("/api/v1/tasks/arch/sketch-to-multiview", response_model=SketchMultiViewResponse)
-def execute_sketch_multiview(req: SketchMultiViewRequest):
-    """
-    Generates 5 structurally and visually locked 3D perspectives from an architectural sketch:
-    Front, Left Side, Right Side, Back Elevation, Top Aerial View.
-    """
-    try:
-        t0 = time.time()
-        sketch_img = None
-        if req.sketch_base64 and req.sketch_base64.strip():
-            try:
-                sketch_img = decode_b64_image(req.sketch_base64)
-            except Exception:
-                sketch_img = None
-
-        views_data = multiview_generator.generate_all_views(
-            sketch_img=sketch_img,
-            prompt=req.prompt or "Modern luxury villa with 3 floors",
-            style=req.style or "Modern Luxury Villa",
-            lighting=req.lighting or "Twilight Golden Hour",
-            steps=req.steps or 28,
-            seed=req.seed or -1,
-            project_id=req.project_id or "PRJ-1001"
-        )
-        dur_ms = round((time.time() - t0) * 1000.0, 1)
-
-        result_views: List[MultiViewAngleItem] = []
-        for v in views_data:
-            fn = os.path.basename(v["filepath"])
-            record_output({
-                "id": fn,
-                "filename": fn,
-                "file_url": v["file_url"],
-                "project_id": req.project_id or "PRJ-1001",
-                "task_id": "arch_sketch_to_multiview",
-                "task_title": f"Sketch to Multi View ({v['name']})",
-                "category": "architecture",
-                "prompt": f"Synchronized 3D perspective: {v['name']}",
-                "model": "qwen",
-                "seed": v["seed"],
-                "timestamp": int(time.time())
-            })
-            result_views.append(MultiViewAngleItem(
-                view_id=v["view_id"],
-                name=v["name"],
-                description=v["description"],
-                file_url=v["file_url"],
-                image_base64=encode_image_b64(v["image"]),
-                seed=v["seed"]
-            ))
-
-        try:
-            progress_tracker.finish()
-        except Exception:
-            pass
-
-        return SketchMultiViewResponse(
-            success=True,
-            views=result_views,
-            execution_time_ms=dur_ms,
-            metadata={"style": req.style, "lighting": req.lighting, "steps": req.steps}
-        )
-    except Exception as e:
-        logger.exception("Error executing architectural sketch multiview:")
-        raise HTTPException(status_code=500, detail=str(e))
-
-
 # Dedicated REST endpoints for individual tasks
 @app.post("/api/v1/tasks/arch/text-to-arch")
 def task_arch_t2a(req: TaskGenerateRequest):
@@ -665,9 +593,7 @@ def openai_chat_completions(req: OpenAIChatCompletionRequest):
         if not task_id:
             # Auto-detect from text
             lower = user_text.lower()
-            if "multiview" in lower or "multi view" in lower or "5 views" in lower:
-                task_id = "arch_sketch_to_multiview"
-            elif "sketch" in lower and "interior" in lower:
+            if "sketch" in lower and "interior" in lower:
                 task_id = "interior_sketch_to_design"
             elif "sketch" in lower and "furniture" in lower:
                 task_id = "furniture_sketch_to_render"

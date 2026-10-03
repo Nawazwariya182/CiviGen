@@ -51,37 +51,7 @@ class TaskGenerateResponse(BaseModel):
 
 
 # =============================================================================
-# 2. MultiView Elevation Schemas
-# =============================================================================
-
-class MultiViewAngleItem(BaseModel):
-    view_id: str
-    name: str
-    description: str
-    file_url: str
-    image_base64: str
-    seed: int
-
-
-class SketchMultiViewRequest(BaseModel):
-    sketch_base64: Optional[str] = Field("", description="Optional base64 encoded architectural sketch")
-    prompt: Optional[str] = Field("Modern luxury villa with 3 floors", description="Architectural text prompt for Front Elevation")
-    style: Optional[str] = Field("Modern Luxury Villa", description="Architectural style")
-    lighting: Optional[str] = Field("Twilight Golden Hour", description="Lighting conditions")
-    steps: Optional[int] = Field(28, description="Inference steps per perspective")
-    seed: Optional[int] = Field(-1, description="Base seed for structural locking")
-    project_id: Optional[str] = Field("PRJ-1001", description="Project ID for grouping assets")
-
-
-class SketchMultiViewResponse(BaseModel):
-    success: bool
-    views: List[MultiViewAngleItem]
-    execution_time_ms: float
-    metadata: Dict[str, Any] = {}
-
-
-# =============================================================================
-# 3. Direct JSON & 4K Upscale Schemas
+# 2. Direct JSON & 4K Upscale Schemas
 # =============================================================================
 
 class GenerateJsonRequest(BaseModel):

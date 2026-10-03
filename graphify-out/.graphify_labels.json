@@ -2,7 +2,7 @@
   "0": "CiviGen — Generative Architectural Design Studio",
   "1": "argparse",
   "2": "google",
-  "3": "PipelineManager",
+  "3": "FluxPipeline",
   "4": "package.json",
   "5": "google_genai",
   "6": "compilerOptions",
@@ -12,10 +12,14 @@
   "10": "tsconfig.json",
   "11": "vite-env.d.ts",
   "12": "urllib_parse",
+  "13": "BlurText.tsx",
   "14": "pipeline_flux.py",
+  "15": "CustomSlider.tsx",
+  "16": "CustomSwitch.tsx",
+  "17": "Magnet.tsx",
   "18": "QwenPipeline",
   "25": "react",
-  "45": "App.tsx",
+  "45": "CustomSelect.tsx",
   "59": "ScrollableCards.tsx",
   "72": "get",
   "81": "main.tsx",
@@ -24,5 +28,5 @@
   "91": "GenerationProgressTracker",
   "95": "server.py",
   "97": "concurrent_futures",
-  "99": "TaskSelectionPage.tsx"
+  "99": "App.tsx"
 }

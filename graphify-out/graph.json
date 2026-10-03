@@ -4,6 +4,71 @@
   "graph": {},
   "nodes": [
     {
+      "id": "ui_src_components_blurtext_blurtextprops",
+      "label": "BlurTextProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "BlurText.tsx",
+      "file_type": "code",
+      "norm_label": "blurtextprops",
+      "source_file": "ui/src/components/BlurText.tsx",
+      "source_location": "L3"
+    },
+    {
+      "id": "ui_src_components_customslider_customsliderprops",
+      "label": "CustomSliderProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "CustomSlider.tsx",
+      "file_type": "code",
+      "norm_label": "customsliderprops",
+      "source_file": "ui/src/components/CustomSlider.tsx",
+      "source_location": "L3"
+    },
+    {
+      "id": "ui_src_components_customswitch_customswitchprops",
+      "label": "CustomSwitchProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 16,
+      "community_name": "CustomSwitch.tsx",
+      "file_type": "code",
+      "norm_label": "customswitchprops",
+      "source_file": "ui/src/components/CustomSwitch.tsx",
+      "source_location": "L3"
+    },
+    {
+      "id": "ui_src_components_magnet_magnetprops",
+      "label": "MagnetProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "Magnet.tsx",
+      "file_type": "code",
+      "norm_label": "magnetprops",
+      "source_file": "ui/src/components/Magnet.tsx",
+      "source_location": "L3"
+    },
+    {
+      "id": "model_server_pipeline_manager_pipelinemanager",
+      "label": "PipelineManager",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "QwenPipeline",
+      "file_type": "code",
+      "norm_label": "pipelinemanager",
+      "source_file": "MODEL SERVER/pipeline_manager.py",
+      "source_location": "L28"
+    },
+    {
       "id": "model_server_pipeline_qwen_qwenpipeline",
       "label": "QwenPipeline",
       "_callable": true,
@@ -28,19 +93,6 @@
       "norm_label": "taskmeta",
       "source_file": "ui/src/components/ApiPlaygroundTab.tsx",
       "source_location": "L19"
-    },
-    {
-      "id": "ui_src_components_blurtext_blurtextprops",
-      "label": "BlurTextProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 25,
-      "community_name": "react",
-      "file_type": "code",
-      "norm_label": "blurtextprops",
-      "source_file": "ui/src/components/BlurText.tsx",
-      "source_location": "L3"
     },
     {
       "id": "ui_src_components_shinytext_shinytextprops",
@@ -69,17 +121,17 @@
       "source_location": "L3"
     },
     {
-      "id": "model_server_multiview_architectural_generator_architecturalmultiviewgenerator",
-      "label": "ArchitecturalMultiViewGenerator",
+      "id": "ui_src_components_stylecarddotmatrix_stylecarddotmatrixprops",
+      "label": "StyleCardDotMatrixProps",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 3,
-      "community_name": "PipelineManager",
+      "community": 25,
+      "community_name": "react",
       "file_type": "code",
-      "norm_label": "architecturalmultiviewgenerator",
-      "source_file": "MODEL SERVER/multiview_architectural_generator.py",
-      "source_location": "L47"
+      "norm_label": "stylecarddotmatrixprops",
+      "source_file": "ui/src/components/StyleCardDotMatrix.tsx",
+      "source_location": "L3"
     },
     {
       "id": "model_server_pipeline_flux_fluxpipeline",
@@ -88,50 +140,11 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 3,
-      "community_name": "PipelineManager",
+      "community_name": "FluxPipeline",
       "file_type": "code",
       "norm_label": "fluxpipeline",
       "source_file": "MODEL SERVER/pipeline_flux.py",
       "source_location": "L40"
-    },
-    {
-      "id": "model_server_pipeline_manager_pipelinemanager",
-      "label": "PipelineManager",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "PipelineManager",
-      "file_type": "code",
-      "norm_label": "pipelinemanager",
-      "source_file": "MODEL SERVER/pipeline_manager.py",
-      "source_location": "L28"
-    },
-    {
-      "id": "ui_src_app_parsedroute",
-      "label": "ParsedRoute",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 45,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "parsedroute",
-      "source_file": "ui/src/App.tsx",
-      "source_location": "L80"
-    },
-    {
-      "id": "ui_src_app_taskdef",
-      "label": "TaskDef",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 45,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "taskdef",
-      "source_file": "ui/src/App.tsx",
-      "source_location": "L60"
     },
     {
       "id": "ui_src_components_customselect_customselectprops",
@@ -140,7 +153,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 45,
-      "community_name": "App.tsx",
+      "community_name": "CustomSelect.tsx",
       "file_type": "code",
       "norm_label": "customselectprops",
       "source_file": "ui/src/components/CustomSelect.tsx",
@@ -153,50 +166,11 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 45,
-      "community_name": "App.tsx",
+      "community_name": "CustomSelect.tsx",
       "file_type": "code",
       "norm_label": "selectoption",
       "source_file": "ui/src/components/CustomSelect.tsx",
       "source_location": "L4"
-    },
-    {
-      "id": "ui_src_components_customslider_customsliderprops",
-      "label": "CustomSliderProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 45,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "customsliderprops",
-      "source_file": "ui/src/components/CustomSlider.tsx",
-      "source_location": "L3"
-    },
-    {
-      "id": "ui_src_components_customswitch_customswitchprops",
-      "label": "CustomSwitchProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 45,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "customswitchprops",
-      "source_file": "ui/src/components/CustomSwitch.tsx",
-      "source_location": "L3"
-    },
-    {
-      "id": "ui_src_components_magnet_magnetprops",
-      "label": "MagnetProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 45,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "magnetprops",
-      "source_file": "ui/src/components/Magnet.tsx",
-      "source_location": "L3"
     },
     {
       "id": "ui_src_components_scrollablecards_aspectratiooption",
@@ -236,19 +210,6 @@
       "norm_label": "stylepresetoption",
       "source_file": "ui/src/components/ScrollableCards.tsx",
       "source_location": "L234"
-    },
-    {
-      "id": "ui_src_components_stylecarddotmatrix_stylecarddotmatrixprops",
-      "label": "StyleCardDotMatrixProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 59,
-      "community_name": "ScrollableCards.tsx",
-      "file_type": "code",
-      "norm_label": "stylecarddotmatrixprops",
-      "source_file": "ui/src/components/StyleCardDotMatrix.tsx",
-      "source_location": "L3"
     },
     {
       "id": "ui_src_components_assetfeeditem_assetfeeditemprops",
@@ -378,7 +339,7 @@
       "file_type": "code",
       "norm_label": "exampleitem",
       "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L189"
+      "source_location": "L159"
     },
     {
       "id": "model_server_schemas_generatejsonrequest",
@@ -391,7 +352,7 @@
       "file_type": "code",
       "norm_label": "generatejsonrequest",
       "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L87"
+      "source_location": "L57"
     },
     {
       "id": "model_server_schemas_generateresponse",
@@ -404,20 +365,7 @@
       "file_type": "code",
       "norm_label": "generateresponse",
       "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L105"
-    },
-    {
-      "id": "model_server_schemas_multiviewangleitem",
-      "label": "MultiViewAngleItem",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 95,
-      "community_name": "server.py",
-      "file_type": "code",
-      "norm_label": "multiviewangleitem",
-      "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L57"
+      "source_location": "L75"
     },
     {
       "id": "model_server_schemas_openaichatcompletionchoice",
@@ -430,7 +378,7 @@
       "file_type": "code",
       "norm_label": "openaichatcompletionchoice",
       "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L152"
+      "source_location": "L122"
     },
     {
       "id": "model_server_schemas_openaichatcompletionrequest",
@@ -443,7 +391,7 @@
       "file_type": "code",
       "norm_label": "openaichatcompletionrequest",
       "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L138"
+      "source_location": "L108"
     },
     {
       "id": "model_server_schemas_openaichatcompletionresponse",
@@ -456,7 +404,7 @@
       "file_type": "code",
       "norm_label": "openaichatcompletionresponse",
       "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L158"
+      "source_location": "L128"
     },
     {
       "id": "model_server_schemas_openaichatmessage",
@@ -469,7 +417,7 @@
       "file_type": "code",
       "norm_label": "openaichatmessage",
       "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L133"
+      "source_location": "L103"
     },
     {
       "id": "model_server_schemas_openaichatmessagecontentitem",
@@ -482,7 +430,7 @@
       "file_type": "code",
       "norm_label": "openaichatmessagecontentitem",
       "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L127"
+      "source_location": "L97"
     },
     {
       "id": "model_server_schemas_openaiimageeditrequest",
@@ -495,7 +443,7 @@
       "file_type": "code",
       "norm_label": "openaiimageeditrequest",
       "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L176"
+      "source_location": "L146"
     },
     {
       "id": "model_server_schemas_openaiimagegenerationrequest",
@@ -508,33 +456,7 @@
       "file_type": "code",
       "norm_label": "openaiimagegenerationrequest",
       "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L167"
-    },
-    {
-      "id": "model_server_schemas_sketchmultiviewrequest",
-      "label": "SketchMultiViewRequest",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 95,
-      "community_name": "server.py",
-      "file_type": "code",
-      "norm_label": "sketchmultiviewrequest",
-      "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L66"
-    },
-    {
-      "id": "model_server_schemas_sketchmultiviewresponse",
-      "label": "SketchMultiViewResponse",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 95,
-      "community_name": "server.py",
-      "file_type": "code",
-      "norm_label": "sketchmultiviewresponse",
-      "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L76"
+      "source_location": "L137"
     },
     {
       "id": "model_server_schemas_systemtelemetryresponse",
@@ -547,7 +469,7 @@
       "file_type": "code",
       "norm_label": "systemtelemetryresponse",
       "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L199"
+      "source_location": "L169"
     },
     {
       "id": "model_server_schemas_taskgeneraterequest",
@@ -586,7 +508,33 @@
       "file_type": "code",
       "norm_label": "upscale4krequest",
       "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L117"
+      "source_location": "L87"
+    },
+    {
+      "id": "ui_src_app_parsedroute",
+      "label": "ParsedRoute",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 99,
+      "community_name": "App.tsx",
+      "file_type": "code",
+      "norm_label": "parsedroute",
+      "source_file": "ui/src/App.tsx",
+      "source_location": "L80"
+    },
+    {
+      "id": "ui_src_app_taskdef",
+      "label": "TaskDef",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 99,
+      "community_name": "App.tsx",
+      "file_type": "code",
+      "norm_label": "taskdef",
+      "source_file": "ui/src/App.tsx",
+      "source_location": "L60"
     },
     {
       "id": "ui_src_components_appshubpage_appshubpageprops",
@@ -595,7 +543,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 99,
-      "community_name": "TaskSelectionPage.tsx",
+      "community_name": "App.tsx",
       "file_type": "code",
       "norm_label": "appshubpageprops",
       "source_file": "ui/src/components/AppsHubPage.tsx",
@@ -608,11 +556,11 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 99,
-      "community_name": "TaskSelectionPage.tsx",
+      "community_name": "App.tsx",
       "file_type": "code",
       "norm_label": "taskitem",
       "source_file": "ui/src/components/TaskSelectionPage.tsx",
-      "source_location": "L11"
+      "source_location": "L12"
     },
     {
       "id": "ui_src_components_taskselectionpage_taskselectionpageprops",
@@ -621,11 +569,23 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 99,
-      "community_name": "TaskSelectionPage.tsx",
+      "community_name": "App.tsx",
       "file_type": "code",
       "norm_label": "taskselectionpageprops",
       "source_file": "ui/src/components/TaskSelectionPage.tsx",
-      "source_location": "L449"
+      "source_location": "L491"
+    },
+    {
+      "id": "ui_src_components_blurtext_blurtext",
+      "label": "BlurText()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "BlurText.tsx",
+      "file_type": "code",
+      "norm_label": "blurtext()",
+      "source_file": "ui/src/components/BlurText.tsx",
+      "source_location": "L10"
     },
     {
       "id": "model_server_prompt_enhancer_enhance_prompt",
@@ -638,6 +598,114 @@
       "norm_label": "enhance_prompt()",
       "source_file": "MODEL SERVER/prompt_enhancer.py",
       "source_location": "L71"
+    },
+    {
+      "id": "model_server_server_api_enhance_prompt",
+      "label": "api_enhance_prompt()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "pipeline_flux.py",
+      "file_type": "code",
+      "norm_label": "api_enhance_prompt()",
+      "source_file": "MODEL SERVER/server.py",
+      "source_location": "L759"
+    },
+    {
+      "id": "ui_src_components_customslider_customslider",
+      "label": "CustomSlider()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "CustomSlider.tsx",
+      "file_type": "code",
+      "norm_label": "customslider()",
+      "source_file": "ui/src/components/CustomSlider.tsx",
+      "source_location": "L13"
+    },
+    {
+      "id": "ui_src_components_customswitch_customswitch",
+      "label": "CustomSwitch()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 16,
+      "community_name": "CustomSwitch.tsx",
+      "file_type": "code",
+      "norm_label": "customswitch()",
+      "source_file": "ui/src/components/CustomSwitch.tsx",
+      "source_location": "L10"
+    },
+    {
+      "id": "ui_src_components_magnet_magnet",
+      "label": "Magnet()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "Magnet.tsx",
+      "file_type": "code",
+      "norm_label": "magnet()",
+      "source_file": "ui/src/components/Magnet.tsx",
+      "source_location": "L11"
+    },
+    {
+      "id": "model_server_pipeline_manager_pipelinemanager_generate",
+      "label": ".generate()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "QwenPipeline",
+      "file_type": "code",
+      "norm_label": ".generate()",
+      "source_file": "MODEL SERVER/pipeline_manager.py",
+      "source_location": "L93"
+    },
+    {
+      "id": "model_server_pipeline_manager_pipelinemanager_get_system_telemetry",
+      "label": ".get_system_telemetry()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "QwenPipeline",
+      "file_type": "code",
+      "norm_label": ".get_system_telemetry()",
+      "source_file": "MODEL SERVER/pipeline_manager.py",
+      "source_location": "L175"
+    },
+    {
+      "id": "model_server_pipeline_manager_pipelinemanager_init",
+      "label": ".__init__()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "QwenPipeline",
+      "file_type": "code",
+      "norm_label": ".__init__()",
+      "source_file": "MODEL SERVER/pipeline_manager.py",
+      "source_location": "L39"
+    },
+    {
+      "id": "model_server_pipeline_manager_pipelinemanager_new",
+      "label": ".__new__()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "QwenPipeline",
+      "file_type": "code",
+      "norm_label": ".__new__()",
+      "source_file": "MODEL SERVER/pipeline_manager.py",
+      "source_location": "L32"
+    },
+    {
+      "id": "model_server_pipeline_manager_pipelinemanager_tile_refine_4k",
+      "label": ".tile_refine_4k()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "QwenPipeline",
+      "file_type": "code",
+      "norm_label": ".tile_refine_4k()",
+      "source_file": "MODEL SERVER/pipeline_manager.py",
+      "source_location": "L49"
     },
     {
       "id": "model_server_pipeline_qwen_qwenpipeline_generate",
@@ -661,7 +729,7 @@
       "file_type": "code",
       "norm_label": "step_callback()",
       "source_file": "MODEL SERVER/pipeline_qwen.py",
-      "source_location": "L171"
+      "source_location": "L168"
     },
     {
       "id": "model_server_pipeline_qwen_qwenpipeline_init",
@@ -736,18 +804,6 @@
       "source_location": "L38"
     },
     {
-      "id": "ui_src_components_blurtext_blurtext",
-      "label": "BlurText()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 25,
-      "community_name": "react",
-      "file_type": "code",
-      "norm_label": "blurtext()",
-      "source_file": "ui/src/components/BlurText.tsx",
-      "source_location": "L10"
-    },
-    {
       "id": "ui_src_components_shinytext_shinytext",
       "label": "ShinyText()",
       "_callable": true,
@@ -772,52 +828,16 @@
       "source_location": "L8"
     },
     {
-      "id": "model_server_multiview_architectural_generator_architecturalmultiviewgenerator_ensure_pipeline",
-      "label": "._ensure_pipeline()",
+      "id": "ui_src_components_stylecarddotmatrix_stylecarddotmatrix",
+      "label": "StyleCardDotMatrix()",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
-      "community_name": "PipelineManager",
+      "community": 25,
+      "community_name": "react",
       "file_type": "code",
-      "norm_label": "._ensure_pipeline()",
-      "source_file": "MODEL SERVER/multiview_architectural_generator.py",
-      "source_location": "L51"
-    },
-    {
-      "id": "model_server_multiview_architectural_generator_architecturalmultiviewgenerator_generate_all_views",
-      "label": ".generate_all_views()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "PipelineManager",
-      "file_type": "code",
-      "norm_label": ".generate_all_views()",
-      "source_file": "MODEL SERVER/multiview_architectural_generator.py",
-      "source_location": "L56"
-    },
-    {
-      "id": "model_server_multiview_architectural_generator_architecturalmultiviewgenerator_init",
-      "label": ".__init__()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "PipelineManager",
-      "file_type": "code",
-      "norm_label": ".__init__()",
-      "source_file": "MODEL SERVER/multiview_architectural_generator.py",
-      "source_location": "L48"
-    },
-    {
-      "id": "model_server_multiview_architectural_generator_record_view_output",
-      "label": "_record_view_output()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "PipelineManager",
-      "file_type": "code",
-      "norm_label": "_record_view_output()",
-      "source_file": "MODEL SERVER/multiview_architectural_generator.py",
-      "source_location": "L32"
+      "norm_label": "stylecarddotmatrix()",
+      "source_file": "ui/src/components/StyleCardDotMatrix.tsx",
+      "source_location": "L9"
     },
     {
       "id": "model_server_pipeline_flux_fluxpipeline_generate",
@@ -825,7 +845,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 3,
-      "community_name": "PipelineManager",
+      "community_name": "FluxPipeline",
       "file_type": "code",
       "norm_label": ".generate()",
       "source_file": "MODEL SERVER/pipeline_flux.py",
@@ -837,7 +857,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 3,
-      "community_name": "PipelineManager",
+      "community_name": "FluxPipeline",
       "file_type": "code",
       "norm_label": "step_callback()",
       "source_file": "MODEL SERVER/pipeline_flux.py",
@@ -849,7 +869,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 3,
-      "community_name": "PipelineManager",
+      "community_name": "FluxPipeline",
       "file_type": "code",
       "norm_label": ".__init__()",
       "source_file": "MODEL SERVER/pipeline_flux.py",
@@ -861,7 +881,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 3,
-      "community_name": "PipelineManager",
+      "community_name": "FluxPipeline",
       "file_type": "code",
       "norm_label": "._load_clip()",
       "source_file": "MODEL SERVER/pipeline_flux.py",
@@ -873,7 +893,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 3,
-      "community_name": "PipelineManager",
+      "community_name": "FluxPipeline",
       "file_type": "code",
       "norm_label": "._load_unet()",
       "source_file": "MODEL SERVER/pipeline_flux.py",
@@ -885,7 +905,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 3,
-      "community_name": "PipelineManager",
+      "community_name": "FluxPipeline",
       "file_type": "code",
       "norm_label": "._load_vae()",
       "source_file": "MODEL SERVER/pipeline_flux.py",
@@ -897,95 +917,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 3,
-      "community_name": "PipelineManager",
+      "community_name": "FluxPipeline",
       "file_type": "code",
       "norm_label": ".unload_all()",
       "source_file": "MODEL SERVER/pipeline_flux.py",
       "source_location": "L89"
-    },
-    {
-      "id": "model_server_pipeline_manager_pipelinemanager_generate",
-      "label": ".generate()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "PipelineManager",
-      "file_type": "code",
-      "norm_label": ".generate()",
-      "source_file": "MODEL SERVER/pipeline_manager.py",
-      "source_location": "L93"
-    },
-    {
-      "id": "model_server_pipeline_manager_pipelinemanager_get_system_telemetry",
-      "label": ".get_system_telemetry()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "PipelineManager",
-      "file_type": "code",
-      "norm_label": ".get_system_telemetry()",
-      "source_file": "MODEL SERVER/pipeline_manager.py",
-      "source_location": "L175"
-    },
-    {
-      "id": "model_server_pipeline_manager_pipelinemanager_init",
-      "label": ".__init__()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "PipelineManager",
-      "file_type": "code",
-      "norm_label": ".__init__()",
-      "source_file": "MODEL SERVER/pipeline_manager.py",
-      "source_location": "L39"
-    },
-    {
-      "id": "model_server_pipeline_manager_pipelinemanager_new",
-      "label": ".__new__()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "PipelineManager",
-      "file_type": "code",
-      "norm_label": ".__new__()",
-      "source_file": "MODEL SERVER/pipeline_manager.py",
-      "source_location": "L32"
-    },
-    {
-      "id": "model_server_pipeline_manager_pipelinemanager_tile_refine_4k",
-      "label": ".tile_refine_4k()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "PipelineManager",
-      "file_type": "code",
-      "norm_label": ".tile_refine_4k()",
-      "source_file": "MODEL SERVER/pipeline_manager.py",
-      "source_location": "L49"
-    },
-    {
-      "id": "ui_src_app_gettaskdefaultinput",
-      "label": "getTaskDefaultInput()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 45,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "gettaskdefaultinput()",
-      "source_file": "ui/src/App.tsx",
-      "source_location": "L76"
-    },
-    {
-      "id": "ui_src_components_assetfeeditem_assetfeeditem",
-      "label": "AssetFeedItem()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 45,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "assetfeeditem()",
-      "source_file": "ui/src/components/AssetFeedItem.tsx",
-      "source_location": "L53"
     },
     {
       "id": "ui_src_components_customselect_customselect",
@@ -993,107 +929,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 45,
-      "community_name": "App.tsx",
+      "community_name": "CustomSelect.tsx",
       "file_type": "code",
       "norm_label": "customselect()",
       "source_file": "ui/src/components/CustomSelect.tsx",
       "source_location": "L22"
-    },
-    {
-      "id": "ui_src_components_customslider_customslider",
-      "label": "CustomSlider()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 45,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "customslider()",
-      "source_file": "ui/src/components/CustomSlider.tsx",
-      "source_location": "L13"
-    },
-    {
-      "id": "ui_src_components_customswitch_customswitch",
-      "label": "CustomSwitch()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 45,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "customswitch()",
-      "source_file": "ui/src/components/CustomSwitch.tsx",
-      "source_location": "L10"
-    },
-    {
-      "id": "ui_src_components_librarypage_librarypage",
-      "label": "LibraryPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 45,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "librarypage()",
-      "source_file": "ui/src/components/LibraryPage.tsx",
-      "source_location": "L32"
-    },
-    {
-      "id": "ui_src_components_magnet_magnet",
-      "label": "Magnet()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 45,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "magnet()",
-      "source_file": "ui/src/components/Magnet.tsx",
-      "source_location": "L11"
-    },
-    {
-      "id": "ui_src_components_modellogos_fluxlogo",
-      "label": "FluxLogo()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 45,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "fluxlogo()",
-      "source_file": "ui/src/components/ModelLogos.tsx",
-      "source_location": "L30"
-    },
-    {
-      "id": "ui_src_components_modellogos_qwenlogo",
-      "label": "QwenLogo()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 45,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "qwenlogo()",
-      "source_file": "ui/src/components/ModelLogos.tsx",
-      "source_location": "L6"
-    },
-    {
-      "id": "ui_src_components_projectsdrawer_projectsdrawer",
-      "label": "ProjectsDrawer()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 45,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "projectsdrawer()",
-      "source_file": "ui/src/components/ProjectsDrawer.tsx",
-      "source_location": "L16"
-    },
-    {
-      "id": "ui_src_components_projectsportalpage_projectsportalpage",
-      "label": "ProjectsPortalPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 45,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "projectsportalpage()",
-      "source_file": "ui/src/components/ProjectsPortalPage.tsx",
-      "source_location": "L49"
     },
     {
       "id": "ui_src_components_scrollablecards_aspectratiocards",
@@ -1144,18 +984,6 @@
       "source_location": "L289"
     },
     {
-      "id": "ui_src_components_stylecarddotmatrix_stylecarddotmatrix",
-      "label": "StyleCardDotMatrix()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 59,
-      "community_name": "ScrollableCards.tsx",
-      "file_type": "code",
-      "norm_label": "stylecarddotmatrix()",
-      "source_file": "ui/src/components/StyleCardDotMatrix.tsx",
-      "source_location": "L9"
-    },
-    {
       "id": "model_server_server_delete_saved_output",
       "label": "delete_saved_output()",
       "_callable": true,
@@ -1165,7 +993,7 @@
       "file_type": "code",
       "norm_label": "delete_saved_output()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L163"
+      "source_location": "L158"
     },
     {
       "id": "model_server_server_get_generation_progress",
@@ -1177,7 +1005,7 @@
       "file_type": "code",
       "norm_label": "get_generation_progress()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L189"
+      "source_location": "L184"
     },
     {
       "id": "model_server_server_get_saved_outputs",
@@ -1189,7 +1017,7 @@
       "file_type": "code",
       "norm_label": "get_saved_outputs()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L151"
+      "source_location": "L146"
     },
     {
       "id": "model_server_server_get_telemetry",
@@ -1201,7 +1029,7 @@
       "file_type": "code",
       "norm_label": "get_telemetry()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L183"
+      "source_location": "L178"
     },
     {
       "id": "model_server_server_list_examples",
@@ -1213,7 +1041,7 @@
       "file_type": "code",
       "norm_label": "list_examples()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L241"
+      "source_location": "L236"
     },
     {
       "id": "model_server_server_list_tasks",
@@ -1225,7 +1053,7 @@
       "file_type": "code",
       "norm_label": "list_tasks()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L232"
+      "source_location": "L227"
     },
     {
       "id": "model_server_server_load_outputs_metadata",
@@ -1237,7 +1065,7 @@
       "file_type": "code",
       "norm_label": "load_outputs_metadata()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L108"
+      "source_location": "L103"
     },
     {
       "id": "model_server_server_openai_list_models",
@@ -1249,7 +1077,7 @@
       "file_type": "code",
       "norm_label": "openai_list_models()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L608"
+      "source_location": "L536"
     },
     {
       "id": "model_server_server_record_output",
@@ -1261,7 +1089,7 @@
       "file_type": "code",
       "norm_label": "record_output()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L124"
+      "source_location": "L119"
     },
     {
       "id": "model_server_server_save_outputs_metadata",
@@ -1273,7 +1101,7 @@
       "file_type": "code",
       "norm_label": "save_outputs_metadata()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L117"
+      "source_location": "L112"
     },
     {
       "id": "model_server_server_serve_spa_frontend",
@@ -1285,7 +1113,7 @@
       "file_type": "code",
       "norm_label": "serve_spa_frontend()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L920"
+      "source_location": "L846"
     },
     {
       "id": "ui_src_app_app",
@@ -1334,6 +1162,18 @@
       "norm_label": "dotmatrixloadercard()",
       "source_file": "ui/src/components/DotMatrixLoaderCard.tsx",
       "source_location": "L12"
+    },
+    {
+      "id": "ui_src_components_projectsdrawer_projectsdrawer",
+      "label": "ProjectsDrawer()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 90,
+      "community_name": "lucide-react",
+      "file_type": "code",
+      "norm_label": "projectsdrawer()",
+      "source_file": "ui/src/components/ProjectsDrawer.tsx",
+      "source_location": "L16"
     },
     {
       "id": "model_server_progress_tracker_generationprogresstracker_cancel",
@@ -1456,18 +1296,6 @@
       "source_location": "L25"
     },
     {
-      "id": "model_server_server_api_enhance_prompt",
-      "label": "api_enhance_prompt()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 95,
-      "community_name": "server.py",
-      "file_type": "code",
-      "norm_label": "api_enhance_prompt()",
-      "source_file": "MODEL SERVER/server.py",
-      "source_location": "L833"
-    },
-    {
       "id": "model_server_server_api_upscale_4k",
       "label": "api_upscale_4k()",
       "_callable": true,
@@ -1477,7 +1305,7 @@
       "file_type": "code",
       "norm_label": "api_upscale_4k()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L840"
+      "source_location": "L766"
     },
     {
       "id": "model_server_server_decode_b64_image",
@@ -1489,7 +1317,7 @@
       "file_type": "code",
       "norm_label": "decode_b64_image()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L93"
+      "source_location": "L88"
     },
     {
       "id": "model_server_server_encode_image_b64",
@@ -1501,19 +1329,7 @@
       "file_type": "code",
       "norm_label": "encode_image_b64()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L100"
-    },
-    {
-      "id": "model_server_server_execute_sketch_multiview",
-      "label": "execute_sketch_multiview()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 95,
-      "community_name": "server.py",
-      "file_type": "code",
-      "norm_label": "execute_sketch_multiview()",
-      "source_file": "MODEL SERVER/server.py",
-      "source_location": "L480"
+      "source_location": "L95"
     },
     {
       "id": "model_server_server_execute_task",
@@ -1525,7 +1341,7 @@
       "file_type": "code",
       "norm_label": "execute_task()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L282"
+      "source_location": "L277"
     },
     {
       "id": "model_server_server_free_port",
@@ -1537,7 +1353,7 @@
       "file_type": "code",
       "norm_label": "free_port()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L929"
+      "source_location": "L855"
     },
     {
       "id": "model_server_server_generate_from_json",
@@ -1549,7 +1365,7 @@
       "file_type": "code",
       "norm_label": "generate_from_json()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L863"
+      "source_location": "L789"
     },
     {
       "id": "model_server_server_openai_chat_completions",
@@ -1561,7 +1377,7 @@
       "file_type": "code",
       "norm_label": "openai_chat_completions()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L639"
+      "source_location": "L567"
     },
     {
       "id": "model_server_server_openai_image_edits",
@@ -1573,7 +1389,7 @@
       "file_type": "code",
       "norm_label": "openai_image_edits()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L788"
+      "source_location": "L714"
     },
     {
       "id": "model_server_server_openai_image_generation",
@@ -1585,7 +1401,7 @@
       "file_type": "code",
       "norm_label": "openai_image_generation()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L750"
+      "source_location": "L676"
     },
     {
       "id": "model_server_server_save_output_image",
@@ -1597,7 +1413,7 @@
       "file_type": "code",
       "norm_label": "save_output_image()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L130"
+      "source_location": "L125"
     },
     {
       "id": "model_server_server_stop_generation",
@@ -1609,7 +1425,7 @@
       "file_type": "code",
       "norm_label": "stop_generation()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L207"
+      "source_location": "L202"
     },
     {
       "id": "model_server_server_task_arch_aie",
@@ -1621,7 +1437,7 @@
       "file_type": "code",
       "norm_label": "task_arch_aie()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L558"
+      "source_location": "L486"
     },
     {
       "id": "model_server_server_task_arch_etdotr",
@@ -1633,7 +1449,7 @@
       "file_type": "code",
       "norm_label": "task_arch_etdotr()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L563"
+      "source_location": "L491"
     },
     {
       "id": "model_server_server_task_arch_s2a",
@@ -1645,7 +1461,7 @@
       "file_type": "code",
       "norm_label": "task_arch_s2a()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L553"
+      "source_location": "L481"
     },
     {
       "id": "model_server_server_task_arch_t2a",
@@ -1657,7 +1473,7 @@
       "file_type": "code",
       "norm_label": "task_arch_t2a()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L548"
+      "source_location": "L476"
     },
     {
       "id": "model_server_server_task_furniture_fe",
@@ -1669,7 +1485,7 @@
       "file_type": "code",
       "norm_label": "task_furniture_fe()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L593"
+      "source_location": "L521"
     },
     {
       "id": "model_server_server_task_furniture_s2f",
@@ -1681,7 +1497,7 @@
       "file_type": "code",
       "norm_label": "task_furniture_s2f()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L588"
+      "source_location": "L516"
     },
     {
       "id": "model_server_server_task_furniture_t2f",
@@ -1693,7 +1509,7 @@
       "file_type": "code",
       "norm_label": "task_furniture_t2f()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L598"
+      "source_location": "L526"
     },
     {
       "id": "model_server_server_task_interior_frmr",
@@ -1705,7 +1521,7 @@
       "file_type": "code",
       "norm_label": "task_interior_frmr()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L583"
+      "source_location": "L511"
     },
     {
       "id": "model_server_server_task_interior_gyrnl",
@@ -1717,7 +1533,7 @@
       "file_type": "code",
       "norm_label": "task_interior_gyrnl()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L573"
+      "source_location": "L501"
     },
     {
       "id": "model_server_server_task_interior_idie",
@@ -1729,7 +1545,7 @@
       "file_type": "code",
       "norm_label": "task_interior_idie()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L578"
+      "source_location": "L506"
     },
     {
       "id": "model_server_server_task_interior_s2id",
@@ -1741,7 +1557,7 @@
       "file_type": "code",
       "norm_label": "task_interior_s2id()",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L568"
+      "source_location": "L496"
     },
     {
       "id": "model_server_task_configs_build_task_prompt",
@@ -1768,16 +1584,88 @@
       "source_location": "L346"
     },
     {
+      "id": "ui_src_app_gettaskdefaultinput",
+      "label": "getTaskDefaultInput()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 99,
+      "community_name": "App.tsx",
+      "file_type": "code",
+      "norm_label": "gettaskdefaultinput()",
+      "source_file": "ui/src/App.tsx",
+      "source_location": "L76"
+    },
+    {
       "id": "ui_src_components_appshubpage_appshubpage",
       "label": "AppsHubPage()",
       "_callable": true,
       "_origin": "ast",
       "community": 99,
-      "community_name": "TaskSelectionPage.tsx",
+      "community_name": "App.tsx",
       "file_type": "code",
       "norm_label": "appshubpage()",
       "source_file": "ui/src/components/AppsHubPage.tsx",
       "source_location": "L23"
+    },
+    {
+      "id": "ui_src_components_assetfeeditem_assetfeeditem",
+      "label": "AssetFeedItem()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 99,
+      "community_name": "App.tsx",
+      "file_type": "code",
+      "norm_label": "assetfeeditem()",
+      "source_file": "ui/src/components/AssetFeedItem.tsx",
+      "source_location": "L53"
+    },
+    {
+      "id": "ui_src_components_librarypage_librarypage",
+      "label": "LibraryPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 99,
+      "community_name": "App.tsx",
+      "file_type": "code",
+      "norm_label": "librarypage()",
+      "source_file": "ui/src/components/LibraryPage.tsx",
+      "source_location": "L32"
+    },
+    {
+      "id": "ui_src_components_modellogos_fluxlogo",
+      "label": "FluxLogo()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 99,
+      "community_name": "App.tsx",
+      "file_type": "code",
+      "norm_label": "fluxlogo()",
+      "source_file": "ui/src/components/ModelLogos.tsx",
+      "source_location": "L30"
+    },
+    {
+      "id": "ui_src_components_modellogos_qwenlogo",
+      "label": "QwenLogo()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 99,
+      "community_name": "App.tsx",
+      "file_type": "code",
+      "norm_label": "qwenlogo()",
+      "source_file": "ui/src/components/ModelLogos.tsx",
+      "source_location": "L6"
+    },
+    {
+      "id": "ui_src_components_projectsportalpage_projectsportalpage",
+      "label": "ProjectsPortalPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 99,
+      "community_name": "App.tsx",
+      "file_type": "code",
+      "norm_label": "projectsportalpage()",
+      "source_file": "ui/src/components/ProjectsPortalPage.tsx",
+      "source_location": "L49"
     },
     {
       "id": "ui_src_components_taskselectionpage_isometricherographic",
@@ -1785,11 +1673,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 99,
-      "community_name": "TaskSelectionPage.tsx",
+      "community_name": "App.tsx",
       "file_type": "code",
       "norm_label": "isometricherographic()",
       "source_file": "ui/src/components/TaskSelectionPage.tsx",
-      "source_location": "L300"
+      "source_location": "L342"
     },
     {
       "id": "ui_src_components_taskselectionpage_taskcardslider",
@@ -1797,11 +1685,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 99,
-      "community_name": "TaskSelectionPage.tsx",
+      "community_name": "App.tsx",
       "file_type": "code",
       "norm_label": "taskcardslider()",
       "source_file": "ui/src/components/TaskSelectionPage.tsx",
-      "source_location": "L143"
+      "source_location": "L131"
     },
     {
       "id": "ui_src_components_taskselectionpage_taskselectionpage",
@@ -1809,11 +1697,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 99,
-      "community_name": "TaskSelectionPage.tsx",
+      "community_name": "App.tsx",
       "file_type": "code",
       "norm_label": "taskselectionpage()",
       "source_file": "ui/src/components/TaskSelectionPage.tsx",
-      "source_location": "L457"
+      "source_location": "L499"
     },
     {
       "id": "readme",
@@ -1956,14 +1844,14 @@
       "source_location": "L1"
     },
     {
-      "id": "model_server_multiview_architectural_generator",
-      "label": "multiview_architectural_generator.py",
+      "id": "ui_src_components_blurtext",
+      "label": "BlurText.tsx",
       "_origin": "ast",
-      "community": 14,
-      "community_name": "pipeline_flux.py",
+      "community": 13,
+      "community_name": "BlurText.tsx",
       "file_type": "code",
-      "norm_label": "multiview_architectural_generator.py",
-      "source_file": "MODEL SERVER/multiview_architectural_generator.py",
+      "norm_label": "blurtext.tsx",
+      "source_file": "ui/src/components/BlurText.tsx",
       "source_location": "L1"
     },
     {
@@ -2022,17 +1910,6 @@
       "source_location": "L1"
     },
     {
-      "id": "model_server_multiview_architectural_generator_rationale_1",
-      "label": "Architectural Sketch-to-5-Multi-View Generator Converts 2D architectural\u2026",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "pipeline_flux.py",
-      "file_type": "rationale",
-      "norm_label": "architectural sketch-to-5-multi-view generator converts 2d architectural...",
-      "source_file": "MODEL SERVER/multiview_architectural_generator.py",
-      "source_location": "L1"
-    },
-    {
       "id": "model_server_pipeline_flux_rationale_1",
       "label": "Flux.2 Klein (4B) Custom Pipeline Supports fast, high-quality text-to-image and\u2026",
       "_origin": "ast",
@@ -2088,6 +1965,72 @@
       "source_location": "L72"
     },
     {
+      "id": "model_server_server_rationale_760",
+      "label": "Expands user prompt into a high-end architectural brief.",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "pipeline_flux.py",
+      "file_type": "rationale",
+      "norm_label": "expands user prompt into a high-end architectural brief.",
+      "source_file": "MODEL SERVER/server.py",
+      "source_location": "L760"
+    },
+    {
+      "id": "ui_src_components_customslider",
+      "label": "CustomSlider.tsx",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "CustomSlider.tsx",
+      "file_type": "code",
+      "norm_label": "customslider.tsx",
+      "source_file": "ui/src/components/CustomSlider.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "ui_src_components_customswitch",
+      "label": "CustomSwitch.tsx",
+      "_origin": "ast",
+      "community": 16,
+      "community_name": "CustomSwitch.tsx",
+      "file_type": "code",
+      "norm_label": "customswitch.tsx",
+      "source_file": "ui/src/components/CustomSwitch.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "ui_src_components_magnet",
+      "label": "Magnet.tsx",
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "Magnet.tsx",
+      "file_type": "code",
+      "norm_label": "magnet.tsx",
+      "source_file": "ui/src/components/Magnet.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "model_server_pipeline_manager_py_any",
+      "label": "Any",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "QwenPipeline",
+      "file_type": "code",
+      "norm_label": "any",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "model_server_pipeline_manager_py_image",
+      "label": "Image",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "QwenPipeline",
+      "file_type": "code",
+      "norm_label": "image",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "model_server_pipeline_qwen_py_any",
       "label": "Any",
       "_origin": "ast",
@@ -2108,6 +2051,39 @@
       "norm_label": "image",
       "source_file": "",
       "source_location": ""
+    },
+    {
+      "id": "model_server_pipeline_manager_rationale_109",
+      "label": "Executes image generation or multi-image editing with the chosen model. Thread-\u2026",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "QwenPipeline",
+      "file_type": "rationale",
+      "norm_label": "executes image generation or multi-image editing with the chosen model. thread-...",
+      "source_file": "MODEL SERVER/pipeline_manager.py",
+      "source_location": "L109"
+    },
+    {
+      "id": "model_server_pipeline_manager_rationale_176",
+      "label": "Returns real-time GPU telemetry and pipeline readiness.",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "QwenPipeline",
+      "file_type": "rationale",
+      "norm_label": "returns real-time gpu telemetry and pipeline readiness.",
+      "source_file": "MODEL SERVER/pipeline_manager.py",
+      "source_location": "L176"
+    },
+    {
+      "id": "model_server_pipeline_manager_rationale_50",
+      "label": "4K Ultra-Sharp Latent Upscaling & Tile Refiner: 1. High-order Lanczos\u2026",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "QwenPipeline",
+      "file_type": "rationale",
+      "norm_label": "4k ultra-sharp latent upscaling & tile refiner: 1. high-order lanczos...",
+      "source_file": "MODEL SERVER/pipeline_manager.py",
+      "source_location": "L50"
     },
     {
       "id": "model_server_pipeline_qwen_rationale_103",
@@ -2143,17 +2119,6 @@
       "source_location": "L1"
     },
     {
-      "id": "ui_src_components_blurtext",
-      "label": "BlurText.tsx",
-      "_origin": "ast",
-      "community": 25,
-      "community_name": "react",
-      "file_type": "code",
-      "norm_label": "blurtext.tsx",
-      "source_file": "ui/src/components/BlurText.tsx",
-      "source_location": "L1"
-    },
-    {
       "id": "ui_src_components_shinytext",
       "label": "ShinyText.tsx",
       "_origin": "ast",
@@ -2176,6 +2141,17 @@
       "source_location": "L1"
     },
     {
+      "id": "ui_src_components_stylecarddotmatrix",
+      "label": "StyleCardDotMatrix.tsx",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "stylecarddotmatrix.tsx",
+      "source_file": "ui/src/components/StyleCardDotMatrix.tsx",
+      "source_location": "L1"
+    },
+    {
       "id": "ref_react",
       "label": "react",
       "_origin": "ast",
@@ -2187,33 +2163,11 @@
       "source_location": "L13"
     },
     {
-      "id": "model_server_multiview_architectural_generator_py_any",
-      "label": "Any",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "PipelineManager",
-      "file_type": "code",
-      "norm_label": "any",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "model_server_multiview_architectural_generator_py_image",
-      "label": "Image",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "PipelineManager",
-      "file_type": "code",
-      "norm_label": "image",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "model_server_pipeline_flux_py_any",
       "label": "Any",
       "_origin": "ast",
       "community": 3,
-      "community_name": "PipelineManager",
+      "community_name": "FluxPipeline",
       "file_type": "code",
       "norm_label": "any",
       "source_file": "",
@@ -2224,29 +2178,7 @@
       "label": "Image",
       "_origin": "ast",
       "community": 3,
-      "community_name": "PipelineManager",
-      "file_type": "code",
-      "norm_label": "image",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "model_server_pipeline_manager_py_any",
-      "label": "Any",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "PipelineManager",
-      "file_type": "code",
-      "norm_label": "any",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "model_server_pipeline_manager_py_image",
-      "label": "Image",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "PipelineManager",
+      "community_name": "FluxPipeline",
       "file_type": "code",
       "norm_label": "image",
       "source_file": "",
@@ -2257,7 +2189,7 @@
       "label": "Executes generation / editing with Flux.2 Klein.",
       "_origin": "ast",
       "community": 3,
-      "community_name": "PipelineManager",
+      "community_name": "FluxPipeline",
       "file_type": "rationale",
       "norm_label": "executes generation / editing with flux.2 klein.",
       "source_file": "MODEL SERVER/pipeline_flux.py",
@@ -2268,44 +2200,11 @@
       "label": "Offload models and clear GPU cache to ensure ~0 MB idle VRAM",
       "_origin": "ast",
       "community": 3,
-      "community_name": "PipelineManager",
+      "community_name": "FluxPipeline",
       "file_type": "rationale",
       "norm_label": "offload models and clear gpu cache to ensure ~0 mb idle vram",
       "source_file": "MODEL SERVER/pipeline_flux.py",
       "source_location": "L90"
-    },
-    {
-      "id": "model_server_pipeline_manager_rationale_109",
-      "label": "Executes image generation or multi-image editing with the chosen model. Thread-\u2026",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "PipelineManager",
-      "file_type": "rationale",
-      "norm_label": "executes image generation or multi-image editing with the chosen model. thread-...",
-      "source_file": "MODEL SERVER/pipeline_manager.py",
-      "source_location": "L109"
-    },
-    {
-      "id": "model_server_pipeline_manager_rationale_176",
-      "label": "Returns real-time GPU telemetry and pipeline readiness.",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "PipelineManager",
-      "file_type": "rationale",
-      "norm_label": "returns real-time gpu telemetry and pipeline readiness.",
-      "source_file": "MODEL SERVER/pipeline_manager.py",
-      "source_location": "L176"
-    },
-    {
-      "id": "model_server_pipeline_manager_rationale_50",
-      "label": "4K Ultra-Sharp Latent Upscaling & Tile Refiner: 1. High-order Lanczos\u2026",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "PipelineManager",
-      "file_type": "rationale",
-      "norm_label": "4k ultra-sharp latent upscaling & tile refiner: 1. high-order lanczos...",
-      "source_file": "MODEL SERVER/pipeline_manager.py",
-      "source_location": "L50"
     },
     {
       "id": "ui_package",
@@ -2627,69 +2526,14 @@
       "source_location": "L20"
     },
     {
-      "id": "ui_src_app",
-      "label": "App.tsx",
-      "_origin": "ast",
-      "community": 45,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "app.tsx",
-      "source_file": "ui/src/App.tsx",
-      "source_location": "L1"
-    },
-    {
       "id": "ui_src_components_customselect",
       "label": "CustomSelect.tsx",
       "_origin": "ast",
       "community": 45,
-      "community_name": "App.tsx",
+      "community_name": "CustomSelect.tsx",
       "file_type": "code",
       "norm_label": "customselect.tsx",
       "source_file": "ui/src/components/CustomSelect.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "ui_src_components_customslider",
-      "label": "CustomSlider.tsx",
-      "_origin": "ast",
-      "community": 45,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "customslider.tsx",
-      "source_file": "ui/src/components/CustomSlider.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "ui_src_components_customswitch",
-      "label": "CustomSwitch.tsx",
-      "_origin": "ast",
-      "community": 45,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "customswitch.tsx",
-      "source_file": "ui/src/components/CustomSwitch.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "ui_src_components_magnet",
-      "label": "Magnet.tsx",
-      "_origin": "ast",
-      "community": 45,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "magnet.tsx",
-      "source_file": "ui/src/components/Magnet.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "ui_src_components_modellogos",
-      "label": "ModelLogos.tsx",
-      "_origin": "ast",
-      "community": 45,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "modellogos.tsx",
-      "source_file": "ui/src/components/ModelLogos.tsx",
       "source_location": "L1"
     },
     {
@@ -2746,17 +2590,6 @@
       "norm_label": "resolution_options",
       "source_file": "ui/src/components/ScrollableCards.tsx",
       "source_location": "L158"
-    },
-    {
-      "id": "ui_src_components_stylecarddotmatrix",
-      "label": "StyleCardDotMatrix.tsx",
-      "_origin": "ast",
-      "community": 59,
-      "community_name": "ScrollableCards.tsx",
-      "file_type": "code",
-      "norm_label": "stylecarddotmatrix.tsx",
-      "source_file": "ui/src/components/StyleCardDotMatrix.tsx",
-      "source_location": "L1"
     },
     {
       "id": "ui_tsconfig_app",
@@ -2990,7 +2823,7 @@
       "source_location": ""
     },
     {
-      "id": "model_server_server_rationale_152",
+      "id": "model_server_server_rationale_147",
       "label": "Returns saved generated outputs with full metadata.",
       "_origin": "ast",
       "community": 72,
@@ -2998,10 +2831,10 @@
       "file_type": "rationale",
       "norm_label": "returns saved generated outputs with full metadata.",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L152"
+      "source_location": "L147"
     },
     {
-      "id": "model_server_server_rationale_164",
+      "id": "model_server_server_rationale_159",
       "label": "Deletes a generated output image from disk and metadata.",
       "_origin": "ast",
       "community": 72,
@@ -3009,10 +2842,10 @@
       "file_type": "rationale",
       "norm_label": "deletes a generated output image from disk and metadata.",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L164"
+      "source_location": "L159"
     },
     {
-      "id": "model_server_server_rationale_184",
+      "id": "model_server_server_rationale_179",
       "label": "Returns GPU telemetry, VRAM status, and ready models.",
       "_origin": "ast",
       "community": 72,
@@ -3020,10 +2853,10 @@
       "file_type": "rationale",
       "norm_label": "returns gpu telemetry, vram status, and ready models.",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L184"
+      "source_location": "L179"
     },
     {
-      "id": "model_server_server_rationale_190",
+      "id": "model_server_server_rationale_185",
       "label": "Returns real diffusion step percentage directly from ComfyUI sampler callback.",
       "_origin": "ast",
       "community": 72,
@@ -3031,10 +2864,10 @@
       "file_type": "rationale",
       "norm_label": "returns real diffusion step percentage directly from comfyui sampler callback.",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L190"
+      "source_location": "L185"
     },
     {
-      "id": "model_server_server_rationale_233",
+      "id": "model_server_server_rationale_228",
       "label": "Returns all 12 tasks with configurations, prompt templates, and default\u2026",
       "_origin": "ast",
       "community": 72,
@@ -3042,10 +2875,10 @@
       "file_type": "rationale",
       "norm_label": "returns all 12 tasks with configurations, prompt templates, and default...",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L233"
+      "source_location": "L228"
     },
     {
-      "id": "model_server_server_rationale_242",
+      "id": "model_server_server_rationale_237",
       "label": "Scans and returns the ground-truth example files and prompts from EXAMPLE\u2026",
       "_origin": "ast",
       "community": 72,
@@ -3053,10 +2886,10 @@
       "file_type": "rationale",
       "norm_label": "scans and returns the ground-truth example files and prompts from example...",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L242"
+      "source_location": "L237"
     },
     {
-      "id": "model_server_server_rationale_609",
+      "id": "model_server_server_rationale_537",
       "label": "OpenAI standard models list endpoint.",
       "_origin": "ast",
       "community": 72,
@@ -3064,7 +2897,7 @@
       "file_type": "rationale",
       "norm_label": "openai standard models list endpoint.",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L609"
+      "source_location": "L537"
     },
     {
       "id": "ui_tsconfig_node",
@@ -3452,7 +3285,7 @@
       "source_location": "L1"
     },
     {
-      "id": "model_server_server_rationale_208",
+      "id": "model_server_server_rationale_203",
       "label": "Immediately stops and cancels any active generation on the GPU and resets\u2026",
       "_origin": "ast",
       "community": 95,
@@ -3460,10 +3293,10 @@
       "file_type": "rationale",
       "norm_label": "immediately stops and cancels any active generation on the gpu and resets...",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L208"
+      "source_location": "L203"
     },
     {
-      "id": "model_server_server_rationale_283",
+      "id": "model_server_server_rationale_278",
       "label": "Executes any of the 12 tasks (Architecture, Interior, Furniture) using domain-\u2026",
       "_origin": "ast",
       "community": 95,
@@ -3471,21 +3304,10 @@
       "file_type": "rationale",
       "norm_label": "executes any of the 12 tasks (architecture, interior, furniture) using domain-...",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L283"
+      "source_location": "L278"
     },
     {
-      "id": "model_server_server_rationale_481",
-      "label": "Generates 5 structurally and visually locked 3D perspectives from an\u2026",
-      "_origin": "ast",
-      "community": 95,
-      "community_name": "server.py",
-      "file_type": "rationale",
-      "norm_label": "generates 5 structurally and visually locked 3d perspectives from an...",
-      "source_file": "MODEL SERVER/server.py",
-      "source_location": "L481"
-    },
-    {
-      "id": "model_server_server_rationale_640",
+      "id": "model_server_server_rationale_568",
       "label": "OpenAI Chat Completion API Compatibility Endpoint. Accepts text prompts and\u2026",
       "_origin": "ast",
       "community": 95,
@@ -3493,10 +3315,10 @@
       "file_type": "rationale",
       "norm_label": "openai chat completion api compatibility endpoint. accepts text prompts and...",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L640"
+      "source_location": "L568"
     },
     {
-      "id": "model_server_server_rationale_751",
+      "id": "model_server_server_rationale_677",
       "label": "OpenAI standard Image Generation API.",
       "_origin": "ast",
       "community": 95,
@@ -3504,10 +3326,10 @@
       "file_type": "rationale",
       "norm_label": "openai standard image generation api.",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L751"
+      "source_location": "L677"
     },
     {
-      "id": "model_server_server_rationale_789",
+      "id": "model_server_server_rationale_715",
       "label": "OpenAI standard Image Edit API.",
       "_origin": "ast",
       "community": 95,
@@ -3515,21 +3337,10 @@
       "file_type": "rationale",
       "norm_label": "openai standard image edit api.",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L789"
+      "source_location": "L715"
     },
     {
-      "id": "model_server_server_rationale_834",
-      "label": "Expands user prompt into a high-end architectural brief.",
-      "_origin": "ast",
-      "community": 95,
-      "community_name": "server.py",
-      "file_type": "rationale",
-      "norm_label": "expands user prompt into a high-end architectural brief.",
-      "source_file": "MODEL SERVER/server.py",
-      "source_location": "L834"
-    },
-    {
-      "id": "model_server_server_rationale_841",
+      "id": "model_server_server_rationale_767",
       "label": "Runs high-order 4K latent tile refinement on input image.",
       "_origin": "ast",
       "community": 95,
@@ -3537,10 +3348,10 @@
       "file_type": "rationale",
       "norm_label": "runs high-order 4k latent tile refinement on input image.",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L841"
+      "source_location": "L767"
     },
     {
-      "id": "model_server_server_rationale_864",
+      "id": "model_server_server_rationale_790",
       "label": "Raw low-level JSON generation endpoint.",
       "_origin": "ast",
       "community": 95,
@@ -3548,10 +3359,10 @@
       "file_type": "rationale",
       "norm_label": "raw low-level json generation endpoint.",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L864"
+      "source_location": "L790"
     },
     {
-      "id": "model_server_server_rationale_930",
+      "id": "model_server_server_rationale_856",
       "label": "Automatically frees the port on Windows if lingering processes are holding it.",
       "_origin": "ast",
       "community": 95,
@@ -3559,7 +3370,7 @@
       "file_type": "rationale",
       "norm_label": "automatically frees the port on windows if lingering processes are holding it.",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L930"
+      "source_location": "L856"
     },
     {
       "id": "model_server_task_configs_rationale_1",
@@ -3595,14 +3406,36 @@
       "source_location": "L353"
     },
     {
+      "id": "ui_src_app",
+      "label": "App.tsx",
+      "_origin": "ast",
+      "community": 99,
+      "community_name": "App.tsx",
+      "file_type": "code",
+      "norm_label": "app.tsx",
+      "source_file": "ui/src/App.tsx",
+      "source_location": "L1"
+    },
+    {
       "id": "ui_src_components_appshubpage",
       "label": "AppsHubPage.tsx",
       "_origin": "ast",
       "community": 99,
-      "community_name": "TaskSelectionPage.tsx",
+      "community_name": "App.tsx",
       "file_type": "code",
       "norm_label": "appshubpage.tsx",
       "source_file": "ui/src/components/AppsHubPage.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "ui_src_components_modellogos",
+      "label": "ModelLogos.tsx",
+      "_origin": "ast",
+      "community": 99,
+      "community_name": "App.tsx",
+      "file_type": "code",
+      "norm_label": "modellogos.tsx",
+      "source_file": "ui/src/components/ModelLogos.tsx",
       "source_location": "L1"
     },
     {
@@ -3610,7 +3443,7 @@
       "label": "TaskSelectionPage.tsx",
       "_origin": "ast",
       "community": 99,
-      "community_name": "TaskSelectionPage.tsx",
+      "community_name": "App.tsx",
       "file_type": "code",
       "norm_label": "taskselectionpage.tsx",
       "source_file": "ui/src/components/TaskSelectionPage.tsx",
@@ -3621,18 +3454,18 @@
       "label": "ALL_TASKS",
       "_origin": "ast",
       "community": 99,
-      "community_name": "TaskSelectionPage.tsx",
+      "community_name": "App.tsx",
       "file_type": "code",
       "norm_label": "all_tasks",
       "source_file": "ui/src/components/TaskSelectionPage.tsx",
-      "source_location": "L22"
+      "source_location": "L23"
     },
     {
       "id": "ui_src_taskconstants",
       "label": "taskConstants.ts",
       "_origin": "ast",
       "community": 99,
-      "community_name": "TaskSelectionPage.tsx",
+      "community_name": "App.tsx",
       "file_type": "code",
       "norm_label": "taskconstants.ts",
       "source_file": "ui/src/taskConstants.ts",
@@ -3643,51 +3476,51 @@
       "label": "SHORT_CODE_TO_TASK_ID",
       "_origin": "ast",
       "community": 99,
-      "community_name": "TaskSelectionPage.tsx",
+      "community_name": "App.tsx",
       "file_type": "code",
       "norm_label": "short_code_to_task_id",
       "source_file": "ui/src/taskConstants.ts",
-      "source_location": "L16"
+      "source_location": "L15"
     },
     {
       "id": "ui_src_taskconstants_suite_tasks",
       "label": "SUITE_TASKS",
       "_origin": "ast",
       "community": 99,
-      "community_name": "TaskSelectionPage.tsx",
+      "community_name": "App.tsx",
       "file_type": "code",
       "norm_label": "suite_tasks",
       "source_file": "ui/src/taskConstants.ts",
-      "source_location": "L34"
+      "source_location": "L32"
     },
     {
       "id": "ui_src_taskconstants_task_example_images",
       "label": "TASK_EXAMPLE_IMAGES",
       "_origin": "ast",
       "community": 99,
-      "community_name": "TaskSelectionPage.tsx",
+      "community_name": "App.tsx",
       "file_type": "code",
       "norm_label": "task_example_images",
       "source_file": "ui/src/taskConstants.ts",
-      "source_location": "L53"
+      "source_location": "L50"
     },
     {
       "id": "ui_src_taskconstants_task_input_images",
       "label": "TASK_INPUT_IMAGES",
       "_origin": "ast",
       "community": 99,
-      "community_name": "TaskSelectionPage.tsx",
+      "community_name": "App.tsx",
       "file_type": "code",
       "norm_label": "task_input_images",
       "source_file": "ui/src/taskConstants.ts",
-      "source_location": "L68"
+      "source_location": "L64"
     },
     {
       "id": "ui_src_taskconstants_task_short_codes",
       "label": "TASK_SHORT_CODES",
       "_origin": "ast",
       "community": 99,
-      "community_name": "TaskSelectionPage.tsx",
+      "community_name": "App.tsx",
       "file_type": "code",
       "norm_label": "task_short_codes",
       "source_file": "ui/src/taskConstants.ts",
@@ -3786,18 +3619,6 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "importlib",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "json",
-      "label": "json",
-      "_origin": "semantic",
-      "community": 14,
-      "community_name": "pipeline_flux.py",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "json",
       "source_file": "",
       "type": "external"
     },
@@ -4090,6 +3911,18 @@
       "type": "external"
     },
     {
+      "id": "json",
+      "label": "json",
+      "_origin": "semantic",
+      "community": 95,
+      "community_name": "server.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "json",
+      "source_file": "",
+      "type": "external"
+    },
+    {
       "id": "pydantic",
       "label": "pydantic",
       "_origin": "semantic",
@@ -4139,42 +3972,6 @@
     }
   ],
   "links": [
-    {
-      "source": "model_server_multiview_architectural_generator_architecturalmultiviewgenerator_ensure_pipeline",
-      "target": "model_server_pipeline_manager_pipelinemanager",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "MODEL SERVER/multiview_architectural_generator.py",
-      "source_location": "L54",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_multiview_architectural_generator_architecturalmultiviewgenerator_generate_all_views",
-      "target": "model_server_multiview_architectural_generator_record_view_output",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "MODEL SERVER/multiview_architectural_generator.py",
-      "source_location": "L115",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_multiview_architectural_generator_architecturalmultiviewgenerator_generate_all_views",
-      "target": "model_server_multiview_architectural_generator_architecturalmultiviewgenerator_ensure_pipeline",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "MODEL SERVER/multiview_architectural_generator.py",
-      "source_location": "L66",
-      "weight": 1.0
-    },
     {
       "source": "model_server_pipeline_flux_fluxpipeline_generate",
       "target": "model_server_pipeline_flux_fluxpipeline_load_clip",
@@ -4316,7 +4113,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L835",
+      "source_location": "L761",
       "weight": 1.0
     },
     {
@@ -4328,7 +4125,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L844",
+      "source_location": "L770",
       "weight": 1.0
     },
     {
@@ -4340,7 +4137,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L846",
+      "source_location": "L772",
       "weight": 1.0
     },
     {
@@ -4352,7 +4149,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L855",
+      "source_location": "L781",
       "weight": 1.0
     },
     {
@@ -4364,7 +4161,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L171",
+      "source_location": "L166",
       "weight": 1.0
     },
     {
@@ -4376,43 +4173,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L173",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_server_execute_sketch_multiview",
-      "target": "model_server_server_decode_b64_image",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "MODEL SERVER/server.py",
-      "source_location": "L490",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_server_execute_sketch_multiview",
-      "target": "model_server_server_record_output",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "MODEL SERVER/server.py",
-      "source_location": "L508",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_server_execute_sketch_multiview",
-      "target": "model_server_server_encode_image_b64",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "MODEL SERVER/server.py",
-      "source_location": "L526",
+      "source_location": "L168",
       "weight": 1.0
     },
     {
@@ -4424,7 +4185,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L289",
+      "source_location": "L284",
       "weight": 1.0
     },
     {
@@ -4436,7 +4197,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L306",
+      "source_location": "L301",
       "weight": 1.0
     },
     {
@@ -4448,7 +4209,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L366",
+      "source_location": "L361",
       "weight": 1.0
     },
     {
@@ -4460,7 +4221,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L372",
+      "source_location": "L367",
       "weight": 1.0
     },
     {
@@ -4472,7 +4233,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L413",
+      "source_location": "L408",
       "weight": 1.0
     },
     {
@@ -4484,7 +4245,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L430",
+      "source_location": "L425",
       "weight": 1.0
     },
     {
@@ -4496,7 +4257,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L869",
+      "source_location": "L795",
       "weight": 1.0
     },
     {
@@ -4508,7 +4269,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L889",
+      "source_location": "L815",
       "weight": 1.0
     },
     {
@@ -4520,7 +4281,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L900",
+      "source_location": "L826",
       "weight": 1.0
     },
     {
@@ -4532,7 +4293,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L153",
+      "source_location": "L148",
       "weight": 1.0
     },
     {
@@ -4544,7 +4305,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L661",
+      "source_location": "L589",
       "weight": 1.0
     },
     {
@@ -4556,7 +4317,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L693",
+      "source_location": "L619",
       "weight": 1.0
     },
     {
@@ -4568,7 +4329,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L695",
+      "source_location": "L621",
       "weight": 1.0
     },
     {
@@ -4580,7 +4341,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L715",
+      "source_location": "L641",
       "weight": 1.0
     },
     {
@@ -4592,7 +4353,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L716",
+      "source_location": "L642",
       "weight": 1.0
     },
     {
@@ -4604,7 +4365,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L792",
+      "source_location": "L718",
       "weight": 1.0
     },
     {
@@ -4616,7 +4377,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L810",
+      "source_location": "L736",
       "weight": 1.0
     },
     {
@@ -4628,7 +4389,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L811",
+      "source_location": "L737",
       "weight": 1.0
     },
     {
@@ -4640,7 +4401,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L769",
+      "source_location": "L695",
       "weight": 1.0
     },
     {
@@ -4652,7 +4413,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L770",
+      "source_location": "L696",
       "weight": 1.0
     },
     {
@@ -4664,7 +4425,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L125",
+      "source_location": "L120",
       "weight": 1.0
     },
     {
@@ -4676,7 +4437,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L127",
+      "source_location": "L122",
       "weight": 1.0
     },
     {
@@ -4688,7 +4449,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L146",
+      "source_location": "L141",
       "weight": 1.0
     },
     {
@@ -4700,7 +4461,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L560",
+      "source_location": "L488",
       "weight": 1.0
     },
     {
@@ -4712,7 +4473,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L565",
+      "source_location": "L493",
       "weight": 1.0
     },
     {
@@ -4724,7 +4485,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L555",
+      "source_location": "L483",
       "weight": 1.0
     },
     {
@@ -4736,7 +4497,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L550",
+      "source_location": "L478",
       "weight": 1.0
     },
     {
@@ -4748,7 +4509,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L595",
+      "source_location": "L523",
       "weight": 1.0
     },
     {
@@ -4760,7 +4521,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L590",
+      "source_location": "L518",
       "weight": 1.0
     },
     {
@@ -4772,7 +4533,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L600",
+      "source_location": "L528",
       "weight": 1.0
     },
     {
@@ -4784,7 +4545,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L585",
+      "source_location": "L513",
       "weight": 1.0
     },
     {
@@ -4796,7 +4557,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L575",
+      "source_location": "L503",
       "weight": 1.0
     },
     {
@@ -4808,7 +4569,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L580",
+      "source_location": "L508",
       "weight": 1.0
     },
     {
@@ -4820,7 +4581,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L570",
+      "source_location": "L498",
       "weight": 1.0
     },
     {
@@ -4856,7 +4617,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L832",
+      "source_location": "L758",
       "weight": 1.0
     },
     {
@@ -4868,7 +4629,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L839",
+      "source_location": "L765",
       "weight": 1.0
     },
     {
@@ -4880,19 +4641,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L162",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_server_execute_sketch_multiview",
-      "target": "post",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "decorator",
-      "source_file": "MODEL SERVER/server.py",
-      "source_location": "L479",
+      "source_location": "L157",
       "weight": 1.0
     },
     {
@@ -4904,7 +4653,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L281",
+      "source_location": "L276",
       "weight": 1.0
     },
     {
@@ -4916,7 +4665,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L862",
+      "source_location": "L788",
       "weight": 1.0
     },
     {
@@ -4928,7 +4677,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L188",
+      "source_location": "L183",
       "weight": 1.0
     },
     {
@@ -4940,7 +4689,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L150",
+      "source_location": "L145",
       "weight": 1.0
     },
     {
@@ -4952,7 +4701,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L182",
+      "source_location": "L177",
       "weight": 1.0
     },
     {
@@ -4964,7 +4713,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L240",
+      "source_location": "L235",
       "weight": 1.0
     },
     {
@@ -4976,7 +4725,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L231",
+      "source_location": "L226",
       "weight": 1.0
     },
     {
@@ -4988,7 +4737,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L638",
+      "source_location": "L566",
       "weight": 1.0
     },
     {
@@ -5000,7 +4749,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L787",
+      "source_location": "L713",
       "weight": 1.0
     },
     {
@@ -5012,7 +4761,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L749",
+      "source_location": "L675",
       "weight": 1.0
     },
     {
@@ -5024,7 +4773,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L607",
+      "source_location": "L535",
       "weight": 1.0
     },
     {
@@ -5036,7 +4785,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L919",
+      "source_location": "L845",
       "weight": 1.0
     },
     {
@@ -5048,7 +4797,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L206",
+      "source_location": "L201",
       "weight": 1.0
     },
     {
@@ -5060,7 +4809,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L557",
+      "source_location": "L485",
       "weight": 1.0
     },
     {
@@ -5072,7 +4821,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L562",
+      "source_location": "L490",
       "weight": 1.0
     },
     {
@@ -5084,7 +4833,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L552",
+      "source_location": "L480",
       "weight": 1.0
     },
     {
@@ -5096,7 +4845,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L547",
+      "source_location": "L475",
       "weight": 1.0
     },
     {
@@ -5108,7 +4857,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L592",
+      "source_location": "L520",
       "weight": 1.0
     },
     {
@@ -5120,7 +4869,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L587",
+      "source_location": "L515",
       "weight": 1.0
     },
     {
@@ -5132,7 +4881,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L597",
+      "source_location": "L525",
       "weight": 1.0
     },
     {
@@ -5144,7 +4893,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L582",
+      "source_location": "L510",
       "weight": 1.0
     },
     {
@@ -5156,7 +4905,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L572",
+      "source_location": "L500",
       "weight": 1.0
     },
     {
@@ -5168,7 +4917,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L577",
+      "source_location": "L505",
       "weight": 1.0
     },
     {
@@ -5180,7 +4929,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L567",
+      "source_location": "L495",
       "weight": 1.0
     },
     {
@@ -5229,42 +4978,6 @@
       "context": "field",
       "source_file": "ui/src/components/ProjectsPortalPage.tsx",
       "source_location": "L41",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_multiview_architectural_generator_architecturalmultiviewgenerator_generate_all_views",
-      "target": "model_server_multiview_architectural_generator_py_any",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "generic_arg",
-      "source_file": "MODEL SERVER/multiview_architectural_generator.py",
-      "source_location": "L56",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_multiview_architectural_generator_architecturalmultiviewgenerator_generate_all_views",
-      "target": "model_server_multiview_architectural_generator_py_image",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "generic_arg",
-      "source_file": "MODEL SERVER/multiview_architectural_generator.py",
-      "source_location": "L56",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_multiview_architectural_generator_record_view_output",
-      "target": "model_server_multiview_architectural_generator_py_any",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "generic_arg",
-      "source_file": "MODEL SERVER/multiview_architectural_generator.py",
-      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -5372,7 +5085,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L108",
+      "source_location": "L103",
       "weight": 1.0
     },
     {
@@ -5384,7 +5097,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L124",
+      "source_location": "L119",
       "weight": 1.0
     },
     {
@@ -5396,7 +5109,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L130",
+      "source_location": "L125",
       "weight": 1.0
     },
     {
@@ -5408,7 +5121,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L117",
+      "source_location": "L112",
       "weight": 1.0
     },
     {
@@ -5421,78 +5134,6 @@
       "context": "generic_arg",
       "source_file": "MODEL SERVER/task_configs.py",
       "source_location": "L346",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_multiview_architectural_generator",
-      "target": "os",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "MODEL SERVER/multiview_architectural_generator.py",
-      "source_location": "L13",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_multiview_architectural_generator",
-      "target": "sys",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "MODEL SERVER/multiview_architectural_generator.py",
-      "source_location": "L14",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_multiview_architectural_generator",
-      "target": "time",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "MODEL SERVER/multiview_architectural_generator.py",
-      "source_location": "L15",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_multiview_architectural_generator",
-      "target": "json",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "MODEL SERVER/multiview_architectural_generator.py",
-      "source_location": "L16",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_multiview_architectural_generator",
-      "target": "logging",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "MODEL SERVER/multiview_architectural_generator.py",
-      "source_location": "L17",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_multiview_architectural_generator",
-      "target": "model_server_pipeline_manager_pipelinemanager",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "MODEL SERVER/multiview_architectural_generator.py",
-      "source_location": "L53",
       "weight": 1.0
     },
     {
@@ -6025,18 +5666,6 @@
     },
     {
       "source": "model_server_server",
-      "target": "model_server_schemas_multiviewangleitem",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "MODEL SERVER/server.py",
-      "source_location": "L35",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_server",
       "target": "model_server_schemas_openaichatcompletionchoice",
       "relation": "imports",
       "_origin": "ast",
@@ -6086,30 +5715,6 @@
     {
       "source": "model_server_server",
       "target": "model_server_schemas_openaiimagegenerationrequest",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "MODEL SERVER/server.py",
-      "source_location": "L35",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_server",
-      "target": "model_server_schemas_sketchmultiviewrequest",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "MODEL SERVER/server.py",
-      "source_location": "L35",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_server",
-      "target": "model_server_schemas_sketchmultiviewresponse",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6176,7 +5781,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L51",
+      "source_location": "L48",
       "weight": 1.0
     },
     {
@@ -6188,7 +5793,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L51",
+      "source_location": "L48",
       "weight": 1.0
     },
     {
@@ -6200,7 +5805,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L52",
+      "source_location": "L49",
       "weight": 1.0
     },
     {
@@ -6212,19 +5817,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L53",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_server",
-      "target": "model_server_multiview_architectural_generator_architecturalmultiviewgenerator",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "MODEL SERVER/server.py",
-      "source_location": "L54",
+      "source_location": "L50",
       "weight": 1.0
     },
     {
@@ -6788,7 +6381,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "ui/src/components/TaskSelectionPage.tsx",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0
     },
     {
@@ -6800,7 +6393,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "ui/src/components/TaskSelectionPage.tsx",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0
     },
     {
@@ -6812,7 +6405,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "ui/src/components/TaskSelectionPage.tsx",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0
     },
     {
@@ -6825,42 +6418,6 @@
       "context": "import",
       "source_file": "ui/src/main.tsx",
       "source_location": "L3",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_multiview_architectural_generator",
-      "target": "typing",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "MODEL SERVER/multiview_architectural_generator.py",
-      "source_location": "L18",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_multiview_architectural_generator",
-      "target": "pil",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "MODEL SERVER/multiview_architectural_generator.py",
-      "source_location": "L19",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_multiview_architectural_generator",
-      "target": "model_server_progress_tracker",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "MODEL SERVER/multiview_architectural_generator.py",
-      "source_location": "L22",
       "weight": 1.0
     },
     {
@@ -7136,7 +6693,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L51",
+      "source_location": "L48",
       "weight": 1.0
     },
     {
@@ -7148,7 +6705,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L52",
+      "source_location": "L49",
       "weight": 1.0
     },
     {
@@ -7160,19 +6717,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L53",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_server",
-      "target": "model_server_multiview_architectural_generator",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "MODEL SERVER/server.py",
-      "source_location": "L54",
+      "source_location": "L50",
       "weight": 1.0
     },
     {
@@ -7873,6 +7418,18 @@
     },
     {
       "source": "ui_src_components_taskselectionpage",
+      "target": "ui_src_taskconstants",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "ui/src/components/TaskSelectionPage.tsx",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_src_components_taskselectionpage",
       "target": "ref_lucide_react",
       "relation": "imports_from",
       "_origin": "ast",
@@ -7881,18 +7438,6 @@
       "context": "import",
       "source_file": "ui/src/components/TaskSelectionPage.tsx",
       "source_location": "L2",
-      "weight": 1.0
-    },
-    {
-      "source": "ui_src_components_taskselectionpage",
-      "target": "ui_src_taskconstants",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "ui/src/components/TaskSelectionPage.tsx",
-      "source_location": "L9",
       "weight": 1.0
     },
     {
@@ -7976,7 +7521,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L100",
+      "source_location": "L95",
       "weight": 1.0
     },
     {
@@ -7988,7 +7533,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L130",
+      "source_location": "L125",
       "weight": 1.0
     },
     {
@@ -8012,29 +7557,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L93",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_multiview_architectural_generator",
-      "target": "model_server_multiview_architectural_generator_record_view_output",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "MODEL SERVER/multiview_architectural_generator.py",
-      "source_location": "L32",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_multiview_architectural_generator",
-      "target": "model_server_multiview_architectural_generator_architecturalmultiviewgenerator",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "MODEL SERVER/multiview_architectural_generator.py",
-      "source_location": "L47",
+      "source_location": "L88",
       "weight": 1.0
     },
     {
@@ -8089,7 +7612,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/pipeline_qwen.py",
-      "source_location": "L171",
+      "source_location": "L168",
       "weight": 1.0
     },
     {
@@ -8116,46 +7639,13 @@
     },
     {
       "source": "model_server_schemas",
-      "target": "model_server_schemas_generateresponse",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L105",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_schemas",
-      "target": "model_server_schemas_upscale4krequest",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L117",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_schemas",
-      "target": "model_server_schemas_openaichatmessagecontentitem",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L127",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_schemas",
       "target": "model_server_schemas_openaichatmessage",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L133",
+      "source_location": "L103",
       "weight": 1.0
     },
     {
@@ -8166,7 +7656,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L138",
+      "source_location": "L108",
       "weight": 1.0
     },
     {
@@ -8177,7 +7667,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L152",
+      "source_location": "L122",
       "weight": 1.0
     },
     {
@@ -8188,7 +7678,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L158",
+      "source_location": "L128",
       "weight": 1.0
     },
     {
@@ -8199,7 +7689,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L167",
+      "source_location": "L137",
       "weight": 1.0
     },
     {
@@ -8210,7 +7700,29 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L176",
+      "source_location": "L146",
+      "weight": 1.0
+    },
+    {
+      "source": "model_server_schemas",
+      "target": "model_server_schemas_exampleitem",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "MODEL SERVER/schemas.py",
+      "source_location": "L159",
+      "weight": 1.0
+    },
+    {
+      "source": "model_server_schemas",
+      "target": "model_server_schemas_systemtelemetryresponse",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "MODEL SERVER/schemas.py",
+      "source_location": "L169",
       "weight": 1.0
     },
     {
@@ -8226,28 +7738,6 @@
     },
     {
       "source": "model_server_schemas",
-      "target": "model_server_schemas_exampleitem",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L189",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_schemas",
-      "target": "model_server_schemas_systemtelemetryresponse",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L199",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_schemas",
       "target": "model_server_schemas_taskgenerateresponse",
       "relation": "contains",
       "_origin": "ast",
@@ -8259,7 +7749,7 @@
     },
     {
       "source": "model_server_schemas",
-      "target": "model_server_schemas_multiviewangleitem",
+      "target": "model_server_schemas_generatejsonrequest",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -8270,29 +7760,18 @@
     },
     {
       "source": "model_server_schemas",
-      "target": "model_server_schemas_sketchmultiviewrequest",
+      "target": "model_server_schemas_generateresponse",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L66",
+      "source_location": "L75",
       "weight": 1.0
     },
     {
       "source": "model_server_schemas",
-      "target": "model_server_schemas_sketchmultiviewresponse",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L76",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_schemas",
-      "target": "model_server_schemas_generatejsonrequest",
+      "target": "model_server_schemas_upscale4krequest",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -8302,14 +7781,14 @@
       "weight": 1.0
     },
     {
-      "source": "model_server_server",
-      "target": "model_server_server_encode_image_b64",
+      "source": "model_server_schemas",
+      "target": "model_server_schemas_openaichatmessagecontentitem",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "MODEL SERVER/server.py",
-      "source_location": "L100",
+      "source_file": "MODEL SERVER/schemas.py",
+      "source_location": "L97",
       "weight": 1.0
     },
     {
@@ -8320,7 +7799,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L108",
+      "source_location": "L103",
       "weight": 1.0
     },
     {
@@ -8331,7 +7810,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L117",
+      "source_location": "L112",
       "weight": 1.0
     },
     {
@@ -8342,7 +7821,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L124",
+      "source_location": "L119",
       "weight": 1.0
     },
     {
@@ -8353,7 +7832,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L130",
+      "source_location": "L125",
       "weight": 1.0
     },
     {
@@ -8364,7 +7843,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L151",
+      "source_location": "L146",
       "weight": 1.0
     },
     {
@@ -8375,7 +7854,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L163",
+      "source_location": "L158",
       "weight": 1.0
     },
     {
@@ -8386,7 +7865,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L183",
+      "source_location": "L178",
       "weight": 1.0
     },
     {
@@ -8397,7 +7876,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L189",
+      "source_location": "L184",
       "weight": 1.0
     },
     {
@@ -8408,7 +7887,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L207",
+      "source_location": "L202",
       "weight": 1.0
     },
     {
@@ -8419,7 +7898,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L232",
+      "source_location": "L227",
       "weight": 1.0
     },
     {
@@ -8430,7 +7909,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L241",
+      "source_location": "L236",
       "weight": 1.0
     },
     {
@@ -8441,18 +7920,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L282",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_server",
-      "target": "model_server_server_execute_sketch_multiview",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "MODEL SERVER/server.py",
-      "source_location": "L480",
+      "source_location": "L277",
       "weight": 1.0
     },
     {
@@ -8463,7 +7931,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L548",
+      "source_location": "L476",
       "weight": 1.0
     },
     {
@@ -8474,7 +7942,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L553",
+      "source_location": "L481",
       "weight": 1.0
     },
     {
@@ -8485,7 +7953,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L558",
+      "source_location": "L486",
       "weight": 1.0
     },
     {
@@ -8496,7 +7964,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L563",
+      "source_location": "L491",
       "weight": 1.0
     },
     {
@@ -8507,7 +7975,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L568",
+      "source_location": "L496",
       "weight": 1.0
     },
     {
@@ -8518,7 +7986,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L573",
+      "source_location": "L501",
       "weight": 1.0
     },
     {
@@ -8529,7 +7997,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L578",
+      "source_location": "L506",
       "weight": 1.0
     },
     {
@@ -8540,7 +8008,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L583",
+      "source_location": "L511",
       "weight": 1.0
     },
     {
@@ -8551,7 +8019,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L588",
+      "source_location": "L516",
       "weight": 1.0
     },
     {
@@ -8562,7 +8030,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L593",
+      "source_location": "L521",
       "weight": 1.0
     },
     {
@@ -8573,7 +8041,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L598",
+      "source_location": "L526",
       "weight": 1.0
     },
     {
@@ -8584,7 +8052,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L608",
+      "source_location": "L536",
       "weight": 1.0
     },
     {
@@ -8595,7 +8063,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L639",
+      "source_location": "L567",
       "weight": 1.0
     },
     {
@@ -8606,7 +8074,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L750",
+      "source_location": "L676",
       "weight": 1.0
     },
     {
@@ -8617,7 +8085,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L788",
+      "source_location": "L714",
       "weight": 1.0
     },
     {
@@ -8628,7 +8096,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L833",
+      "source_location": "L759",
       "weight": 1.0
     },
     {
@@ -8639,7 +8107,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L840",
+      "source_location": "L766",
       "weight": 1.0
     },
     {
@@ -8650,7 +8118,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L863",
+      "source_location": "L789",
       "weight": 1.0
     },
     {
@@ -8661,7 +8129,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L920",
+      "source_location": "L846",
       "weight": 1.0
     },
     {
@@ -8672,7 +8140,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L929",
+      "source_location": "L855",
       "weight": 1.0
     },
     {
@@ -8683,7 +8151,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L93",
+      "source_location": "L88",
+      "weight": 1.0
+    },
+    {
+      "source": "model_server_server",
+      "target": "model_server_server_encode_image_b64",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "MODEL SERVER/server.py",
+      "source_location": "L95",
       "weight": 1.0
     },
     {
@@ -9596,7 +9075,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "ui/src/components/TaskSelectionPage.tsx",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0
     },
     {
@@ -9607,7 +9086,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "ui/src/components/TaskSelectionPage.tsx",
-      "source_location": "L143",
+      "source_location": "L131",
       "weight": 1.0
     },
     {
@@ -9618,7 +9097,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "ui/src/components/TaskSelectionPage.tsx",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -9629,7 +9108,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "ui/src/components/TaskSelectionPage.tsx",
-      "source_location": "L300",
+      "source_location": "L342",
       "weight": 1.0
     },
     {
@@ -9640,7 +9119,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "ui/src/components/TaskSelectionPage.tsx",
-      "source_location": "L449",
+      "source_location": "L491",
       "weight": 1.0
     },
     {
@@ -9651,7 +9130,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "ui/src/components/TaskSelectionPage.tsx",
-      "source_location": "L457",
+      "source_location": "L499",
       "weight": 1.0
     },
     {
@@ -9673,7 +9152,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "ui/src/taskConstants.ts",
-      "source_location": "L16",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
@@ -9684,7 +9163,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "ui/src/taskConstants.ts",
-      "source_location": "L34",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -9695,7 +9174,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "ui/src/taskConstants.ts",
-      "source_location": "L53",
+      "source_location": "L50",
       "weight": 1.0
     },
     {
@@ -9706,7 +9185,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "ui/src/taskConstants.ts",
-      "source_location": "L68",
+      "source_location": "L64",
       "weight": 1.0
     },
     {
@@ -10091,7 +9570,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L189",
+      "source_location": "L159",
       "weight": 1.0
     },
     {
@@ -10102,7 +9581,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L87",
+      "source_location": "L57",
       "weight": 1.0
     },
     {
@@ -10113,18 +9592,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L105",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_schemas_multiviewangleitem",
-      "target": "basemodel",
-      "relation": "inherits",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L57",
+      "source_location": "L75",
       "weight": 1.0
     },
     {
@@ -10135,7 +9603,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L152",
+      "source_location": "L122",
       "weight": 1.0
     },
     {
@@ -10146,7 +9614,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L138",
+      "source_location": "L108",
       "weight": 1.0
     },
     {
@@ -10157,7 +9625,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L158",
+      "source_location": "L128",
       "weight": 1.0
     },
     {
@@ -10168,7 +9636,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L133",
+      "source_location": "L103",
       "weight": 1.0
     },
     {
@@ -10179,7 +9647,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L127",
+      "source_location": "L97",
       "weight": 1.0
     },
     {
@@ -10190,7 +9658,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L176",
+      "source_location": "L146",
       "weight": 1.0
     },
     {
@@ -10201,29 +9669,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L167",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_schemas_sketchmultiviewrequest",
-      "target": "basemodel",
-      "relation": "inherits",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L66",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_schemas_sketchmultiviewresponse",
-      "target": "basemodel",
-      "relation": "inherits",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L76",
+      "source_location": "L137",
       "weight": 1.0
     },
     {
@@ -10234,7 +9680,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L199",
+      "source_location": "L169",
       "weight": 1.0
     },
     {
@@ -10267,40 +9713,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/schemas.py",
-      "source_location": "L117",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_multiview_architectural_generator_architecturalmultiviewgenerator",
-      "target": "model_server_multiview_architectural_generator_architecturalmultiviewgenerator_init",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "MODEL SERVER/multiview_architectural_generator.py",
-      "source_location": "L48",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_multiview_architectural_generator_architecturalmultiviewgenerator",
-      "target": "model_server_multiview_architectural_generator_architecturalmultiviewgenerator_ensure_pipeline",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "MODEL SERVER/multiview_architectural_generator.py",
-      "source_location": "L51",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_multiview_architectural_generator_architecturalmultiviewgenerator",
-      "target": "model_server_multiview_architectural_generator_architecturalmultiviewgenerator_generate_all_views",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "MODEL SERVER/multiview_architectural_generator.py",
-      "source_location": "L56",
+      "source_location": "L87",
       "weight": 1.0
     },
     {
@@ -10601,17 +10014,6 @@
       "weight": 1.0
     },
     {
-      "source": "model_server_multiview_architectural_generator_rationale_1",
-      "target": "model_server_multiview_architectural_generator",
-      "relation": "rationale_for",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "MODEL SERVER/multiview_architectural_generator.py",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
       "source": "model_server_pipeline_flux_rationale_1",
       "target": "model_server_pipeline_flux",
       "relation": "rationale_for",
@@ -10766,190 +10168,179 @@
       "weight": 1.0
     },
     {
-      "source": "model_server_server_rationale_152",
+      "source": "model_server_server_rationale_147",
       "target": "model_server_server_get_saved_outputs",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L152",
+      "source_location": "L147",
       "weight": 1.0
     },
     {
-      "source": "model_server_server_rationale_164",
+      "source": "model_server_server_rationale_159",
       "target": "model_server_server_delete_saved_output",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L164",
+      "source_location": "L159",
       "weight": 1.0
     },
     {
-      "source": "model_server_server_rationale_184",
+      "source": "model_server_server_rationale_179",
       "target": "model_server_server_get_telemetry",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L184",
+      "source_location": "L179",
       "weight": 1.0
     },
     {
-      "source": "model_server_server_rationale_190",
+      "source": "model_server_server_rationale_185",
       "target": "model_server_server_get_generation_progress",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L190",
+      "source_location": "L185",
       "weight": 1.0
     },
     {
-      "source": "model_server_server_rationale_208",
+      "source": "model_server_server_rationale_203",
       "target": "model_server_server_stop_generation",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L208",
+      "source_location": "L203",
       "weight": 1.0
     },
     {
-      "source": "model_server_server_rationale_233",
+      "source": "model_server_server_rationale_228",
       "target": "model_server_server_list_tasks",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L233",
+      "source_location": "L228",
       "weight": 1.0
     },
     {
-      "source": "model_server_server_rationale_242",
+      "source": "model_server_server_rationale_237",
       "target": "model_server_server_list_examples",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L242",
+      "source_location": "L237",
       "weight": 1.0
     },
     {
-      "source": "model_server_server_rationale_283",
+      "source": "model_server_server_rationale_278",
       "target": "model_server_server_execute_task",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L283",
+      "source_location": "L278",
       "weight": 1.0
     },
     {
-      "source": "model_server_server_rationale_481",
-      "target": "model_server_server_execute_sketch_multiview",
-      "relation": "rationale_for",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "MODEL SERVER/server.py",
-      "source_location": "L481",
-      "weight": 1.0
-    },
-    {
-      "source": "model_server_server_rationale_609",
+      "source": "model_server_server_rationale_537",
       "target": "model_server_server_openai_list_models",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L609",
+      "source_location": "L537",
       "weight": 1.0
     },
     {
-      "source": "model_server_server_rationale_640",
+      "source": "model_server_server_rationale_568",
       "target": "model_server_server_openai_chat_completions",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L640",
+      "source_location": "L568",
       "weight": 1.0
     },
     {
-      "source": "model_server_server_rationale_751",
+      "source": "model_server_server_rationale_677",
       "target": "model_server_server_openai_image_generation",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L751",
+      "source_location": "L677",
       "weight": 1.0
     },
     {
-      "source": "model_server_server_rationale_789",
+      "source": "model_server_server_rationale_715",
       "target": "model_server_server_openai_image_edits",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L789",
+      "source_location": "L715",
       "weight": 1.0
     },
     {
-      "source": "model_server_server_rationale_834",
+      "source": "model_server_server_rationale_760",
       "target": "model_server_server_api_enhance_prompt",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L834",
+      "source_location": "L760",
       "weight": 1.0
     },
     {
-      "source": "model_server_server_rationale_841",
+      "source": "model_server_server_rationale_767",
       "target": "model_server_server_api_upscale_4k",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L841",
+      "source_location": "L767",
       "weight": 1.0
     },
     {
-      "source": "model_server_server_rationale_864",
+      "source": "model_server_server_rationale_790",
       "target": "model_server_server_generate_from_json",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L864",
+      "source_location": "L790",
       "weight": 1.0
     },
     {
-      "source": "model_server_server_rationale_930",
+      "source": "model_server_server_rationale_856",
       "target": "model_server_server_free_port",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L930",
+      "source_location": "L856",
       "weight": 1.0
     },
     {
@@ -10994,19 +10385,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L840",
-      "weight": 0.8
-    },
-    {
-      "source": "model_server_server_execute_sketch_multiview",
-      "target": "model_server_schemas_sketchmultiviewrequest",
-      "relation": "uses",
-      "_origin": "ast",
-      "confidence": "INFERRED",
-      "confidence_score": 0.95,
-      "context": "parameter_type",
-      "source_file": "MODEL SERVER/server.py",
-      "source_location": "L480",
+      "source_location": "L766",
       "weight": 0.8
     },
     {
@@ -11018,7 +10397,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L282",
+      "source_location": "L277",
       "weight": 0.8
     },
     {
@@ -11030,7 +10409,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L863",
+      "source_location": "L789",
       "weight": 0.8
     },
     {
@@ -11042,7 +10421,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L639",
+      "source_location": "L567",
       "weight": 0.8
     },
     {
@@ -11054,7 +10433,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L788",
+      "source_location": "L714",
       "weight": 0.8
     },
     {
@@ -11066,7 +10445,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L750",
+      "source_location": "L676",
       "weight": 0.8
     },
     {
@@ -11078,7 +10457,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L558",
+      "source_location": "L486",
       "weight": 0.8
     },
     {
@@ -11090,7 +10469,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L563",
+      "source_location": "L491",
       "weight": 0.8
     },
     {
@@ -11102,7 +10481,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L553",
+      "source_location": "L481",
       "weight": 0.8
     },
     {
@@ -11114,7 +10493,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L548",
+      "source_location": "L476",
       "weight": 0.8
     },
     {
@@ -11126,7 +10505,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L593",
+      "source_location": "L521",
       "weight": 0.8
     },
     {
@@ -11138,7 +10517,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L588",
+      "source_location": "L516",
       "weight": 0.8
     },
     {
@@ -11150,7 +10529,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L598",
+      "source_location": "L526",
       "weight": 0.8
     },
     {
@@ -11162,7 +10541,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L583",
+      "source_location": "L511",
       "weight": 0.8
     },
     {
@@ -11174,7 +10553,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L573",
+      "source_location": "L501",
       "weight": 0.8
     },
     {
@@ -11186,7 +10565,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L578",
+      "source_location": "L506",
       "weight": 0.8
     },
     {
@@ -11198,18 +10577,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L568",
-      "weight": 0.8
-    },
-    {
-      "source": "model_server_multiview_architectural_generator_architecturalmultiviewgenerator",
-      "target": "model_server_pipeline_manager_pipelinemanager",
-      "relation": "uses",
-      "_origin": "ast",
-      "confidence": "INFERRED",
-      "confidence_score": 0.95,
-      "source_file": "MODEL SERVER/multiview_architectural_generator.py",
-      "source_location": "L54",
+      "source_location": "L496",
       "weight": 0.8
     },
     {
@@ -11235,28 +10603,6 @@
       "weight": 0.8
     },
     {
-      "source": "model_server_server_execute_sketch_multiview",
-      "target": "model_server_schemas_multiviewangleitem",
-      "relation": "uses",
-      "_origin": "ast",
-      "confidence": "INFERRED",
-      "confidence_score": 0.95,
-      "source_file": "MODEL SERVER/server.py",
-      "source_location": "L505",
-      "weight": 0.8
-    },
-    {
-      "source": "model_server_server_execute_sketch_multiview",
-      "target": "model_server_schemas_sketchmultiviewresponse",
-      "relation": "uses",
-      "_origin": "ast",
-      "confidence": "INFERRED",
-      "confidence_score": 0.95,
-      "source_file": "MODEL SERVER/server.py",
-      "source_location": "L535",
-      "weight": 0.8
-    },
-    {
       "source": "model_server_server_execute_task",
       "target": "model_server_schemas_taskgenerateresponse",
       "relation": "uses",
@@ -11264,7 +10610,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.95,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L435",
+      "source_location": "L430",
       "weight": 0.8
     },
     {
@@ -11275,7 +10621,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.95,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L892",
+      "source_location": "L818",
       "weight": 0.8
     },
     {
@@ -11286,7 +10632,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.95,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L725",
+      "source_location": "L651",
       "weight": 0.8
     },
     {
@@ -11297,10 +10643,10 @@
       "confidence": "INFERRED",
       "confidence_score": 0.95,
       "source_file": "MODEL SERVER/server.py",
-      "source_location": "L737",
+      "source_location": "L663",
       "weight": 0.8
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "0d9210a181bfe74b4e721e4d5ace4189a1da9161"
+  "built_at_commit": "baec8dc54e02568f608e47928d588aebb10bedf0"
 }

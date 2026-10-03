@@ -339,7 +339,6 @@ console.log("Render result:", data);`;
               <optgroup label="1. Architecture">
                 <option value="arch_text_to_arch">Text to Arch (T2A)</option>
                 <option value="arch_sketch_to_arch">Sketch to Image Arch Render (S2A)</option>
-                <option value="arch_sketch_to_multiview">Sketch to Multi View 5-Elevations (S2MVA)</option>
                 <option value="arch_image_edit">Architecture Image Editing (AIE)</option>
                 <option value="arch_enhance_render">Enhance the Details of Render (ETDOTR)</option>
               </optgroup>

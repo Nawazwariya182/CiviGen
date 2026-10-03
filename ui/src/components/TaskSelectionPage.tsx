@@ -4,7 +4,8 @@ import {
   ArrowRight,
   FolderOpen,
   ChevronDown,
-  Cpu
+  Cpu,
+  Sparkles
 } from 'lucide-react';
 import { TASK_SHORT_CODES, TASK_EXAMPLE_IMAGES, TASK_INPUT_IMAGES } from '../taskConstants';
 
@@ -13,7 +14,7 @@ export interface TaskItem {
   code: string;
   title: string;
   description: string;
-  inputImage: string;
+  inputImage?: string;
   outputImage: string;
   category: 'architecture' | 'interior' | 'furniture';
   isSampleOnly?: boolean;
@@ -26,10 +27,8 @@ export const ALL_TASKS: TaskItem[] = [
     code: 'T2A',
     title: 'Text to Arch',
     description: 'Generate photorealistic architectural exteriors, luxury villas, and complex facades directly from descriptive prompts.',
-    inputImage: TASK_INPUT_IMAGES['arch_text_to_arch'],
     outputImage: TASK_EXAMPLE_IMAGES['arch_text_to_arch'],
-    category: 'architecture',
-    isSampleOnly: true
+    category: 'architecture'
   },
   {
     id: 'arch_sketch_to_arch',
@@ -38,15 +37,6 @@ export const ALL_TASKS: TaskItem[] = [
     description: 'Transform architectural concept sketches and line drafts into high-end luxury villa renders with crisp materials.',
     inputImage: TASK_INPUT_IMAGES['arch_sketch_to_arch'],
     outputImage: TASK_EXAMPLE_IMAGES['arch_sketch_to_arch'],
-    category: 'architecture'
-  },
-  {
-    id: 'arch_sketch_to_multiview',
-    code: 'S2MVA',
-    title: 'Sketch to Multi View (5 Elevations)',
-    description: 'Generate 5 synchronized orthogonal elevation perspectives (front, left, right, back, top) with consistent structural identity.',
-    inputImage: TASK_INPUT_IMAGES['arch_sketch_to_multiview'],
-    outputImage: TASK_EXAMPLE_IMAGES['arch_sketch_to_multiview'],
     category: 'architecture'
   },
   {
@@ -130,10 +120,8 @@ export const ALL_TASKS: TaskItem[] = [
     code: 'T2F',
     title: 'Text-Furniture',
     description: 'Generate bespoke furniture pieces, customized wardrobes, closets, and cabinetry directly from detailed text descriptions.',
-    inputImage: TASK_INPUT_IMAGES['furniture_text_to_render'],
     outputImage: TASK_EXAMPLE_IMAGES['furniture_text_to_render'],
-    category: 'furniture',
-    isSampleOnly: true
+    category: 'furniture'
   }
 ];
 
@@ -141,13 +129,67 @@ export const ALL_TASKS: TaskItem[] = [
  * Interactive Before/After Split Comparison Slider for each task card
  */
 const TaskCardSlider: React.FC<{
-  inputImage: string;
+  inputImage?: string;
   outputImage: string;
   title: string;
   isSampleOnly?: boolean;
 }> = ({ inputImage, outputImage, title, isSampleOnly }) => {
   const [sliderPos, setSliderPos] = useState<number>(50);
   const containerRef = useRef<HTMLDivElement | null>(null);
+
+  // If task has no input image (e.g. Text to Arch, Text-Furniture), render clean full render
+  if (!inputImage) {
+    return (
+      <div
+        style={{
+          position: 'relative',
+          width: '100%',
+          height: '190px',
+          overflow: 'hidden',
+          background: '#0F172A',
+          userSelect: 'none'
+        }}
+      >
+        <img
+          src={outputImage}
+          alt={`${title} Render`}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            display: 'block'
+          }}
+          loading="lazy"
+        />
+        {/* Top Right Label: TEXT TO IMAGE */}
+        <div
+          style={{
+            position: 'absolute',
+            top: 10,
+            right: 10,
+            background: 'rgba(15, 23, 42, 0.85)',
+            backdropFilter: 'blur(6px)',
+            color: '#38BDF8',
+            fontSize: 9.5,
+            fontWeight: 700,
+            letterSpacing: '0.06em',
+            padding: '2.5px 8px',
+            borderRadius: 4,
+            pointerEvents: 'none',
+            zIndex: 10,
+            textTransform: 'uppercase',
+            display: 'flex',
+            alignItems: 'center',
+            gap: 4,
+            border: '1px solid rgba(56, 189, 248, 0.3)'
+          }}
+        >
+          <Sparkles size={10} />
+          <span>TEXT TO IMAGE</span>
+        </div>
+      </div>
+    );
+  }
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!containerRef.current) return;

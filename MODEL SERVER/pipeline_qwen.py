@@ -160,17 +160,13 @@ class QwenPipeline:
 
         noise = comfy.sample.prepare_noise(latent, seed)
 
-        is_subtask = False
         try:
             from progress_tracker import progress_tracker
-            if progress_tracker.is_generating and progress_tracker.task_id == "arch_sketch_to_multiview":
-                is_subtask = True
-            else:
+            if not progress_tracker.is_generating:
                 progress_tracker.start(task_id="qwen", total_steps=steps)
 
             def step_callback(step, x0, x, total_steps):
-                if not is_subtask:
-                    progress_tracker.update_step(step, total_steps)
+                progress_tracker.update_step(step, total_steps)
         except Exception:
             step_callback = None
 

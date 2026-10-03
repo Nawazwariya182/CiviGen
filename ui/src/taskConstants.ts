@@ -1,7 +1,6 @@
 export const TASK_SHORT_CODES: Record<string, string> = {
   arch_text_to_arch: 'T2A',
   arch_sketch_to_arch: 'S2A',
-  arch_sketch_to_multiview: 'S2MVA',
   arch_image_edit: 'AIE',
   arch_enhance_render: 'ETDTER',
   interior_sketch_to_design: 'S2ID',
@@ -16,7 +15,6 @@ export const TASK_SHORT_CODES: Record<string, string> = {
 export const SHORT_CODE_TO_TASK_ID: Record<string, string> = {
   T2A: 'arch_text_to_arch',
   S2A: 'arch_sketch_to_arch',
-  S2MVA: 'arch_sketch_to_multiview',
   AIE: 'arch_image_edit',
   ETDTER: 'arch_enhance_render',
   ETDOTR: 'arch_enhance_render',
@@ -35,7 +33,6 @@ export const SUITE_TASKS = {
   architecture: [
     'arch_text_to_arch',
     'arch_sketch_to_arch',
-    'arch_sketch_to_multiview',
     'arch_image_edit',
     'arch_enhance_render'
   ],
@@ -53,7 +50,6 @@ export const SUITE_TASKS = {
 export const TASK_EXAMPLE_IMAGES: Record<string, string> = {
   arch_text_to_arch: '/examples/ARCH/T2A/make%20a%20luxury%20villa%20with%203%20floors.png',
   arch_sketch_to_arch: '/examples/ARCH/S2A/Output.png',
-  arch_sketch_to_multiview: '/examples/ARCH/S2MVA/Front.png',
   arch_image_edit: '/examples/ARCH/AIE/Output.png',
   arch_enhance_render: '/examples/ARCH/ETDOTR/Output.png',
   interior_sketch_to_design: '/examples/INTERIOR%20DESIGNING/S2ID/Output.png',
@@ -67,7 +63,6 @@ export const TASK_EXAMPLE_IMAGES: Record<string, string> = {
 
 export const TASK_INPUT_IMAGES: Record<string, string> = {
   arch_sketch_to_arch: '/examples/ARCH/S2A/Input.jpg',
-  arch_sketch_to_multiview: '/examples/ARCH/S2MVA/Input.jpg',
   arch_image_edit: '/examples/ARCH/AIE/input.png',
   arch_enhance_render: '/examples/ARCH/ETDOTR/input.png',
   interior_sketch_to_design: '/examples/INTERIOR%20DESIGNING/S2ID/Input.jpg',
